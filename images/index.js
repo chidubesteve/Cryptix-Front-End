@@ -38,13 +38,13 @@ import getAble from "./getable.png";
 import nft_image_1 from "./nft-image-1.png";
 import nft_image_2 from "./nft-image-2.png";
 import nft_image_3 from "./nft-image-3.png";
-import musiceWave from "./musicwave.png";
+import musicWave from "./musicwave.png";
 import update from "./update.png";
 
 export default {
   collection,
   update,
-  musiceWave,
+  musicWave,
   nft_image_1,
   nft_image_2,
   nft_image_3,
