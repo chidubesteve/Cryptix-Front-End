@@ -71,7 +71,7 @@ const SideBar = ({ setOpenSideMenu }) => {
           <a href="#">
             <TiSocialYoutube />
           </a>
-          <a href="#">
+          <a href="https://instagram.com/phoenixdevhub">
             <TiSocialInstagram />
           </a>
         </div>
