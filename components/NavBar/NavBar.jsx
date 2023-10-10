@@ -145,7 +145,7 @@ const NavBar = () => {
           <div className={styles.navbar_container_right_menuBtn}>
             <CgMenuRight
               className={styles.menuIcon}
-              onClick={() => openSideBar}
+              onClick={() => openSideBar()}
             />
           </div>
         </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link'
 import React from "react";
 import { FaUserAlt, FaRegImage, FaUserEdit } from "react-icons/fa";
 import { MdHelpCenter } from "react-icons/md";
@@ -29,19 +30,19 @@ const Profile = () => {
           <div className={style.profile_menu_one_item}>
             <FaUserAlt />
             <p>
-              <link href={{ pathname: "/myprofile" }}>My Profile</link>
+              <Link href={{ pathname: "/myprofile" }}>My Profile</Link>
             </p>
           </div>
           <div className={style.profile_menu_one_item}>
             <FaRegImage />
             <p>
-              <link href={{ pathname: "/my-items" }}>My Items</link>
+              <Link href={{ pathname: "/my-items" }}>My Items</Link>
             </p>
           </div>
           <div className={style.profile_menu_one_item}>
             <FaUserEdit />
             <p>
-              <link href={{pathname: '/edit-profile'}}>Edit Profile</link>
+              <Link href={{pathname: '/edit-profile'}}>Edit Profile</Link>
             </p>
           </div>
         </div>
@@ -50,13 +51,13 @@ const Profile = () => {
           <div className={style.profile_menu_one_item}>
             <MdHelpCenter />
             <p>
-              <link href={{ pathname: "/help" }}>Help</link>
+              <Link href={{ pathname: "/help" }}>Help</Link>
             </p>
           </div>
           <div className={style.profile_menu_one_item}>
             <TbDownload/>
             <p>
-              <link href={{ pathname: "/disconnect" }}>Disconnect</link>
+              <Link href={{ pathname: "/disconnect" }}>Disconnect</Link>
             </p>
           </div>
         </div>

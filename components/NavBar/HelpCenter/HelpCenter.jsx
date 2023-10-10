@@ -3,30 +3,8 @@ import Link from "next/link";
 
 // Internal import
 import Style from "./HelpCenter.module.css";
-
+import { helpCenter } from "../NavMenus";
 const HelpCenter = () => {
-  const helpCenter = [
-    {
-      name: "About",
-      link: "about",
-    },
-    {
-      name: "Contact us",
-      link: "contact-us",
-    },
-    {
-      name: "Sign Up",
-      link: "sign-up",
-    },
-    {
-      name: "Sign In",
-      link: "Sign-in",
-    },
-    {
-      name: "Subscription",
-      link: "subscription",
-    },
-  ];
 
   return (
     <div className={Style.box}>

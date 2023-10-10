@@ -3,40 +3,10 @@ import Link from "next/link";
 
 // Internal import
 import Style from "./Discover.module.css";
+import { discover } from "../NavMenus";
 
 const Discover = () => {
-  // DISCOVER NAVIGATION MENU
 
-  const discover = [
-    {
-      name: "Collection",
-      link: "collection",
-    },
-    {
-      name: "Search",
-      link: "search",
-    },
-    {
-      name: "Author Profile",
-      link: "author-profile",
-    },
-    {
-      name: "NFT Details",
-      link: "NFT-details",
-    },
-    {
-      name: "Account Setting",
-      link: "account-setting",
-    },
-    {
-      name: "Connect Wallet",
-      link: "connect-wallet",
-    },
-    {
-      name: "Blog",
-      link: "blog",
-    },
-  ];
   return (
     <div>
       {discover.map((el, i) => (
