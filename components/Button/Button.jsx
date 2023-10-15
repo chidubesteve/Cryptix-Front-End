@@ -1,8 +1,13 @@
 import React from 'react'
 
-const Button = () => {
+// internal import
+import style from './Button.module.css'
+
+const Button = ({btnName, handleClick}) => {
   return (
-    <div>Button</div>
+    <div className={style.box}>
+      <button className={style.button} onClick={() => handleClick()}> {btnName} </button>
+      </div>
   )
 }
 

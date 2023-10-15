@@ -8,14 +8,14 @@ import Style from "./Notification.module.css";
 const Notification = () => {
   return (
     <div className={Style.notification}>
-      <p>Notification</p>
+      <p>Notifications</p>
       <div className={Style.notification_box}>
         <div className={Style.notification_box_img}>
           <Image
             src={images.user1}
             alt="Profile image"
-            width={50}
-            height={50}
+            width={40}
+            height={40}
             className={Style.notification_box_img}
           />
         </div>

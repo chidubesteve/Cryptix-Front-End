@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from "react";
 import { FaUserAlt, FaRegImage, FaUserEdit } from "react-icons/fa";
 import { MdHelpCenter } from "react-icons/md";
-import { TbDownloadOff, TbDownload } from "react-icons/tb";
+import { TbWorldOff } from "react-icons/tb";
 
 // Internal imports
 import style from "./Profile.module.css";
@@ -55,7 +55,7 @@ const Profile = () => {
             </p>
           </div>
           <div className={style.profile_menu_one_item}>
-            <TbDownload/>
+            <TbWorldOff/>
             <p>
               <Link href={{ pathname: "/disconnect" }}>Disconnect</Link>
             </p>

@@ -65,8 +65,12 @@ const NavBar = () => {
   const openSideBar = () => {
     if (!openSideMenu) {
       setOpenSideMenu(true);
+      setProfile(false);
+      setNotification(false)
     } else {
       setOpenSideMenu(false);
+      setProfile(true);
+      setNotification(true)
     }
   };
 
@@ -84,7 +88,7 @@ const NavBar = () => {
           </div>
           <div className={styles.navbar_container_left_box_input}>
             <div className={styles.navbar_container_left_box_input_box}>
-              <input type="text" placeholder="Search NFT..." />
+              <input type="text" placeholder="Search NFTs..." />
               <BsSearch onClick={() => {}} className={styles.search_icon} />
             </div>
           </div>
@@ -116,13 +120,14 @@ const NavBar = () => {
             <MdNotifications
               className={styles.notify}
               onClick={() => openNotification()}
+              size={25}
             />
             {notification && <Notification />}
           </div>
 
           {/* CREATE BUTTON SECTION */}
           <div className={styles.navbar_container_right_button}>
-            <Button btnText="Create" />
+            <Button btnName="Create" handleClick={() => {}}/>
           </div>
 
           {/* USER PROFILE */}
@@ -131,8 +136,9 @@ const NavBar = () => {
               <Image
                 src={images.user1}
                 alt="Profile"
-                width={40}
-                height={40}
+                width={50}
+                height={50}
+                objectFit="center"
                 onClick={() => openProfile()}
                 className={styles.navbar_container_right_profile}
               />
@@ -146,6 +152,7 @@ const NavBar = () => {
             <CgMenuRight
               className={styles.menuIcon}
               onClick={() => openSideBar()}
+              size={25}
             />
           </div>
         </div>
@@ -153,7 +160,7 @@ const NavBar = () => {
 
       {/* SIDEBAR COMPONENT*/}
       {openSideMenu && (
-        <div className={styles.SideBar}>
+        <div className={styles.sideBar}>
           <SideBar setOpenSideMenu={setOpenSideMenu} />
         </div>
       )}

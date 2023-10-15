@@ -22,6 +22,7 @@ import { discover, helpCenter } from "../NavMenus";
 const SideBar = ({ setOpenSideMenu }) => {
   const [openDiscover, setOpenDiscover] = useState(false);
   const [openHelp, setOpenHelp] = useState(false);
+  // const [openProfile, setOpenProfile] = useState(false);
 
   const openDiscoverMenu = () => {
     if (!openDiscover) {
@@ -119,8 +120,8 @@ const SideBar = ({ setOpenSideMenu }) => {
       </div>
 
       <div className={style.sideBar_button}>
-        <Button btnName="Create" />
-        <Button btnName="Connect Wallet" />
+        <Button btnName="Create" handleClick={() => {}}/>
+        <Button btnName="Connect Wallet" handleClick={() => {}}/>
       </div>
     </div>
   );
