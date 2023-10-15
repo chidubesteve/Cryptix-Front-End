@@ -2,6 +2,7 @@
 padding: 1.2rem;
 border-bottom: 1px solid  var(--icons-color);
 background-color: var(--main-bg-color);
+z-index: 33333333;
 }
 
 .sideBar_closeBtn{

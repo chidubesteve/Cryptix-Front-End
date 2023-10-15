@@ -22,7 +22,7 @@ const Profile = () => {
         />
         <div className={style.profile_account_info}>
           <p>Robert Clark</p>
-          <small>0xbd8393yde...ugf389439834hr</small>
+          <small>0xbd83yde...ugf38943</small>
         </div>
       </div>
       <div className={style.profile_menu}>

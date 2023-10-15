@@ -46,6 +46,7 @@ const NavBar = () => {
       setDiscover(false);
       setHelp(false);
       setProfile(false);
+      setOpenSideMenu(false);
     } else {
       setNotification(false);
     }
@@ -57,6 +58,8 @@ const NavBar = () => {
       setDiscover(false);
       setHelp(false);
       setNotification(false);
+      setOpenSideMenu(false);
+
     } else {
       setProfile(false);
     }
