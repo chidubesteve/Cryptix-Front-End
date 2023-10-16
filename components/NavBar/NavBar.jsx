@@ -83,7 +83,7 @@ const NavBar = () => {
         <div className={styles.navbar_container_left}>
           <div className={styles.logo}>
             <Image
-              src={images.logo}
+              src={images.logoLight}
               alt="NFT Marketplace logo"
               width={135}
               height={125}
@@ -131,6 +131,7 @@ const NavBar = () => {
           {/* CREATE BUTTON SECTION */}
           <div className={styles.navbar_container_right_button}>
             <Button btnName="Create" handleClick={() => {}}/>
+            <Button btnName="Connect Wallet" handleClick={() => {}}/>
           </div>
 
           {/* USER PROFILE */}
