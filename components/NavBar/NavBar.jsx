@@ -140,8 +140,8 @@ const NavBar = () => {
               <Image
                 src={images.user1}
                 alt="Profile"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
                 objectFit="center"
                 onClick={() => openProfile()}
                 className={styles.navbar_container_right_profile}
