@@ -71,6 +71,11 @@
   position: relative;
   cursor: pointer;
 }
+
+.navbar_container_right_help{
+  text-wrap: nowrap;
+}
+
 .navbar_container_right_button{
   padding: 1rem ;
   display: flex;
