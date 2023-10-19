@@ -22,7 +22,6 @@ import { discover, helpCenter } from "../NavMenus";
 const SideBar = ({ setOpenSideMenu }) => {
   const [openDiscover, setOpenDiscover] = useState(false);
   const [openHelp, setOpenHelp] = useState(false);
-  // const [openProfile, setOpenProfile] = useState(false);
 
   const openDiscoverMenu = () => {
     if (!openDiscover) {
@@ -53,8 +52,9 @@ const SideBar = ({ setOpenSideMenu }) => {
       <div className={style.sideBar_box}>
         <Image src={images.logo} alt="Cryptix logo" width={150} height={150} />
         <p>
-          Discover the most outstanding articles on all you need to know about
-          NFTs
+          The world's first and largest digital marketplace for crypto
+          collectibles and non-fungible token (NFTs). Buy, sell, and discover
+          exclusive digital items
         </p>
         <div className={style.sideBar_social}>
           <a href="https://twitter.com/PhoenixWeb3Dev">
@@ -120,8 +120,8 @@ const SideBar = ({ setOpenSideMenu }) => {
       </div>
 
       <div className={style.sideBar_button}>
-        <Button btnName="Create" handleClick={() => {}}/>
-        <Button btnName="Connect Wallet" handleClick={() => {}}/>
+        <Button btnName="Create" handleClick={() => {}} />
+        <Button btnName="Connect Wallet" handleClick={() => {}} />
       </div>
     </div>
   );
