@@ -72,8 +72,6 @@ const NavBar = () => {
       setNotification(false)
     } else {
       setOpenSideMenu(false);
-      setProfile(true);
-      setNotification(true)
     }
   };
 
