@@ -1,0 +1,52 @@
+
+.heroSection {
+    width: 90%;
+    margin: 3rem auto;
+}
+.heroSection_box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.heroSection_box_left{
+    padding-right: 5rem;
+}
+
+.heroSection_box_left h1{
+    font-size: 5rem;
+    line-height: 1;
+    margin: 0;
+}
+
+.heroSection_box_left p{
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width:  320px) and (max-width: 425px) {
+    .heroSection{
+        width: 90%;
+        margin: 1rem auto;
+    }
+    .heroSection_box{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem ;
+    }
+
+    .heroSection_box_left{
+        padding-right: 2rem;
+    }
+    .heroSection_box_left h1{
+        line-height: 1;
+        font-size: 2.5rem;
+    }
+}
+@media screen and (min-width:  726px) {
+    .heroSection_box_left h1{
+        font-size: 3rem;
+    }
+    .heroSection_box_left{
+        padding: 0;
+    }
+}

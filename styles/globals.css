@@ -6,6 +6,7 @@
   --icons-bg-color: #e2e6e9;
   --shadow-dark-color: #d3dae7;
   --shadow-light-color: #fff;
+  --gradient-color: linear-gradient(225deg, rgba(27,57,160,1) 0%, rgba(135,40,144,1) 40%, rgba(255,44,137,1) 100%);
   --main-bg-color: #ecf0f3;
 
   --box-shadow: 1rem 1rem 1rem var(--shadow-dark-color),

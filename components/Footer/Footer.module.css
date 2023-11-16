@@ -74,8 +74,17 @@ display: grid;
         width: 90%;
         grid-template-columns: 1fr 2fr;
     }
+
+    .subscribe_box{
+        padding: .9rem .8rem;
+    }
+    .subscribe_box_send{
+        font-size: 1rem;
+    }
+
+
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 375px) {
     .footer_box{
         width: 90%;
         grid-template-columns: 1fr;

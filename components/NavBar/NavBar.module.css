@@ -138,8 +138,13 @@
 
   .navbar_container_left {
     grid-template-columns: 1fr;
+    padding: 0rem 1.8rem;
   }
 
+  .navbar_container_left .logo{
+   display:flex;
+    justify-self: start;
+  }
   .navbar_container_right {
     grid-template-columns: repeat(3, 1fr);
   }
