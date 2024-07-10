@@ -1,0 +1,33 @@
+.service {
+  width: 90%;
+  margin: 3rem auto;
+  margin-block: 8rem;
+}
+.service_box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  text-align: center;
+}
+
+.service_box_item_step {
+margin-block: 1rem;
+}
+
+.service_box_item_step span {
+    padding: .5em 1.5em;
+    background-color: var(--icons-color);
+    color: var(--shadow-dark-color);
+    border-radius: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .service {
+    margin-block: 4rem;
+    display: flex;
+    justify-content: center;
+  }
+  .service_box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
