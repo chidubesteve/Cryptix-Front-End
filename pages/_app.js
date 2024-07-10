@@ -13,6 +13,9 @@ const MyApp = ({ Component, pageProps }) => (
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"  / >
       <meta name="msapplication-TileColor" content="#2b5797" />
       <meta name="theme-color" content="#ffffff" />
+      // set title an description for the site
+      <title>Cryptix &nbsp;&mdash;&nbsp; NFT Marketplace</title>
+      <meta name="description" content="The world's first and largest digital marketplace for crypto collectibles and non-fungible token (NFTs). Buy, sell, and discover exclusive digital items" />
     </Head>
     <NavBar />
     <Component {...pageProps} />
