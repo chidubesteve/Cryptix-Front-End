@@ -21,7 +21,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-size: clamp(.89rem, 1.5vw, 1.3rem); 
   background-color: var(--main-bg-color);
   color: var(--icons-color);
 }
@@ -56,7 +56,7 @@ a {
   width: 0.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -64,4 +64,4 @@ a {
     color: white;
     background: black;
   }
-}
+} */
