@@ -19,6 +19,7 @@ import user6 from "./user-6.png";
 import user7 from "./user-7.png";
 import user8 from "./user-8.png";
 import user9 from "./user-9.png";
+import dashes from "./dashes.png";
 import service1 from "./service-1.png";
 import service2 from "./service-2.png";
 import service3 from "./service-3.png";
@@ -38,6 +39,7 @@ import getAble from "./getable.png";
 import nft_image_1 from "./nft-image-1.png";
 import nft_image_2 from "./nft-image-2.png";
 import nft_image_3 from "./nft-image-3.png";
+import nft_image_4 from "./nft-image-4.png";
 import musicWave from "./musicwave.png";
 import update from "./update.png";
 
@@ -48,6 +50,8 @@ export default {
   nft_image_1,
   nft_image_2,
   nft_image_3,
+  nft_image_4,
+  dashes,
   getAble,
   hero,
   creatorbackground1,
