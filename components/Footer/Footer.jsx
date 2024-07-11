@@ -2,13 +2,13 @@ import Image from "next/image";
 import React from "react";
 
 import {
-  TiSocialFacebook,
   TiSocialInstagram,
   TiSocialLinkedin,
-  TiSocialTwitter,
   TiSocialYoutube,
   TiArrowSortedDown,
 } from "react-icons/ti";
+import { FaXTwitter } from "react-icons/fa6";
+import { TbWorld } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa";
 import { RiSendPlaneFill } from "react-icons/ri";
 import images from "../../images";
@@ -31,7 +31,7 @@ const Footer = () => {
 
           <div className={style.footer_social}>
             <a href="https://twitter.com/PhoenixWeb3Dev">
-              <TiSocialTwitter />
+              <FaXTwitter />
             </a>
             <a href="https://github.com/chidubesteve">
               <FaGithub />
@@ -42,8 +42,8 @@ const Footer = () => {
             <a href="https://instagram.com/phoenixdevhub">
               <TiSocialInstagram />
             </a>
-            <a href="https://facebook.com/Web3Phoenix/">
-              <TiSocialFacebook />
+            <a href="https://direct.me/phoenixtech/">
+              <TbWorld />
             </a>
             <a href="https://youtube.com/@web3phoenix">
               <TiSocialYoutube />
