@@ -8,6 +8,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
   text-align: center;
+  background-image: url(../../images/dashes.png);
 }
 
 .service_box_item_step {
