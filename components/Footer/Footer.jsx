@@ -22,7 +22,7 @@ const Footer = () => {
     <div className={style.footer}>
       <div className={style.footer_box}>
         <div className={style.footer_box_social}>
-          <Image src={images.logo} alt="footer logo" height={100} width={100} />
+          <Image src={images.logo} alt="footer logo" height={125} width={135} />
           <p>
             The world's first and largest digital marketplace for crypto
             collectibles and non-fungible token (NFTs). Buy, sell, and discover
@@ -42,10 +42,10 @@ const Footer = () => {
             <a href="https://instagram.com/phoenixdevhub">
               <TiSocialInstagram />
             </a>
-            <a href="#">
+            <a href="https://facebook.com/Web3Phoenix/">
               <TiSocialFacebook />
             </a>
-            <a href="#">
+            <a href="https://youtube.com/@web3phoenix">
               <TiSocialYoutube />
             </a>
           </div>
