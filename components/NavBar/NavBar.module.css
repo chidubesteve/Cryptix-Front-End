@@ -26,7 +26,8 @@
 }
 
 .navbar_container_left_box_input{
-  width: 80%;
+  width: 75%;
+  justify-self: start;
 }
 .navbar_container_left_box_input_box {
   width: 100%;
@@ -34,8 +35,7 @@
   display: flex;
   align-items: center;
   padding: 0.5rem;
-  border-radius: 2rem;
-
+  border-radius: .8rem;
 }
 
 .navbar_container_left_box_input_box input {
