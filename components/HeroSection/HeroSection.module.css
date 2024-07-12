@@ -23,14 +23,21 @@
 .heroSection_box_left p {
   margin-bottom: 2rem;
 }
+
 .btnsContainer {
   display: flex;
   gap: 2.58rem;
   align-items: center;
   width: fit-content;
 }
+.btn1{
+  padding: 1rem 1.3rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
 .btn {
-  padding: 0.8rem 1.3rem;
+  padding: 1rem 1.3rem;
   background: #fff;
   font-size: 1.25rem;
   justify-content: space-between;

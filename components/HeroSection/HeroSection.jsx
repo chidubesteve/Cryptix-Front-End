@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { LuPencilLine } from 'react-icons/lu';
+import { IoIosSearch } from 'react-icons/io';
 
 // Internal Imports
 import style from './HeroSection.module.css';
@@ -20,9 +21,13 @@ function HeroSection() {
             Discover the most outstanding NFTs in all topics of life. Create
             your NFTs and sell them
           </p>
-          
+
           <div className={style.btnsContainer}>
-            <Button btnName="Explore NFTs" />
+            <Button
+              btnName="Explore"
+              icon={<IoIosSearch size={30} style={{ marginLeft: '.6rem' }} />}
+              className={style.btn1}
+            />
             <Button
               btnName="Create"
               icon={<LuPencilLine size={30} style={{ marginLeft: '.6rem' }} />}
