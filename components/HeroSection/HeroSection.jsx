@@ -1,10 +1,11 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
+import { LuPencilLine } from 'react-icons/lu';
 
 // Internal Imports
-import style from "./HeroSection.module.css";
-import { Button } from "../ComponentIndex";
-import images from "../../images";
+import style from './HeroSection.module.css';
+import { Button } from '../ComponentIndex';
+import images from '../../images';
 
 function HeroSection() {
   return (
@@ -12,20 +13,29 @@ function HeroSection() {
       <div className={style.heroSection_box}>
         <div className={style.heroSection_box_left}>
           <h1>
-            Discover, collect, and sell NFTs
+            Discover,
+            <br /> collect, and sell extraordinary NFTs
           </h1>
           <p>
             Discover the most outstanding NFTs in all topics of life. Create
             your NFTs and sell them
           </p>
-          <Button btnName="Explore NFTs" />
+          
+          <div className={style.btnsContainer}>
+            <Button btnName="Explore NFTs" />
+            <Button
+              btnName="Create"
+              icon={<LuPencilLine size={30} style={{ marginLeft: '.6rem' }} />}
+              className={style.btn}
+            />
+          </div>
         </div>
         <div className={style.heroSection_box_right}>
           <Image
             src={images.hero}
             alt="Hero Section image"
-            width={600}
-            height={600}
+            width={900}
+            height={500}
           />
         </div>
       </div>

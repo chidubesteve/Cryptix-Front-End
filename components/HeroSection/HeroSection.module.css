@@ -1,53 +1,79 @@
-
 .heroSection {
-    width: 90%;
-    margin: 3rem auto;
+  width: 90%;
+  margin: 3rem auto;
 }
+
 .heroSection_box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.heroSection_box_left {
+  padding-right: 4rem;
+}
+
+.heroSection_box_left h1 {
+  font-size: 5rem;
+  white-space: break-space;
+  margin: 0;
+}
+
+.heroSection_box_left p {
+  margin-bottom: 2rem;
+}
+.btnsContainer {
+  display: flex;
+  gap: 2.58rem;
+  align-items: center;
+  width: fit-content;
+}
+.btn {
+  padding: 0.8rem 1.3rem;
+  background: #fff;
+  font-size: 1.25rem;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  color: var(--icons-color);
+  border: 1px solid rgba(128, 128, 128, 0.264);
+}
+.btn:hover {
+  background: #f3f4f6;
+  border: 0.8px solid rgba(128, 128, 128, 0.718);
+  color: var(--icons-color);
+}
+.heroSection_box_right {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .heroSection {
+    width: 90%;
+    margin: 1rem auto;
+  }
+  .heroSection_box {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    align-items: center;
-}
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
 
-.heroSection_box_left{
-    padding-right: 4rem;
-}
-
-.heroSection_box_left h1{
-    font-size: 5rem;
+  .heroSection_box_left {
+    padding-right: 2rem;
+  }
+  .heroSection_box_left h1 {
     line-height: 1;
-    margin: 0;
+    font-size: 2.5rem;
+  }
 }
-
-.heroSection_box_left p{
-    margin-bottom: 2rem;
-}
-
-@media screen and (min-width:  320px) and (max-width: 425px) {
-    .heroSection{
-        width: 90%;
-        margin: 1rem auto;
-    }
-    .heroSection_box{
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 4rem ;
-    }
-
-    .heroSection_box_left{
-        padding-right: 2rem;
-    }
-    .heroSection_box_left h1{
-        line-height: 1;
-        font-size: 2.5rem;
-    }
-}
-@media screen and (min-width:  726px) {
-    .heroSection_box_left h1{
-        font-size: 3rem;
-    }
-    .heroSection_box_left{
-        padding: 0;
-    }
+@media screen and (min-width: 726px) {
+  .heroSection_box_left h1 {
+    font-size: 3rem;
+  }
+  .heroSection_box_left {
+    padding: 0;
+  }
 }
