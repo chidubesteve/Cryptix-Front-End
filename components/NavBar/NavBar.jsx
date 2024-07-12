@@ -1,16 +1,18 @@
-import React, { useState } from "react";
-import Image from "next/image";
+import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 // Import icons
-import { MdNotifications } from "react-icons/md";
-import { BsSearch } from "react-icons/bs";
-import {  CgMenuRight } from "react-icons/cg";
+import { HiOutlineBell } from 'react-icons/hi2';
+import { BsSearch } from 'react-icons/bs';
+import { CgMenuRight } from 'react-icons/cg';
+import { FiSun } from 'react-icons/fi';
+import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 
 // internal imports
-import styles from "./NavBar.module.css";
-import { Discover, HelpCenter, Notification, Profile, SideBar } from "./index";
-import { Button } from "../ComponentIndex";
-import images from "../../images";
+import styles from './NavBar.module.css';
+import { Discover, HelpCenter, Notification, Profile, SideBar } from './index';
+import { Button } from '../ComponentIndex';
+import images from '../../images';
 
 const NavBar = () => {
   // ----USESTATE
@@ -20,14 +22,17 @@ const NavBar = () => {
   const [profile, setProfile] = useState(false);
   const [openSideMenu, setOpenSideMenu] = useState(false);
 
-  const openMenu = (e) => {
-    const btnText = e.target.innerText;
-    if (btnText == "Discover") {
+  const discoverRef = useRef(null);
+  const notificationRef = useRef(null);
+  const helpRef = useRef(null);
+
+  const openMenu = (menu) => {
+    if (menu === 'Discover') {
       setDiscover(true);
       setHelp(false);
       setNotification(false);
       setProfile(false);
-    } else if (btnText == "Help Center") {
+    } else if (menu === 'Help Center') {
       setDiscover(false);
       setHelp(true);
       setNotification(false);
@@ -59,7 +64,6 @@ const NavBar = () => {
       setHelp(false);
       setNotification(false);
       setOpenSideMenu(false);
-
     } else {
       setProfile(false);
     }
@@ -69,11 +73,33 @@ const NavBar = () => {
     if (!openSideMenu) {
       setOpenSideMenu(true);
       setProfile(false);
-      setNotification(false)
+      setNotification(false);
     } else {
       setOpenSideMenu(false);
     }
   };
+
+  // ----USEEFFECT
+  useEffect(() => {
+    const closeOpenMenus = (e) => {
+      if (
+        discoverRef.current &&
+        !discoverRef.current.contains(e.target) &&
+        helpRef.current &&
+        !helpRef.current.contains(e.target) &&
+        notificationRef.current &&
+        !notificationRef.current.contains(e.target)
+      ) {
+        setDiscover(false);
+        setHelp(false);
+        setNotification(false);
+      }
+    };
+    document.addEventListener('click', closeOpenMenus);
+    return () => {
+      document.removeEventListener('click', closeOpenMenus);
+    };
+  }, []);
 
   return (
     <div className={styles.navbar}>
@@ -97,9 +123,18 @@ const NavBar = () => {
 
         {/* END OF LEFT SECTION */}
         <div className={styles.navbar_container_right}>
-          <div className={styles.navbar_container_right_discover}>
+          <div
+            className={styles.navbar_container_right_discover}
+            ref={discoverRef}
+          >
             {/* DISCOVER MENU */}
-            <p onClick={(e) => openMenu(e)}>Discover</p>
+            <p data-menu="Discover" onClick={() => openMenu('Discover')}>
+              Discover &nbsp;
+              <MdOutlineKeyboardArrowDown
+                size={30}
+                style={{ color: 'rgba(128, 128, 128, 0.418)' }}
+              />
+            </p>
             {discover && (
               <div className={styles.navbar_container_right_discover_box}>
                 <Discover />
@@ -107,8 +142,14 @@ const NavBar = () => {
             )}
           </div>
           {/* HELP CENTER */}
-          <div className={styles.navbar_container_right_help}>
-      <p onClick={(e) => openMenu(e)}>Help Center</p>
+          <div className={styles.navbar_container_right_help} ref={helpRef}>
+            <p data-menu="Help Center" onClick={() => openMenu('Help Center')}>
+              Help Center &nbsp;
+              <MdOutlineKeyboardArrowDown
+                size={30}
+                style={{ color: 'rgba(128, 128, 128, 0.418)' }}
+              />
+            </p>
             {help && (
               <div className={styles.navbar_container_right_help_box}>
                 <HelpCenter />
@@ -117,23 +158,31 @@ const NavBar = () => {
           </div>
 
           {/* NOTIFICATION */}
-          <div className={styles.navbar_container_right_notify}>
-            <MdNotifications
+          <div
+            className={styles.navbar_container_right_notify}
+            ref={notificationRef}
+          >
+            <HiOutlineBell
               className={styles.notify}
               onClick={() => openNotification()}
-              size={25}
+              size={35}
             />
             {notification && <Notification />}
           </div>
-
+          <div className={styles.verticalBar}></div>
+          <FiSun size={35} />
           {/* CREATE & CONNECT WALLET BUTTON SECTION */}
           <div className={styles.navbar_container_right_button}>
-            <Button btnName="Create" handleClick={() => {}}/>
-            <Button btnName="Connect Wallet" handleClick={() => {}}/>
+            <Button btnName="Create" handleClick={() => {}} />
+            <Button
+              btnName="Connect Wallet"
+              handleClick={() => {}}
+              className={styles.connectWalletBtn}
+            />
           </div>
 
           {/* USER PROFILE */}
-          <div className={styles.navbar_container_right_profile_box}>
+          {/* <div className={styles.navbar_container_right_profile_box}>
             <div className={styles.navbar_container_right_profile}>
               <Image
                 src={images.user1}
@@ -147,7 +196,7 @@ const NavBar = () => {
 
               {profile && <Profile />}
             </div>
-          </div>
+          </div> */}
 
           {/* MENU BUTTON */}
           <div className={styles.navbar_container_right_menuBtn}>
