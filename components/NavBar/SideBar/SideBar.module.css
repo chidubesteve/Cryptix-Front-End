@@ -1,66 +1,86 @@
 .sideBar_box {
-padding: 1.2rem;
-border-bottom: 1px solid  var(--icons-color);
-background-color: var(--main-bg-color);
-z-index: 33333333;
+  padding: 1.2rem;
+  border-bottom: 1px solid var(--icons-color);
+  width: 100%;
+}
+.sideBarLogoBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline-end: .7rem;
+  margin-bottom: 1.5rem;
 }
 
-.sideBar_closeBtn{
-    position: absolute;
-    top: 3rem;
-    right: 2rem;
-    transition: all .2s ease-in-out;
-    cursor: pointer;
-    box-shadow: var(--box-shadow);
+.sideBar_closeBtn {
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  width: fit-content;
+  font-size: 1.2rem;
 }
 
 .sideBar_closeBtn:hover {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .sideBar_box P {
-    margin-top: -2rem;
+  margin-top: -2rem;
 }
 
 .sideBar_social {
-    display: flex;
-    gap: 1.3rem;
-    align-items: center;
-    font-size:  1.5rem;
+  display: flex;
+  gap: 1.3rem;
+  align-items: center;
+  font-size: 1.5rem;
 }
 
 .sideBar_social a {
-    padding: .2rem;
-    transition: all ease-in .3s;
-    display: grid;
-    border-radius: 50%;
+  padding: 0.2rem;
+  transition: all ease-in 0.3s;
+  display: grid;
+  border-radius: 50%;
 }
-.sideBar_social a:hover{
-    background-color: var(--icons-color);
-    color: var(--shadow-dark-color);
-    box-shadow: 1px solid var(--icons-color)
+.sideBar_social a:hover {
+  background-color: var(--icons-color);
+  color: var(--shadow-dark-color);
+  box-shadow: 1px solid var(--icons-color);
 }
 
-.sideBar_menu{
-    padding: 2rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    border-bottom: 1px solid var(--icons-color);
+.sideBar_menu {
+  padding: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-bottom: 1px solid var(--icons-color);
 }
 
 .sideBar_menu_box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
 
 .sideBar_discover {
-    padding-inline: 1rem;
+  padding-inline: 1rem;
 }
-.sideBar_button{
-    padding: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.createBtn {
+  padding-inline: 0.5rem;
+}
+.sideBar_button {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.connectWalletBtn {
+  padding: 0.8rem 1rem;
+  background: transparent;
+  white-space: nowrap;
+  color: var(--icons-color);
+  border: 1px solid rgba(128, 128, 128, 0.524);
+}
+.connectWalletBtn:hover {
+  background: #f3f4f6;
+  border: 0.8px solid rgba(128, 128, 128, 0.718);
+  color: var(--icons-color);
 }

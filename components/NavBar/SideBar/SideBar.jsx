@@ -1,23 +1,23 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { GrClose } from "react-icons/gr";
+import React, { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { GrClose } from 'react-icons/gr';
 import {
-  TiSocialFacebook,
   TiSocialInstagram,
   TiSocialLinkedin,
   TiSocialTwitter,
   TiSocialYoutube,
   TiArrowSortedDown,
   TiArrowSortedUp,
-} from "react-icons/ti";
-import { FaGithub } from "react-icons/fa";
+} from 'react-icons/ti';
+import { TbWorld } from 'react-icons/tb';
+import { FaGithub } from 'react-icons/fa';
 
 // Internal import
-import style from "./SideBar.module.css";
-import images from "../../../images";
-import Button from "../../Button/Button";
-import { discover, helpCenter } from "../NavMenus";
+import style from './SideBar.module.css';
+import images from '../../../images';
+import Button from '../../Button/Button';
+import { discover, helpCenter } from '../NavMenus';
 
 const SideBar = ({ setOpenSideMenu }) => {
   const [openDiscover, setOpenDiscover] = useState(false);
@@ -42,15 +42,24 @@ const SideBar = ({ setOpenSideMenu }) => {
   const closeSideBar = () => {
     setOpenSideMenu(false);
   };
-  return (
-    <div className={style.sideBar}>
-      <GrClose
-        className={style.sideBar_closeBtn}
-        onClick={() => closeSideBar()}
-      />
 
+
+
+  return (
+    <>
       <div className={style.sideBar_box}>
-        <Image src={images.logo} alt="Cryptix logo" width={150} height={150} />
+        <div className={style.sideBarLogoBox}>
+          <Image
+            src={images.logo}
+            alt="Cryptix logo"
+            width={100}
+            height={100}
+          />
+          <GrClose
+            className={style.sideBar_closeBtn}
+            onClick={() => closeSideBar()}
+          />
+        </div>
         <p>
           The world's first and largest digital marketplace for crypto
           collectibles and non-fungible token (NFTs). Buy, sell, and discover
@@ -66,10 +75,10 @@ const SideBar = ({ setOpenSideMenu }) => {
           <a href="https://www.linkedin.com/in/chidube-anike">
             <TiSocialLinkedin />
           </a>
-          <a href="#">
-            <TiSocialFacebook />
+          <a href="https://direct.me/phoenixtech/">
+            <TbWorld />
           </a>
-          <a href="#">
+          <a href="https://youtube.com/@web3phoenix">
             <TiSocialYoutube />
           </a>
           <a href="https://instagram.com/phoenixdevhub">
@@ -85,7 +94,7 @@ const SideBar = ({ setOpenSideMenu }) => {
             onClick={() => openDiscoverMenu()}
           >
             <p>Discover</p>
-            <TiArrowSortedDown />
+            <TiArrowSortedDown style={{ width: 'fit-content' }} />
           </div>
 
           {openDiscover && (
@@ -105,7 +114,7 @@ const SideBar = ({ setOpenSideMenu }) => {
             onClick={() => openHelpMenu()}
           >
             <p>Help Center</p>
-            <TiArrowSortedDown />
+            <TiArrowSortedDown style={{ width: 'fit-content' }} />
           </div>
           {openHelp && (
             <div className={style.sideBar_discover}>
@@ -120,10 +129,18 @@ const SideBar = ({ setOpenSideMenu }) => {
       </div>
 
       <div className={style.sideBar_button}>
-        <Button btnName="Create" handleClick={() => {}} />
-        <Button btnName="Connect Wallet" handleClick={() => {}} />
+        <Button
+          btnName="Create"
+          handleClick={() => {}}
+          className={style.createBtn}
+        />
+        <Button
+          btnName="Connect Wallet"
+          handleClick={() => {}}
+          className={style.connectWalletBtn}
+        />
       </div>
-    </div>
+    </>
   );
 };
 
