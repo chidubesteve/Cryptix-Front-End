@@ -50,6 +50,7 @@
 .search_icon {
   cursor: pointer;
   font-size: 1.4rem;
+  width: fit-content
 }
 
 /* RIGHT SECTION */
@@ -95,6 +96,7 @@
   box-shadow: var(--box-shadow);
   width: 15rem;
   border-radius: 1rem;
+  border: 1px solid rgba(211, 211, 211, 0.622);
   background-color: var(--main-bg-color);
 }
 
@@ -105,7 +107,7 @@
 }
 
 .notify {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 .verticalBar {
   width: 1px;
@@ -133,6 +135,9 @@
 .navbar_container_right_menuBtn {
   display: none;
 }
+.themeIcon {
+  font-size: 2.18rem;
+}
 
 .menuIcon {
   font-size: 2.5rem;
@@ -144,27 +149,36 @@
 .sideBar {
   position: fixed;
   top: 0;
-  width: 24rem;
+  width: 20rem;
   background-color: var(--main-bg-color);
   box-shadow: var(--box-shadow);
   overflow-y: auto;
-  height: 100vh;
+  height: 100%;
+  z-index: 1111111;
   display: none;
-  z-index: 1111;
 }
 
 .sideBar::-webkit-scrollbar {
   display: none;
 }
 
-@media screen and (min-device-width: 320px) and (max-device-width: 768px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 649px) {
   .navbar_container {
     grid-template-columns: 1fr 1fr;
+  }
+  .themeIcon {
+    font-size: 2rem;
   }
 
   .navbar_container_left {
     grid-template-columns: 1fr;
     padding: 0rem 1.8rem;
+  }
+  .verticalBar {
+    display: none;
+  }
+  .notify {
+    display: none;
   }
 
   .navbar_container_left .logo {
@@ -185,6 +199,46 @@
   }
   .sideBar {
     display: block;
-    width: 20rem;
+  }
+}
+
+@media screen and (min-device-width: 650px) and (max-device-width: 1023px) {
+  .navbar_container_left  {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem
+  }
+}
+
+@media screen and (min-device-width: 650px) and (max-device-width: 1280px) {
+  .navbar_container {
+    grid-template-columns: 1fr 1fr;
+    padding-inline: 3rem;
+  }
+  .navbar_container_left_box_input{
+    width: 100%;
+    justify-self: center;
+  }
+
+  .verticalBar {
+    display: none;
+  }
+  .navbar_container_right {
+    grid-template-columns: repeat(3, 1fr);
+    width: fit-content;
+    justify-self: end;
+    gap: 2rem;
+  }
+
+  .navbar_container_right_menuBtn {
+    display: block;
+  }
+
+  .navbar_container_right_discover,
+  .navbar_container_right_help,
+  .navbar_container_right_button {
+    display: none;
+  }
+  .sideBar {
+    display: block;
   }
 }

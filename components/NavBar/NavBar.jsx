@@ -132,7 +132,10 @@ const NavBar = () => {
               Discover &nbsp;
               <MdOutlineKeyboardArrowDown
                 size={30}
-                style={{ color: 'rgba(128, 128, 128, 0.418)' }}
+                style={{
+                  color: 'rgba(128, 128, 128, 0.418)',
+                  width: 'fit-content',
+                }}
               />
             </p>
             {discover && (
@@ -147,7 +150,10 @@ const NavBar = () => {
               Help Center &nbsp;
               <MdOutlineKeyboardArrowDown
                 size={30}
-                style={{ color: 'rgba(128, 128, 128, 0.418)' }}
+                style={{
+                  color: 'rgba(128, 128, 128, 0.418)',
+                  width: 'fit-content',
+                }}
               />
             </p>
             {help && (
@@ -165,12 +171,11 @@ const NavBar = () => {
             <HiOutlineBell
               className={styles.notify}
               onClick={() => openNotification()}
-              size={35}
             />
             {notification && <Notification />}
           </div>
           <div className={styles.verticalBar}></div>
-          <FiSun size={35} />
+          <FiSun className={styles.themeIcon} />
           {/* CREATE & CONNECT WALLET BUTTON SECTION */}
           <div className={styles.navbar_container_right_button}>
             <Button btnName="Create" handleClick={() => {}} />
