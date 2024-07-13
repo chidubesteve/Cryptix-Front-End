@@ -25,12 +25,12 @@ function HeroSection() {
           <div className={style.btnsContainer}>
             <Button
               btnName="Explore"
-              icon={<IoIosSearch size={30} style={{ marginLeft: '.6rem' }} />}
+              icon={<IoIosSearch className={style.btnIcon} />}
               className={style.btn1}
             />
             <Button
               btnName="Create"
-              icon={<LuPencilLine size={30} style={{ marginLeft: '.6rem' }} />}
+              icon={<LuPencilLine className={style.btnIcon} />}
               className={style.btn}
             />
           </div>
