@@ -5,6 +5,7 @@
     font-size: 1rem;
     width: 25rem;
     border-radius: 1rem;
+    border: 1px solid rgba(211, 211, 211, 0.622);
     left: -20rem;
     top: 3.5rem;
     z-index: 2222222222;
@@ -35,6 +36,7 @@
 
 .notification_box_img {
     border-radius: 5rem;
+    width: fit-content
 }
 
 .notification_box_info {
