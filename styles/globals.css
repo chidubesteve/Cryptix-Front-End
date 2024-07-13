@@ -34,6 +34,7 @@ a {
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: none;
+  width: 100%;
 }
 
 ::selection {
