@@ -31,10 +31,12 @@ margin-block: 1rem;
   }
   .service_box {
     grid-template-columns: repeat(1, 1fr);
+    background-image: none;
   }
 }
 @media screen and (min-width: 650px) and (max-width: 1023px) {
   .service_box {
     grid-template-columns: repeat(2, 1fr);
+    background-image: none;
   }
 }
