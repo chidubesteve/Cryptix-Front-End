@@ -15,6 +15,11 @@
   gap: 1rem;
 }
 
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
 .navbar_container_left {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -124,7 +129,7 @@
 }
 .connectWalletBtn:hover {
   background: #f3f4f6;
-  border: 0.8px solid rgba(128, 128, 128, 0.718);
+  border: 0.8px solid rgba(128, 128, 128, 0.524);
   color: var(--icons-color);
 }
 
