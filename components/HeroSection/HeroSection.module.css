@@ -39,12 +39,12 @@
 }
 .btn {
   padding: 1rem 1.3rem;
-  background: #fff !important;
+  background: #fff;
   font-size: 1.25rem;
   justify-content: space-between;
   display: flex;
   align-items: center;
-  color: var(--icons-color) !important;
+  color: var(--icons-color);
   border: 1px solid rgba(128, 128, 128, 0.264) !important;
 }
 .btn:hover {
