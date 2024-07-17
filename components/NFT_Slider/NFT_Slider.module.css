@@ -20,7 +20,7 @@
   border-radius: 1.5rem;
   align-self: flex-start;
   z-index: 222;
-  max-height: 92vh;
+  height: auto;
   min-height: 92vh;
 }
 .bigNftSlider_box_left h2 {
@@ -49,7 +49,6 @@
 }
 .bigNftSlider_box_left_creator_profile_text p {
   margin: 0;
-  /* padding-top: 0.4rem; */
   font-size: 0.85rem;
 }
 .bigNftSlider_box_left_creator_profile_text span {
@@ -100,7 +99,7 @@
   font-size: 1rem;
   position: absolute;
   color: rgba(128, 128, 128, 0.665);
-  top: -1.25rem;
+  top: -1.5rem;
   width: fit-content;
 }
 
@@ -132,7 +131,7 @@
 .bigNftSlider_box_left_bidding_box_timer {
   display: flex;
   gap: 2.5rem;
-  border-bottom:  2px solid var(--shadow-dark-color);
+  border-bottom: 2px solid var(--shadow-dark-color);
   padding-bottom: 1.4rem;
 }
 
@@ -156,9 +155,9 @@
 .bigNftSlider_box_left_buttons_box {
   display: flex;
   gap: 1.5rem;
-  padding: 1.8rem 0rem;
+  padding: 0.2rem 0rem 0 0;
 }
-.place_bid_btn  {
+.place_bid_btn {
   padding-block: 1.2rem;
 }
 .view_item_btn {
@@ -202,8 +201,7 @@
   gap: 1rem;
   position: absolute;
   padding-inline-start: 3rem;
-  bottom: 10rem;
-  /* left: 0; */
+  bottom: 9.5rem;
 }
 .bigNftSlider_box_left_buttons span {
   border-radius: 50%;
@@ -259,10 +257,175 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 639px) {
   .bigNftSlider_box {
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+  .bigNftSlider_box_left {
+    align-self: center;
+    grid-row: -1;
+    padding: 1rem;
+    min-height: 34.6875rem;
+    height: 39.6875rem;
+    max-height: 39.6875rem;
+    width: 100%;
+    margin-top: -9.5rem;
+  }
+  .bigNftSlider_box_left h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+  }
+  /* creators section */
+  .bigNftSlider_box_left_creator {
+    display: flex;
+    flex-direction: column;
+  }
+  .bigNftSlider_box_left_creator_profile_img {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+  .bigNftSlider_box_left_creator_profile_collection {
+    margin-top: 0.8rem;
+  }
+  .bigNftSlider_box_left_creator_profile_collection_icon {
+    font-size: 3rem;
+    margin-right: 0.8rem;
+  }
+
+  /* Auction timer */
+  .bigNftSlider_box_left_bidding_box_auction {
+    gap: 0.7rem;
+  }
+  .bigNftSlider_box_left_bidding_box_auction_timerIcon {
+    font-size: 2rem;
+  }
+
+  /* Bidding section */
+  .bigNftSlider_box_left_bidding_box {
+    padding: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .bigNftSlider_box_left_bidding_box p span {
+    display: block;
+    font-size: 1.3rem;
+  }
+  .bigNftSlider_box_left_bidding_box p {
+    font-size: 2rem;
+    font-weight: 600;
+    display: block;
+    margin: 0;
+  }
+
+  .bigNftSlider_box_left_bidding_box_timer {
     gap: 1rem;
-    padding-top: 28rem;
+    padding-bottom: 0.7rem;
+    justify-content: space-around;
+  }
+
+  .bigNftSlider_box_left_bidding_box_timer_item p {
+    font-size: 1.7rem;
+  }
+  .bigNftSlider_box_left_bidding_box_timer_item span {
+    font-size: 1.1rem;
+  }
+  /*  buttons */
+  .bigNftSlider_box_left_buttons_box {
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 0;
+  }
+  .place_bid_btn,
+  .view_item_btn {
+    padding-block: 0.9rem;
+  }
+
+  /* navigation arrows */
+  .bigNftSlider_box_left_buttons {
+    bottom: 5.5rem;
+    padding-inline-start: 1.5rem;
+  }
+  .bigNftSlider_box_left_buttons span {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  /* right */
+  .bigNftSlider_box_right {
+    grid-row: 1;
+    justify-content: center;
+    padding: 0;
+    min-height: 8rem;
+    min-width: 90vw;
+  }
+
+  .bigNftSlider_box_right_box_nftImage {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Likes */
+  .bigNftSlider_box_right_box_like {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  /* view */
+  .bigNftSlider_box_right_box_view {
+    left: 1rem;
+    font-size: 1.27rem;
+    padding: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+  .bigNftSlider_box {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+  .bigNftSlider_box_left {
+    align-self: center;
+    grid-row: -1;
+    padding: 1rem;
+    min-height: 34.6875rem;
+    height: 40.6875rem;
+    max-height: 40.6875rem;
+    width: 100%;
+    margin-top: -9.5rem;
+  }
+  .bigNftSlider_box_left_buttons_box {
+    padding: 0;
+  }
+  /* navigation arrows */
+  .bigNftSlider_box_left_buttons {
+    bottom: 5.5rem;
+  }
+
+  /* right */
+  .bigNftSlider_box_right {
+    grid-row: 1;
+    justify-content: center;
+    padding: 0;
+    min-height: 8rem;
+    min-width: 90vw;
+  }
+
+  .bigNftSlider_box_right_box_nftImage {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Likes */
+  .bigNftSlider_box_right_box_like {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  /* view */
+  .bigNftSlider_box_right_box_view {
+    left: 1rem;
+    font-size: 1.27rem;
+    padding: 0.8rem;
   }
 }
