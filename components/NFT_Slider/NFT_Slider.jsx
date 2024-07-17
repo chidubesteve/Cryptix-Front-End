@@ -142,7 +142,7 @@ const NFT_Slider = () => {
     newLikedStatus[idNumber] = !newLikedStatus[idNumber];
     setLikes(newLikes);
     setLikedStatus(newLikedStatus);
-  }, [likedStatus, idNumber]);
+  }, [likedStatus, idNumber, likes]);
 
   return (
     <div className={style.bigNftSlider}>
