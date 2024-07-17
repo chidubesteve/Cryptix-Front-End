@@ -140,7 +140,7 @@ const NavBar = () => {
             </p>
             {discover && (
               <div className={styles.navbar_container_right_discover_box}>
-                <Discover />
+                <Discover setDiscover={setDiscover} />
               </div>
             )}
           </div>
@@ -158,7 +158,7 @@ const NavBar = () => {
             </p>
             {help && (
               <div className={styles.navbar_container_right_help_box}>
-                <HelpCenter />
+                <HelpCenter setHelpCenter={setHelp} />
               </div>
             )}
           </div>
