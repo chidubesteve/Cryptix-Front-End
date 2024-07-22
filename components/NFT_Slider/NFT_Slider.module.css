@@ -39,8 +39,8 @@
 }
 .bigNftSlider_box_left_creator_profile_img {
   border-radius: 50%;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3.15rem;
+  height: 3.15rem;
 }
 .bigNftSlider_box_left_creator_profile_text {
   display: flex;
@@ -67,12 +67,13 @@
 .bigNftSlider_box_left_creator_profile_collection {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  justify-content: center;
+  gap: 1.5rem;
+  /* justify-content: center; */
 }
-.bigNftSlider_box_left_creator_profile_collection_icon {
-  font-size: 4rem;
-  width: fit-content;
+.bigNftSlider_box_left_creator_profile_collection_img {
+  border-radius: 50%;
+  width: 3.15rem;
+  height: 3.15rem;
 }
 .bigNftSlider_box_left_creator_profile_collection_info {
   line-height: 0;
@@ -288,10 +289,10 @@
   .bigNftSlider_box_left_creator_profile_collection {
     margin-top: 0.8rem;
   }
-  .bigNftSlider_box_left_creator_profile_collection_icon {
+  /* .bigNftSlider_box_left_creator_profile_collection_icon {
     font-size: 3rem;
     margin-right: 0.8rem;
-  }
+  } */
 
   /* Auction timer */
   .bigNftSlider_box_left_bidding_box_auction {

@@ -1,6 +1,11 @@
-import React from 'react'
+import React from 'react';
 import style from '../styles/index.module.css';
-import {HeroSection, Service, NFT_Slider} from '../components/ComponentIndex'
+import {
+  HeroSection,
+  Service,
+  NFT_Slider,
+  NewsLetter,
+} from '../components/ComponentIndex';
 
 const Home = () => {
   return (
@@ -8,8 +13,9 @@ const Home = () => {
       <HeroSection />
       <Service />
       <NFT_Slider />
+      <NewsLetter />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
