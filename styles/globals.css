@@ -6,6 +6,14 @@
   --icons-bg-color: #eef0f2;
   --shadow-dark-color: #f6f1f1;
   --shadow-light-color: #fff;
+  --highlight-blue-bg-color: #DBEAFE;
+  --highlight-blue-text-color: #1E40A5;
+  --highlight-red-bg-color: #FCE7F3;
+  --highlight-red-text-color: #9D174D;
+  --highlight-green-bg-color: #ECFDF5;
+  --highlight-green-text-color: #166534;
+  --highlight-yellow-bg-color: #FDF8C2;
+  --highlight-yellow-text-color: #854D0E;
   --gradient-color: linear-gradient(225deg, rgba(27,57,160,1) 0%, rgba(135,40,144,1) 40%, rgba(255,44,137,1) 100%);
   --main-bg-color: #ffffff;
 
