@@ -17,7 +17,7 @@ const Service = () => {
             height={100}
           />
           <p className={style.service_box_item_step}>
-            <span style={{ backgroundColor: '#DBEAFE', color: '#0284C7' }}>Step 1</span>
+            <span style={{ backgroundColor: 'var(--highlight-blue-bg-color)', color: 'var(--highlight-blue-text-color)' }}>Step 1</span>
           </p>
           <h3>Filter & Discover</h3>
           <p>
@@ -32,7 +32,7 @@ const Service = () => {
             height={100}
           />
           <p className={style.service_box_item_step}>
-            <span style={{backgroundColor: '#FCE7F3', color: '#DC2626'}}>Step 2</span>
+            <span style={{backgroundColor: 'var(--highlight-red-bg-color)', color: 'var(--highlight-red-text-color)'}}>Step 2</span>
           </p>
           <h3>Connect Wallet</h3>
           <p>
@@ -48,7 +48,7 @@ const Service = () => {
             height={100}
           />
           <p className={style.service_box_item_step}>
-            <span style={{ backgroundColor: '#ECFDF5', color: '#059669' }}>Step 3</span>
+            <span style={{ backgroundColor: 'var(--highlight-green-bg-color)', color: 'var(--highlight-green-text-color)' }}>Step 3</span>
           </p>
           <h3>Start Trading</h3>
           <p>
@@ -63,7 +63,7 @@ const Service = () => {
             height={100}
           />
           <p className={style.service_box_item_step}>
-            <span style={{ backgroundColor: '#FDF8C2', color: '#EAB308' }}>Step 4</span>
+            <span style={{ backgroundColor: 'var(--highlight-yellow-bg-color)', color: 'var(--highlight-yellow-text-color)' }}>Step 4</span>
           </p>
           <h3>Earn Money</h3>
           <p>
