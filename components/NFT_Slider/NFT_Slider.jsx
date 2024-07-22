@@ -171,11 +171,7 @@ const NFT_Slider = () => {
             <div
               className={style.bigNftSlider_box_left_creator_profile_collection}
             >
-              <AiFillFire
-                className={
-                  style.bigNftSlider_box_left_creator_profile_collection_icon
-                }
-              />
+            <Image src={images.collection} width={30} height={30} alt="collection" className={style.bigNftSlider_box_left_creator_profile_collection_img}/>
               <div
                 className={
                   style.bigNftSlider_box_left_creator_profile_collection_info
