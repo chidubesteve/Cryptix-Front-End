@@ -41,7 +41,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: var(--icons-color);
+  border: 1px solid lightgrey;
+  background-color: transparent;
   border-radius: 5rem;
   margin-top: 2rem;
 }
@@ -55,15 +56,10 @@
   font-size: 1rem;
 }
 
-.subscribe_box input::placeholder {
-  color: var(--shadow-dark-color);
-}
-
 .subscribe_box_send {
   cursor: pointer;
   font-size: 2rem;
   width: fit-content;
-  color: var(--shadow-dark-color);
 }
 
 .subscribe_box_info {
