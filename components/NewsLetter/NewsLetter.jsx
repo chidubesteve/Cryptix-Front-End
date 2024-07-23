@@ -1,6 +1,5 @@
 import React from 'react';
-import { HiArrowRight } from 'react-icons/hi2';
-import Image from 'next/future/image';
+import { FiArrowRight } from "react-icons/fi";import Image from 'next/future/image';
 
 // internal imports
 import style from './NewsLetter.module.css';
@@ -30,7 +29,7 @@ const NewsLetter = () => {
             <div className={style.subscribe_box_left_input}>
               <input type="email" placeholder="Enter your email"></input>
               <button className={style.subscribe_box_left_input_btn}>
-                <HiArrowRight
+                <FiArrowRight
                   className={style.subscribe_box_left_input_arrow_icon}
                 />
               </button>
@@ -41,8 +40,9 @@ const NewsLetter = () => {
           <Image
             src={images.newsletter}
             alt="subscribe to newsLetter"
-            height={500}
-            width={500}
+            height={487}
+            width={648}
+            className={style.subscribe_box_right_image}
           />
         </div>
       </div>
