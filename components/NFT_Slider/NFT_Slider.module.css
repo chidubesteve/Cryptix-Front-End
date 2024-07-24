@@ -99,7 +99,7 @@
   padding: 0.5rem;
   font-size: 1rem;
   position: absolute;
-  color: rgba(128, 128, 128, 0.665);
+  color: var(--minor-text-color);
   top: -1.5rem;
   width: fit-content;
 }
@@ -113,12 +113,12 @@
 .bigNftSlider_box_left_bidding_box p span {
   font-size: 1.5rem;
   font-weight: normal;
-  color: rgba(128, 128, 128, 0.665);
+  color: var(--minor-text-color);
 }
 /* Auction timer */
 .bigNftSlider_box_left_bidding_box_auction {
   display: flex;
-  color: rgba(128, 128, 128, 0.665);
+  color: var(--minor-text-color);
   align-items: flex-end;
   font-size: 1.2rem;
   gap: 1rem;
@@ -148,7 +148,7 @@
   margin: 0;
 }
 .bigNftSlider_box_left_bidding_box_timer_item span {
-  color: rgba(128, 128, 128, 0.665);
+  color: var(--minor-text-color);
   font-size: 1.3rem;
   text-align: center;
 }

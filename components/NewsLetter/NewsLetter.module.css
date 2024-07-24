@@ -22,7 +22,7 @@
 
 .subscribe_box_left_text {
   font-size: 1.25rem;
-  color: #6b7280;
+  color: var(--minor-text-color);
 }
 .subscribe_box_left_list {
   display: flex;
@@ -93,6 +93,7 @@
   width: 100%;
 }
 @media screen and (max-width: 500px) {
+
   .subscribe_box_left_input {
     width: 100%;
   }

@@ -1,0 +1,27 @@
+.title {
+    width: 100%;
+}
+.title_box {
+    width: 90%;
+    margin: 0 auto;
+}
+.title_box h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 0;
+}
+.title_box p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    color: var(--minor-text-color);
+}
+
+@media screen and (max-width: 800px) {
+    .title_box h2 {
+        font-size: 2rem;
+    }
+    .title_box p {
+        font-size: 1.2rem;
+    }
+}
