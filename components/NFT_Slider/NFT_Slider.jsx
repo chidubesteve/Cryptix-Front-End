@@ -1,15 +1,14 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import Image from 'next/future/image';
-import { AiFillFire, AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
+import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import { BsCameraVideo } from 'react-icons/bs';
 import { MdVerified } from 'react-icons/md';
 import { LuTimer } from 'react-icons/lu';
-import { HiArrowLeft, HiArrowRight } from 'react-icons/hi2';
 
 //internal imports
 import style from './NFT_Slider.module.css';
 import images from '../../images';
-import { Button } from '../ComponentIndex';
+import { Button, NavigationArrows } from '../ComponentIndex';
 
 const NFTSliderData = [
   {
@@ -171,7 +170,15 @@ const NFT_Slider = () => {
             <div
               className={style.bigNftSlider_box_left_creator_profile_collection}
             >
-            <Image src={images.collection} width={30} height={30} alt="collection" className={style.bigNftSlider_box_left_creator_profile_collection_img}/>
+              <Image
+                src={images.collection}
+                width={30}
+                height={30}
+                alt="collection"
+                className={
+                  style.bigNftSlider_box_left_creator_profile_collection_img
+                }
+              />
               <div
                 className={
                   style.bigNftSlider_box_left_creator_profile_collection_info
@@ -194,7 +201,7 @@ const NFT_Slider = () => {
               <LuTimer
                 className={
                   style.bigNftSlider_box_left_bidding_box_auction_timerIcon
-                }     
+                }
               />
               <span>Auction ending in:</span>
             </p>
@@ -243,27 +250,16 @@ const NFT_Slider = () => {
           </div>
         </div>
         {/* navigation arrows */}
-        <div className={style.bigNftSlider_box_left_buttons}>
-          <span>
-            <HiArrowLeft
-              className={style.bigNftSlider_box_left_buttons_prevIcon}
-              onClick={handlePrev}
-            />
-          </span>
-          <span>
-            <HiArrowRight
-              className={style.bigNftSlider_box_left_buttons_nextIcon}
-              onClick={handleNext}
-            />
-          </span>
-        </div>
+        <NavigationArrows handleNext={handleNext} handlePrev={handlePrev} className={style.navArrowsStyle}/>
 
         <div className={style.bigNftSlider_box_right}>
           <div className={style.bigNftSlider_box_right_box}>
             <Image
               src={NFTSliderData[idNumber].nftImage}
-              alt={`${NFTSliderData[idNumber].title} nft image}`}
+              alt={`${NFTSliderData[idNumber].title} nft image}`
+              }
               className={style.bigNftSlider_box_right_box_nftImage}
+              placeholder="blur"
             />
 
             <div className={style.bigNftSlider_box_right_box_like}>
