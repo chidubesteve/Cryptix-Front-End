@@ -38,9 +38,11 @@ function HeroSection() {
         <div className={style.heroSection_box_right}>
           <Image
             src={images.hero}
-            alt="Hero Section image"
+            alt="Three column nfts"
             width={900}
             height={500}
+            style={{width: 'auto', height: 'auto'}}
+            placeholder="blur"
           />
         </div>
       </div>
