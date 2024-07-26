@@ -42,6 +42,7 @@ const NewsLetter = () => {
             alt="subscribe to newsLetter"
             height={487}
             width={648}
+            placeholder="blur"
             className={style.subscribe_box_right_image}
           />
         </div>
