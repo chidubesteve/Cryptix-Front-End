@@ -10,6 +10,12 @@ import creatorbackground8 from "./creatorbackground-8.jpg";
 import creatorbackground9 from "./creatorbackground-9.jpg";
 import creatorbackground10 from "./creatorbackground-10.jpg";
 import creatorbackground11 from "./creatorbackground-11.jpg";
+import category1 from "./category-1.png"
+import category2 from "./category-2.png"
+import category3 from "./category-3.png"
+import category4 from "./category-4.png"
+import category5 from "./category-5.png"
+import category6 from "./category-6.png"
 import user1 from "./user-1.png";
 import user2 from "./user-2.png";
 import user3 from "./user-3.png";
@@ -58,6 +64,12 @@ export default {
   getAble,
   newsletter,
   hero,
+  category1,
+  category2,
+  category3,
+  category4,
+  category5,
+  category6,
   creatorbackground1,
   creatorbackground2,
   creatorbackground3,
