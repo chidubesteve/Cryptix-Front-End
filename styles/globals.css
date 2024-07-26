@@ -33,6 +33,7 @@ body {
   font-size: clamp(.89rem, 1vw, 1.3rem); 
   background-color: var(--main-bg-color);
   color: var(--icons-color);
+  scroll-behavior: smooth;
 }
 
 a {
