@@ -1,0 +1,22 @@
+/* navigation arrows */
+.navigation_arrows_box {
+    display: flex;
+    width: auto;
+    gap: 1rem;
+  }
+  .navigation_arrows_box span {
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navigation_arrows_box span:hover {
+    border: 3px solid lightgray;
+  }
+  .navigation_arrows_box_arrow_left,
+  .navigation_arrows_box_arrow_right {
+    font-size: 1.5rem;
+    color: gray;
+  }
