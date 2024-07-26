@@ -6,4 +6,6 @@ import Service from './Service/Service';
 import NFT_Slider from './NFT_Slider/NFT_Slider';
 import NewsLetter from './NewsLetter/NewsLetter';
 import Title from './Title/Title';
-export { Button, Footer, NavBar, HeroSection, Service, NFT_Slider, NewsLetter, Title };
+import NavigationArrows from './NavigationArrows/NavigationArrows';
+import Category from './Category/Category';
+export { Button, Footer, NavBar, HeroSection, Service, NFT_Slider, NewsLetter, Title, NavigationArrows, Category };
