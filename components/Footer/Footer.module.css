@@ -20,6 +20,7 @@
   gap: 1rem;
   width: fit-content;
   font-size: 1.5rem;
+  align-self: center;
 }
 
 .footer_social a {
@@ -30,8 +31,8 @@
 }
 
 .footer_social a:hover {
-  background-color: var(--icons-color);
-  color: var(--shadow-dark-color);
+  background-color: var(--icons-bg-color);
+  color: var(--icons-color);
   box-shadow: var(--box-shadow);
 }
 

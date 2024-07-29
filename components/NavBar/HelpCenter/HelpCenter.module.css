@@ -4,7 +4,7 @@
 }
 
 .helpCenter:hover{
-background-color: var(--icons-color);
-color: var(--shadow-dark-color);
+background-color: var(--icons-bg-color);
+color: var(--icons-color);
 border-radius: .3rem;
 }
