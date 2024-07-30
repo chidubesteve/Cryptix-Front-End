@@ -5,7 +5,8 @@ import {
   Service,
   NFT_Slider,
   NewsLetter,
-  Category
+  Category,
+  Filter
 } from '../components/ComponentIndex';
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
       <HeroSection />
       <Service />
       <NFT_Slider />
+      <Filter />
       <Category />
       <NewsLetter />
     </div>

@@ -8,4 +8,5 @@ import NewsLetter from './NewsLetter/NewsLetter';
 import Title from './Title/Title';
 import NavigationArrows from './NavigationArrows/NavigationArrows';
 import Category from './Category/Category';
-export { Button, Footer, NavBar, HeroSection, Service, NFT_Slider, NewsLetter, Title, NavigationArrows, Category };
+import Filter from './Filter/Filter';
+export { Button, Footer, NavBar, HeroSection, Service, NFT_Slider, NewsLetter, Title, NavigationArrows, Category, Filter };
