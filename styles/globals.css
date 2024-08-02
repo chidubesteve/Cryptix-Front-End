@@ -66,7 +66,10 @@ a {
   background: var(--icons-color);
   width: 0.5rem;
 }
-
+button:active, button:focus {
+  outline: 2px solid #95298f; /* Adds a border-like effect, and doesn't affect the box model */
+  outline-offset: 2px; /* Creates space between the outline and the element */
+}
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
