@@ -8,8 +8,7 @@ import {
   IoCloseCircle,
 } from 'react-icons/io5';
 import { BsWallet2 } from "react-icons/bs";
-import { LuMusic } from 'react-icons/lu';
-import { TiTick } from 'react-icons/ti';
+import { BiSort } from "react-icons/bi";import { TiTick } from 'react-icons/ti';
 
 //internal imports
 import style from './Filter.module.css';
@@ -71,21 +70,21 @@ const Filter = () => {
           <button onclick={() => {}}>Photography</button>
         </div>
         <div className={style.filter_box_right}>
-          <div className={style.filter_box_right_box} onClick={openFilter}>
+          <button className={style.filter_box_right_box} onClick={openFilter}>
             <TbFilterSearch className={style.filter_box_right_box_icon} />
             <span>Filter</span> &nbsp;
             {filter ? <FaAngleDown /> : <FaAngleUp />}
-          </div>
+          </button>
         </div>
       </div>
       {filter && (
         <div className={style.filter_box_items}>
-          <div className={style.filter_box_items_box}>
+          <button className={style.filter_box_items_box}>
             <div className={style.filter_box_items_box_item}>
               <BsWallet2 /> <span>0.1 ETH - 10 ETH</span>
               <IoCloseCircle />
             </div>
-          </div>
+          </button>
 
           <div className={style.filter_box_items_box}>
             <div
@@ -112,7 +111,7 @@ const Filter = () => {
               className={style.filter_box_items_box_item_transaction}
               onClick={openMusic}
             >
-              <LuMusic /> <span>Music</span>{' '}
+              <BiSort /> <span>Sort order</span>{' '}
               {music ? <IoCloseCircle /> : <TiTick />}
             </div>
           </div>
