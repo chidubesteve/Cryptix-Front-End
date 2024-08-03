@@ -1,0 +1,23 @@
+.like_box {
+    background-color: rgba(51, 51, 51, 0.508);
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border-radius: 1.5rem;
+    padding: 0.5rem 0.9rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  .like_icon{
+    font-size: 1.5rem;
+    margin-right: 0.6rem;
+  }
+  @media screen and (max-width: 1023px) {
+    .like_box {
+      top: 1rem;
+      right: 1rem;
+    }
+  }

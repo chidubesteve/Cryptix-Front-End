@@ -200,25 +200,6 @@
   margin-inline-start: 3rem;
 }
 
-/* likes */
-.bigNftSlider_box_right_box_like {
-  background-color: rgba(51, 51, 51, 0.508);
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  border-radius: 1.5rem;
-  padding: 0.5rem 0.9rem;
-  color: #fff;
-  cursor: pointer;
-}
-.bigNftSlider_box_right_box_like_icon {
-  font-size: 1.5rem;
-  margin-right: 0.6rem;
-}
-
 /* view icon */
 .bigNftSlider_box_right_box_view {
   background-color: rgba(51, 51, 51, 0.508);
@@ -336,12 +317,6 @@
     height: auto;
   }
 
-  /* Likes */
-  .bigNftSlider_box_right_box_like {
-    top: 1rem;
-    right: 1rem;
-  }
-
   /* view */
   .bigNftSlider_box_right_box_view {
     left: 1rem;
@@ -386,13 +361,6 @@
     width: 100%;
     height: auto;
   }
-
-  /* Likes */
-  .bigNftSlider_box_right_box_like {
-    top: 1rem;
-    right: 1rem;
-  }
-
   /* view */
   .bigNftSlider_box_right_box_view {
     left: 1rem;

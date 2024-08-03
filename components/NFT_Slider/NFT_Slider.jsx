@@ -1,6 +1,5 @@
 import React, { useState, useCallback } from 'react';
 import Image from 'next/future/image';
-import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import { BsCameraVideo } from 'react-icons/bs';
 import { MdVerified } from 'react-icons/md';
 import { LuTimer } from 'react-icons/lu';
@@ -8,7 +7,7 @@ import { LuTimer } from 'react-icons/lu';
 //internal imports
 import style from './NFT_Slider.module.css';
 import images from '../../images';
-import { Button, NavigationArrows } from '../ComponentIndex';
+import { Button, NavigationArrows, Like } from '../ComponentIndex';
 
 const NFTSliderData = [
   {
@@ -262,21 +261,7 @@ const NFT_Slider = () => {
               placeholder="blur"
             />
 
-            <div className={style.bigNftSlider_box_right_box_like}>
-              {likedStatus[idNumber] ? (
-                <AiFillHeart
-                  className={style.bigNftSlider_box_right_box_like_icon}
-                  fill="red"
-                  onClick={handleLike}
-                />
-              ) : (
-                <AiOutlineHeart
-                  className={style.bigNftSlider_box_right_box_like_icon}
-                  onClick={handleLike}
-                />
-              )}
-              <span>{likes[idNumber]}</span>
-            </div>
+           <Like isLiked={likedStatus[idNumber]} noOfLikes={likes[idNumber]} handleClick={handleLike}/>
             <div className={style.bigNftSlider_box_right_box_view}>
               <BsCameraVideo
                 className={style.bigNftSlider_box_right_box_view_icon}

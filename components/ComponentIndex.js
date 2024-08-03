@@ -9,4 +9,6 @@ import Title from './Title/Title';
 import NavigationArrows from './NavigationArrows/NavigationArrows';
 import Category from './Category/Category';
 import Filter from './Filter/Filter';
-export { Button, Footer, NavBar, HeroSection, Service, NFT_Slider, NewsLetter, Title, NavigationArrows, Category, Filter };
+import Dropdown from './Dropdown/Dropdown';
+import Like from './Like/Like';
+export { Button, Footer, NavBar, HeroSection, Service, NFT_Slider, NewsLetter, Title, NavigationArrows, Category, Filter, Dropdown, Like };
