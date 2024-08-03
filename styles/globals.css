@@ -17,7 +17,10 @@
   --highlight-yellow-text-color: #854D0E;
   --gradient-color: linear-gradient(225deg, rgba(27,57,160,1) 0%, rgba(135,40,144,1) 40%, rgba(255,44,137,1) 100%);
   --main-bg-color: #ffffff;
-
+  --highlight-pink-bg-color: #FEF2F8;
+  --highlight-pink-text-color: #DB2777;
+ --highlight-purple-bg-color: #F5F3FF;
+ --highlight-purple-text-color: #7C3AED;
   --box-shadow: 1rem 1rem 1rem var(--shadow-dark-color),
     -1rem -1rem 1rem var(--shadow-light-color);
 
