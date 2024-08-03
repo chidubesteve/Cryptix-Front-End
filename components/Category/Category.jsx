@@ -21,7 +21,7 @@ const Category = () => {
 
   const getItemWidth = () => {
     if (categoryRef.current) {
-      return categoryRef.current.clientWidth
+      return categoryRef.current.clientWidth + 20;
     }
     return 0;
   };
@@ -45,7 +45,7 @@ const Category = () => {
         });
       }
     }
-  }, []);
+  }, [getItemWidth, categoryContainerRef.current?.clientWidth, categoryContainerRef.current?.scrollWidth]);
 
   const handlePrev = useCallback(() => {
     if (categoryContainerRef.current) {
@@ -66,7 +66,7 @@ const Category = () => {
         });
       }
     }
-  }, []);
+  }, [getItemWidth, categoryContainerRef.current?.clientWidth, categoryContainerRef.current?.scrollWidth]);
 
   return (
     <div className={style.category}>
