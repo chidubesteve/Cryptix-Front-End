@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import { TbFilterSearch } from 'react-icons/tb';
-import { MdOutlineVideoLibrary } from 'react-icons/md';
 import { FaAngleDown, FaAngleUp, FaRegUser } from 'react-icons/fa6';
 import { MdVerified } from 'react-icons/md';
-import {
-  IoImagesOutline,
-  IoCloseCircle,
-} from 'react-icons/io5';
-import { BsWallet2 } from "react-icons/bs";
-import { BiSort } from "react-icons/bi";import { TiTick } from 'react-icons/ti';
+import { IoImagesOutline, IoCloseCircle } from 'react-icons/io5';
+import { BsWallet2 } from 'react-icons/bs';
+import { LuFiles } from 'react-icons/lu';
+import { BiSort } from 'react-icons/bi';
+import { TiTick } from 'react-icons/ti';
 
 //internal imports
 import style from './Filter.module.css';
 import { Title } from '../ComponentIndex';
+import { Dropdown } from '../ComponentIndex';
 const Filter = () => {
   const [filter, setFilter] = useState(true);
   const [image, setImage] = useState(true);
   const [video, setVideo] = useState(true);
   const [music, setMusic] = useState(true);
+  const [openDropDown, setOpenDropDown] = useState(false);
+  const [activeButton, setActiveButton] = useState('');
 
   //functions
   const openFilter = () => {
@@ -52,6 +53,22 @@ const Filter = () => {
     }
   };
 
+  const handleButtonClick = (buttonName) => {
+    setActiveButton(buttonName);
+  };
+
+  //arrays
+  const fileTypeArrayNames = ['Image', 'Video', 'Music'];
+
+  const salesTypeArrayNames = ['Buy Now', 'On Auction', 'New', 'Has Offers'];
+
+  const sortOrderArrayNames = [
+    'Price: Low - High',
+    'Price: High - Low',
+    'Newest',
+    'Oldest',
+    'Most favourited',
+  ];
   return (
     <div className={style.filter}>
       <div className={style.filter_box_title}>
@@ -63,11 +80,20 @@ const Filter = () => {
       </div>
       <div className={style.filter_box}>
         <div className={style.filter_box_left}>
-          <button onclick={() => {}}>All NFTs</button>
-          <button onclick={() => {}}>Arts</button>
-          <button onclick={() => {}}>Music</button>
-          <button onclick={() => {}}>Sports</button>
-          <button onclick={() => {}}>Photography</button>
+          {['All NFTs', 'Arts', 'Music', 'Sports', 'Photography'].map(
+            (name) => (
+              <button
+                key={name}
+                className={activeButton === name ? style.activeButton : ''}
+                onClick={() => {
+                  handleButtonClick(name);
+                  console.log('clicked');
+                }}
+              >
+                {name}{' '}
+              </button>
+            )
+          )}
         </div>
         <div className={style.filter_box_right}>
           <button className={style.filter_box_right_box} onClick={openFilter}>
@@ -101,9 +127,10 @@ const Filter = () => {
               className={style.filter_box_items_box_item_transaction}
               onClick={openVideo}
             >
-              <MdOutlineVideoLibrary /> <span>Videos</span>{' '}
+              <LuFiles /> <span>File types</span>{' '}
               {video ? <IoCloseCircle /> : <TiTick />}
             </div>
+            <Dropdown inputType={'checkbox'} children={fileTypeArrayNames} />
           </div>
 
           <div className={style.filter_box_items_box}>
@@ -114,6 +141,7 @@ const Filter = () => {
               <BiSort /> <span>Sort order</span>{' '}
               {music ? <IoCloseCircle /> : <TiTick />}
             </div>
+            <Dropdown inputType={'radio'} children={sortOrderArrayNames} />
           </div>
 
           <div className={style.filter_box_items_box}>
