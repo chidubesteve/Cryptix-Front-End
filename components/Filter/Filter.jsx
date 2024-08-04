@@ -105,17 +105,17 @@ const Filter = () => {
       </div>
       {filter && (
         <div className={style.filter_box_items}>
-          <button className={style.filter_box_items_box}>
-            <div className={style.filter_box_items_box_item}>
+          <div className={style.filter_box_items_box}>
+            <div className={style.filter_box_items_box_item} tabIndex={0}>
               <BsWallet2 /> <span>0.1 ETH - 10 ETH</span>
               <IoCloseCircle />
             </div>
-          </button>
+          </div>
 
           <div className={style.filter_box_items_box}>
             <div
               className={style.filter_box_items_box_item_transaction}
-              onClick={openImage}
+              onClick={openImage} tabIndex={0}
             >
               <IoImagesOutline /> <span>Images</span>{' '}
               {image ? <IoCloseCircle /> : <TiTick />}
@@ -125,7 +125,7 @@ const Filter = () => {
           <div className={style.filter_box_items_box}>
             <div
               className={style.filter_box_items_box_item_transaction}
-              onClick={openVideo}
+              onClick={openVideo} tabIndex={0}
             >
               <LuFiles /> <span>File types</span>{' '}
               {video ? <IoCloseCircle /> : <TiTick />}
@@ -136,7 +136,7 @@ const Filter = () => {
           <div className={style.filter_box_items_box}>
             <div
               className={style.filter_box_items_box_item_transaction}
-              onClick={openMusic}
+              onClick={openMusic} tabIndex={0}
             >
               <BiSort /> <span>Sort order</span>{' '}
               {music ? <IoCloseCircle /> : <TiTick />}
@@ -145,8 +145,8 @@ const Filter = () => {
           </div>
 
           <div className={style.filter_box_items_box}>
-            <div className={style.filter_box_items_box_item}>
-              <FaRegUser /> <span>Verified Creators</span>
+            <div className={style.filter_box_items_box_item} tabIndex={0}>
+              <FaRegUser /> <span>Verified creators</span>
               <MdVerified />
             </div>
           </div>
