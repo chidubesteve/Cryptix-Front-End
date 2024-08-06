@@ -1,0 +1,83 @@
+.dropdown_box {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+  width: 30rem;
+  align-self: flex-start;
+  gap: 1rem;
+  position: absolute;
+  top: 3.5rem;
+  z-index: 9999;
+}
+.dropdown_box_input_box {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.dropdown_box_input_box input[type='checkbox'],
+.dropdown_box_input_box input[type='radio'] {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  border: 1px solid gray;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.dropdown_box_input_box input[type='checkbox'] {
+  border-radius: 0.25rem;
+}
+
+.dropdown_box_input_box input[type='checkbox']:checked,
+.dropdown_box_input_box input[type='radio']:checked {
+  background-color: var(--highlight-pink-text-color);
+  border: none;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% 100%;
+  border-color: transparent;
+}
+
+.dropdown_box_input_box input[type='checkbox']:checked {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L6.5 9.086l4.293-4.293a1 1 0 0 1 1.414 0z'/%3E%3C/svg%3E");
+}
+
+.dropdown_box_input_box input[type='radio'] {
+  border-radius: 50%;
+  margin: 0;
+}
+.dropdown_box_input_box label {
+  margin-left: 1rem !important;
+}
+.dropdown_box_input_box input[type='radio']:checked {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='3'/%3E%3C/svg%3E");
+}
+
+.dropdown_box_input_box input[type='checkbox']:active,
+.dropdown_box_input_box input[type='radio']:active,
+.dropdown_box_input_box input[type='radio']:focus,
+.dropdown_box_input_box input[type='checkbox']:focus {
+  outline-offset: 2px;
+  outline: var(--highlight-pink-text-color) solid 2px;
+}
+
+.dropdown_box_buttons_box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.clear_btn {
+  background: transparent;
+  color: var(--icons-color);
+  border: 1px solid rgba(128, 128, 128, 0.264);
+}
+.apply_btn,
+.clear_btn {
+  padding: 0.8rem 1.7rem;
+  width: fit-content;
+}
