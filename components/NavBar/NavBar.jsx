@@ -13,6 +13,7 @@ import styles from './NavBar.module.css';
 import { Discover, HelpCenter, Notification, Profile, SideBar } from './index';
 import { Button } from '../ComponentIndex';
 import images from '../../images';
+import useCloseOnOutsideClick from '../../utils/useCloseOnOutsideClick';
 
 const NavBar = () => {
   // ----USESTATE
@@ -79,27 +80,10 @@ const NavBar = () => {
     }
   };
 
-  // ----USEEFFECT
-  useEffect(() => {
-    const closeOpenMenus = (e) => {
-      if (
-        discoverRef.current &&
-        !discoverRef.current.contains(e.target) &&
-        helpRef.current &&
-        !helpRef.current.contains(e.target) &&
-        notificationRef.current &&
-        !notificationRef.current.contains(e.target)
-      ) {
-        setDiscover(false);
-        setHelp(false);
-        setNotification(false);
-      }
-    };
-    document.addEventListener('click', closeOpenMenus);
-    return () => {
-      document.removeEventListener('click', closeOpenMenus);
-    };
-  }, []);
+  useCloseOnOutsideClick(
+    [discoverRef, notificationRef, helpRef],
+    [setDiscover, setNotification, setHelp]
+  );
 
   return (
     <div className={styles.navbar}>
