@@ -1,24 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { TbFilterSearch } from 'react-icons/tb';
 import { FaAngleDown, FaAngleUp, FaRegUser } from 'react-icons/fa6';
-import { MdVerified } from 'react-icons/md';
+import { MdVerified, MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { IoImagesOutline, IoCloseCircle } from 'react-icons/io5';
 import { BsWallet2 } from 'react-icons/bs';
 import { LuFiles } from 'react-icons/lu';
 import { BiSort } from 'react-icons/bi';
-import { TiTick } from 'react-icons/ti';
 
 //internal imports
 import style from './Filter.module.css';
 import { Title } from '../ComponentIndex';
 import { Dropdown } from '../ComponentIndex';
+import { handleSelection } from '../../utils/handleDropDownCheckBoxesSelection';
 const Filter = () => {
   const [filter, setFilter] = useState(true);
-  const [image, setImage] = useState(true);
-  const [video, setVideo] = useState(true);
-  const [music, setMusic] = useState(true);
-  const [openDropDown, setOpenDropDown] = useState(false);
+  const [salesTypesDropDown, setSalesTypesDropDown] = useState(false);
+  const [openSortOrderDropDown, setOpenSetOrderDropDown] = useState(false);
+  const [openFileTypesDropDown, setOpenFileTypesDropDown] = useState(false);
+  const [selectedSortOrder, setSelectedSortOrder] = useState('Sort order');
   const [activeButton, setActiveButton] = useState('');
+  const [sortOrderChoices, setSortOrderChoices] = useState(false);
+  const [fileTypesSelected, setFileTypesSelected] = useState([]);
+  const [salesTypesSelected, setSalesTypesSelected] = useState([]);
+  const [isVerifiedFilterRemoved, setIsVerifiedFilterRemoved] = useState(false);
 
   //functions
   const openFilter = () => {
@@ -29,27 +33,56 @@ const Filter = () => {
     }
   };
 
-  const openImage = () => {
-    if (!image) {
-      setImage(true);
+  const handleSalesTypesSelection = (isChecked, value) => {
+    handleSelection(isChecked, value, setSalesTypesSelected);
+  };
+  const handleFilterTypesSelection = (isChecked, value) => {
+    handleSelection(isChecked, value, setFileTypesSelected);
+  };
+
+  const handleSortOrderChange = (value) => {
+    setSelectedSortOrder(value || 'Sort order');
+    setSortOrderChoices(true);
+  };
+
+  const handleClearSortOrderSelection = () => {
+    setSelectedSortOrder('Sort order');
+    setSortOrderChoices(false);
+  };
+
+  const handleClearFileTypesSelection = () => {
+    setFileTypesSelected([]);
+  };
+
+  const handleClearSalesTypesSelection = () => {
+    setSalesTypesSelected([]);
+  };
+  const openSalesTypes = () => {
+    if (!salesTypesDropDown) {
+      setSalesTypesDropDown(true);
+      setOpenFileTypesDropDown(false);
+      setOpenSetOrderDropDown(false);
     } else {
-      setImage(false);
+      setSalesTypesDropDown(false);
+    }
+  };
+  const openFileTypes = () => {
+    if (!openFileTypesDropDown) {
+      setOpenFileTypesDropDown(true);
+      setOpenSetOrderDropDown(false);
+      setSalesTypesDropDown(false);
+    } else {
+      setOpenFileTypesDropDown(false);
     }
   };
 
-  const openVideo = () => {
-    if (!video) {
-      setVideo(true);
+  const openSortOrder = () => {
+    if (!openSortOrderDropDown) {
+      setOpenSetOrderDropDown(true);
+      setOpenFileTypesDropDown(false);
+      setSalesTypesDropDown(false);
     } else {
-      setVideo(false);
-    }
-  };
-
-  const openMusic = () => {
-    if (!music) {
-      setMusic(true);
-    } else {
-      setMusic(false);
+      setOpenSetOrderDropDown(false);
     }
   };
 
@@ -87,7 +120,6 @@ const Filter = () => {
                 className={activeButton === name ? style.activeButton : ''}
                 onClick={() => {
                   handleButtonClick(name);
-                  console.log('clicked');
                 }}
               >
                 {name}{' '}
@@ -114,38 +146,113 @@ const Filter = () => {
 
           <div className={style.filter_box_items_box}>
             <div
-              className={style.filter_box_items_box_item_transaction}
-              onClick={openImage} tabIndex={0}
+              className={`${
+                style.filter_box_items_box_item_transaction
+              }              ${
+                salesTypesSelected.length > 0 &&
+                style.filter_box_item_box_applied_filter
+              }`}
+              onClick={openSalesTypes}
+              tabIndex={0}
             >
-              <IoImagesOutline /> <span>Images</span>{' '}
-              {image ? <IoCloseCircle /> : <TiTick />}
+              <IoImagesOutline /> <span>Sales types</span>{' '}
+              {salesTypesDropDown ? (
+                <IoCloseCircle
+                  onClick={() => handleClearSalesTypesSelection()}
+                />
+              ) : (
+                <MdOutlineKeyboardArrowDown />
+              )}
             </div>
+            {salesTypesDropDown && (
+              <Dropdown
+                inputType={'checkbox'}
+                children={salesTypeArrayNames}
+                openDropDown={setSalesTypesDropDown}
+                handleChoice={handleSalesTypesSelection}
+                handleClearSelection={handleClearSalesTypesSelection}
+                selectedItems={salesTypesSelected}
+              />
+            )}
           </div>
 
           <div className={style.filter_box_items_box}>
             <div
-              className={style.filter_box_items_box_item_transaction}
-              onClick={openVideo} tabIndex={0}
+              className={`${
+                style.filter_box_items_box_item_transaction
+              }              ${
+                fileTypesSelected.length > 0
+                  ? style.filter_box_item_box_applied_filter
+                  : ''
+              }`}
+              onClick={openFileTypes}
+              tabIndex={0}
             >
               <LuFiles /> <span>File types</span>{' '}
-              {video ? <IoCloseCircle /> : <TiTick />}
+              {openFileTypesDropDown ? (
+                <IoCloseCircle
+                  onClick={() => handleClearFileTypesSelection()}
+                />
+              ) : (
+                <MdOutlineKeyboardArrowDown />
+              )}
             </div>
-            <Dropdown inputType={'checkbox'} children={fileTypeArrayNames} />
+            {openFileTypesDropDown && (
+              <Dropdown
+                inputType={'checkbox'}
+                children={fileTypeArrayNames}
+                openDropDown={setOpenFileTypesDropDown}
+                handleChoice={handleFilterTypesSelection}
+                handleClearSelection={handleClearFileTypesSelection}
+                selectedItems={fileTypesSelected}
+              />
+            )}
           </div>
 
           <div className={style.filter_box_items_box}>
             <div
-              className={style.filter_box_items_box_item_transaction}
-              onClick={openMusic} tabIndex={0}
+              className={`${style.filter_box_items_box_item_transaction}  ${
+                sortOrderChoices ? style.filter_box_item_box_applied_filter : ''
+              }`}
+              onClick={openSortOrder}
+              tabIndex={0}
             >
-              <BiSort /> <span>Sort order</span>{' '}
-              {music ? <IoCloseCircle /> : <TiTick />}
+              <BiSort /> <span>{selectedSortOrder}</span>{' '}
+              {openSortOrderDropDown ? (
+                <IoCloseCircle
+                  onClick={() => handleClearSortOrderSelection()}
+                />
+              ) : (
+                <MdOutlineKeyboardArrowDown />
+              )}
             </div>
-            <Dropdown inputType={'radio'} children={sortOrderArrayNames} />
+            {openSortOrderDropDown && (
+              <Dropdown
+                inputType="radio"
+                children={sortOrderArrayNames}
+                openDropDown={setOpenSetOrderDropDown}
+                onSelectSortOrder={handleSortOrderChange}
+                handleChoice={setSortOrderChoices}
+                selectedItems={[selectedSortOrder]}
+                handleClearSelection={handleClearSortOrderSelection}
+              />
+            )}
           </div>
 
           <div className={style.filter_box_items_box}>
-            <div className={style.filter_box_items_box_item} tabIndex={0}>
+            <div
+              className={`${style.filter_box_items_box_item} ${
+                !isVerifiedFilterRemoved &&
+                style.filter_box_item_box_applied_filter
+              }`}
+              tabIndex={0}
+              onClick={() =>
+                setIsVerifiedFilterRemoved(!isVerifiedFilterRemoved)
+              }
+              title={`Verified creators filter: ${
+                isVerifiedFilterRemoved ? 'off' : 'on'
+              }`}
+            >
               <FaRegUser /> <span>Verified creators</span>
               <MdVerified />
             </div>

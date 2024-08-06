@@ -92,6 +92,12 @@
   gap: 1rem;
 }
 
+.filter_box_item_box_applied_filter {
+  background: var(--highlight-pink-bg-color);
+  color: var(--highlight-pink-text-color) !important;
+  border: 1px solid var(--highlight-pink-text-color) !important
+}
+
 .filter_box_items_box_item,
 .filter_box_items_box_item_transaction {
   display: flex;
