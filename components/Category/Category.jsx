@@ -1,5 +1,8 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useRef } from 'react';
 import { FaCircle } from 'react-icons/fa';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 // internal imports
 import style from './Category.module.css';
@@ -8,7 +11,7 @@ import Image from 'next/future/image';
 import { NavigationArrows, Title } from '../ComponentIndex';
 
 const Category = () => {
-  const categoryContainerRef = useRef(null);
+  let sliderRef = useRef(null);
   const categoryRef = useRef(null);
   const CategoryArray = [
     { id: 1, title: 'Entertainment', count: '1169 NFTs', image: 'category1' },
@@ -19,54 +22,47 @@ const Category = () => {
     { id: 6, title: 'Sports', count: '6272 NFTs', image: 'category6' },
   ];
 
-  const getItemWidth = () => {
-    if (categoryRef.current) {
-      return categoryRef.current.clientWidth + 20;
-    }
-    return 0;
+
+  const handleNext = () => {
+    sliderRef.slickNext();
+  };
+  const handlePrevious = () => {
+    sliderRef.slickPrev();
   };
 
-  const handleNext = useCallback(() => {
-    if (categoryContainerRef.current) {
-      const itemWidth = getItemWidth();
-      const currentScrollLeft = categoryContainerRef.current.scrollLeft;
-      const containerWidth = categoryContainerRef.current.clientWidth;
-      const maxScrollLeft = categoryContainerRef.current.scrollWidth - containerWidth;
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    swipeToSlide: true,
+    lazyLoad: true,
+    arrows: false,
+    speed: 1000,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
 
-      if (currentScrollLeft >= maxScrollLeft) {
-        categoryContainerRef.current.scrollTo({
-          left: 0,
-          behavior: 'smooth',
-        });
-      } else {
-        categoryContainerRef.current.scrollBy({
-          left: itemWidth,
-          behavior: 'smooth',
-        });
-      }
-    }
-  }, [getItemWidth, categoryContainerRef.current?.clientWidth, categoryContainerRef.current?.scrollWidth]);
-
-  const handlePrev = useCallback(() => {
-    if (categoryContainerRef.current) {
-      const itemWidth = getItemWidth();
-      const currentScrollLeft = categoryContainerRef.current.scrollLeft;
-
-      if (currentScrollLeft === 0) {
-        const containerWidth = categoryContainerRef.current.clientWidth;
-        const maxScrollLeft = categoryContainerRef.current.scrollWidth - containerWidth;
-        categoryContainerRef.current.scrollTo({
-          left: maxScrollLeft,
-          behavior: 'smooth',
-        });
-      } else {
-        categoryContainerRef.current.scrollBy({
-          left: -itemWidth,
-          behavior: 'smooth',
-        });
-      }
-    }
-  }, [getItemWidth, categoryContainerRef.current?.clientWidth, categoryContainerRef.current?.scrollWidth]);
+        },
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <div className={style.category}>
@@ -77,11 +73,17 @@ const Category = () => {
         />
         <NavigationArrows
           handleNext={handleNext}
-          handlePrev={handlePrev}
+          handlePrev={handlePrevious}
           className={style.navigationArrows}
         />
       </div>
-      <div className={style.category_box} ref={categoryContainerRef}>
+      <Slider
+        {...sliderSettings}
+        className={style.category_box}
+        ref={(slider) => {
+          sliderRef = slider;
+        }}
+      >
         {CategoryArray.map((element) => (
           <div
             className={style.category_box_item}
@@ -107,7 +109,7 @@ const Category = () => {
             </div>
           </div>
         ))}
-      </div>
+      </Slider>
     </div>
   );
 };

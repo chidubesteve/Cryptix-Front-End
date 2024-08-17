@@ -31,9 +31,10 @@
   display: none;
 }
 .category_box_item {
-  width: 20em;
+  max-width: 15.5em;
+  width: 100%;
   height: auto;
-  list-style-type: none  ;
+  list-style-type: none;
 }
 .category_box_item_title {
   display: flex;
@@ -43,7 +44,7 @@
 .category_image {
   border-radius: 1rem;
   object-fit: cover;
-  height: 15em;
+  height: 11.3em;
 }
 .category_box_item_title_span {
   width: fit-content;
@@ -70,7 +71,18 @@
   .navigationArrows {
     align-self: flex-end;
   }
+  .category_box_item {
+    display: flex !important;
+    max-width: 19em;
+    flex-direction: column;
+    margin-inline: auto !important;     
+  }
   .category_box {
     max-width: calc(100vw - 4rem);
+    display: flex;
+    flex-direction: column;
+  }
+  .category_image {
+    height: 12em;
   }
 }
