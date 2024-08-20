@@ -153,7 +153,7 @@ const Filter = () => {
         <div className={style.filter_box_items}>
           <div className={style.filter_box_items_box}>
             <div
-              className={style.filter_box_items_box_item}
+              className={`${style.filter_box_items_box_item} ${style.filter_box_item_box_applied_filter}`}
               tabIndex={0}
               onClick={openNFTPriceRangeFilter}
             >
