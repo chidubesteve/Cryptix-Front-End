@@ -85,14 +85,15 @@
   width: fit-content;
 }
 .dropdown_box_range_slider_box {
-  background-color: blue;
-  position: relative;
   height: 1rem;
+  width: 100%;
+  max-width: 100%;
 }
 /* input range */
 .dropdown_box_range_slider {
-  background-color: red;
-  width: 90%;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
 }
 
 .range_thumbs {
@@ -106,9 +107,10 @@
   touch-action: pan-x;
   margin-top: -5px;
   opacity: 0.8;
-  left: 22.8228%;
-  transform: translateX(-50%);
   outline: 3px solid var(--highlight-pink-text-color);
+}
+.range_thumbs:hover {
+  box-shadow: 0 0 0 8px var(--highlight-pink-bg-color);
 }
 
 .range_thumbs:active {
@@ -116,21 +118,23 @@
   outline: 6px solid #9d174d94;
   cursor: grabbing;
 }
-.range_track {
+.track {
   position: absolute;
   height: 4px;
   border-radius: 6px;
+  width: auto;
+  left: 0;
+  top: 50%;
+  background: var(--highlight-pink-bg-color) !important;
 }
-.range_track .range_track-1 {
-  /* color of the track before the thumb */
-  background-color: #e9e9e9;
-  width: 100%;
+.track_sides{
+  /* color of the track before and after the thumb */
+  background: var(--highlight-pink-bg-color) !important;
 }
 
-.range_track,
-.range_track-0 {
-  /* color of the track after the thumb */
-  background: var(--highlight-pink-text-color);
+.track_middle {
+  /* This targets the track between the first and second thumbs */
+  background: var(--highlight-pink-text-color) !important;
 }
 
 .dropdown_box_range_slider_box_prices_box {
@@ -139,21 +143,20 @@
   justify-content: space-between;
 }
 .dropdown_box_range_slider_box_minPrice label {
-font-weight: 600;
-font-size: .975rem;
-line-height: 1.25rem;
-
+  font-weight: 600;
+  font-size: 0.975rem;
+  line-height: 1.25rem;
 }
 .dropdown_box_range_slider_box_minPrice_input_div {
   position: relative;
-  margin-top: .25rem;
+  margin-top: 0.25rem;
 }
 .dropdown_box_range_slider_box_minPrice span {
   position: absolute;
   font-size: 1.1rem;
   line-height: 1.25rem;
   right: 4.6rem;
-  top: .75rem;
+  top: 0.75rem;
   width: fit-content;
   display: flex;
   align-items: center;
@@ -163,8 +166,8 @@ line-height: 1.25rem;
 .dropdown_box_range_slider_box_minPrice input {
   padding-right: 2.5rem;
   padding-left: 1rem;
-  padding-block: .7rem;
-  margin-left: .4rem;
+  padding-block: 0.7rem;
+  margin-left: 0.4rem;
   width: 9rem;
   background-color: initial;
   border-radius: 9999px;
