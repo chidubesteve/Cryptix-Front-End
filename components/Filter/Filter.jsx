@@ -14,6 +14,8 @@ import { Dropdown } from '../ComponentIndex';
 import { handleSelection } from '../../utils/handleDropDownCheckBoxesSelection';
 const Filter = () => {
   const [filter, setFilter] = useState(true);
+  const [openPriceFilter, setOpenPriceFilter] = useState(false);
+  const [priceRangeValue, setPriceRangeValue] = useState([0.01, 10]);
   const [salesTypesDropDown, setSalesTypesDropDown] = useState(false);
   const [openSortOrderDropDown, setOpenSetOrderDropDown] = useState(false);
   const [openFileTypesDropDown, setOpenFileTypesDropDown] = useState(false);
@@ -32,7 +34,6 @@ const Filter = () => {
       setFilter(false);
     }
   };
-
   const handleSalesTypesSelection = (isChecked, value) => {
     handleSelection(isChecked, value, setSalesTypesSelected);
   };
@@ -57,9 +58,20 @@ const Filter = () => {
   const handleClearSalesTypesSelection = () => {
     setSalesTypesSelected([]);
   };
+  const openNFTPriceRangeFilter = () => {
+    if (!openPriceFilter) {
+      setOpenPriceFilter(true);
+      setOpenFileTypesDropDown(false);
+      setOpenSetOrderDropDown(false);
+      setSalesTypesDropDown(false);
+    } else {
+      setOpenPriceFilter(false);
+    }
+  };
   const openSalesTypes = () => {
     if (!salesTypesDropDown) {
       setSalesTypesDropDown(true);
+      setOpenPriceFilter(false);
       setOpenFileTypesDropDown(false);
       setOpenSetOrderDropDown(false);
     } else {
@@ -70,6 +82,7 @@ const Filter = () => {
     if (!openFileTypesDropDown) {
       setOpenFileTypesDropDown(true);
       setOpenSetOrderDropDown(false);
+      setOpenPriceFilter(false);
       setSalesTypesDropDown(false);
     } else {
       setOpenFileTypesDropDown(false);
@@ -79,6 +92,7 @@ const Filter = () => {
   const openSortOrder = () => {
     if (!openSortOrderDropDown) {
       setOpenSetOrderDropDown(true);
+      setOpenPriceFilter(false);
       setOpenFileTypesDropDown(false);
       setSalesTypesDropDown(false);
     } else {
@@ -138,10 +152,25 @@ const Filter = () => {
       {filter && (
         <div className={style.filter_box_items}>
           <div className={style.filter_box_items_box}>
-            <div className={style.filter_box_items_box_item} tabIndex={0}>
-              <BsWallet2 /> <span>0.1 ETH - 10 ETH</span>
+            <div
+              className={style.filter_box_items_box_item}
+              tabIndex={0}
+              onClick={openNFTPriceRangeFilter}
+            >
+              <BsWallet2 />{' '}
+              <span>
+                {priceRangeValue[0]} ETH - {priceRangeValue[1]} ETH
+              </span>
               <IoCloseCircle />
             </div>
+            {openPriceFilter && (
+              <Dropdown
+                inputType={'range'}
+                openDropDown={setOpenPriceFilter}
+                setPriceRangeValue={setPriceRangeValue}
+                priceRangeValue={priceRangeValue}
+              />
+            )}
           </div>
 
           <div className={style.filter_box_items_box}>
