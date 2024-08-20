@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import ReactSlider from 'react-slider';
 
 import style from './Dropdown.module.css';
@@ -6,7 +6,6 @@ import { Button } from '../ComponentIndex';
 
 const Dropdown = ({
   inputType,
-  className,
   children = [], // Default to an empty array if no children are passed
   openDropDown,
   onSelectSortOrder,
