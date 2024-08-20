@@ -34,7 +34,6 @@ const Category = () => {
     dots: false,
     infinite: true,
     swipeToSlide: true,
-    lazyLoad: true,
     arrows: false,
     speed: 1000,
     slidesToShow: 5,
@@ -43,9 +42,15 @@ const Category = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 4,
+          slidesToScroll: 1,
 
+        },
+      },
+      {
+        breakpoint: 930,
+        settings: {
+          slidesToShow: 3,
         },
       },
       {
