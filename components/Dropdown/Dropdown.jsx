@@ -1,30 +1,39 @@
 import React, { useRef, useState } from 'react';
+import ReactSlider from 'react-slider';
 
-//internal imports
 import style from './Dropdown.module.css';
 import { Button } from '../ComponentIndex';
 
 const Dropdown = ({
   inputType,
   className,
-  children,
+  children = [], // Default to an empty array if no children are passed
   openDropDown,
   onSelectSortOrder,
   handleChoice,
   handleClearSelection,
   selectedItems,
+  setPriceRangeValue,
+  priceRangeValue,
 }) => {
   const refs = useRef([]);
-  // const [currentSelection, setCurrentSelection] = useState(selectedOptions)
+  const range = useRef(null);
+  // Creating the refs
+  const minValRef = useRef(null);
+  const maxValRef = useRef(null);
 
   const handleClear = () => {
-    refs.current.forEach((ref) => {
-      if (ref) {
-        ref.checked = false;
-      }
-    });
-    selectedItems = [];
-    handleClearSelection();
+    if (inputType === 'range') {
+      setPriceRangeValue([0.01, 10]);
+    } else {
+      refs.current.forEach((ref) => {
+        if (ref) {
+          ref.checked = false;
+        }
+      });
+      selectedItems = [];
+      handleClearSelection();
+    }
     openDropDown(false);
   };
 
@@ -33,9 +42,13 @@ const Dropdown = ({
       onSelectSortOrder(value);
       handleChoice(true);
     } else if (inputType === 'checkbox') {
-      const isChecked = refs.current[index].checked;
+      const isChecked = refs.current[index]?.checked;
       handleChoice(isChecked, value);
-      selectedItems.push(value);
+      if (isChecked) {
+        selectedItems.push(value);
+      } else {
+        selectedItems = selectedItems.filter((item) => item !== value);
+      }
     }
   };
 
@@ -46,25 +59,89 @@ const Dropdown = ({
   const classname = `${style.dropdown} ${className ? className : ''}`;
   return (
     <div className={style.dropdown_box}>
-      {children.map((name, i) => (
-        <div className={style.dropdown_box_input_box} key={i}>
-          <input
-            type={inputType}
-            aria-label={name}
-            name="inputGroup"
-            id={`${name}-${i}`}
-            ref={(el) => (refs.current[i] = el)}
-            onClick={() => {
-              handleSelect(name, i);
-            }}
-            checked={selectedItems?.includes(name)}
-          />
-          <label htmlFor={`${name}-${i}`}>
-            <span aria-label={name}>{name}</span>
-          </label>
-        </div>
-      ))}
-
+      {inputType === 'range' ? (
+        <>
+        <h3>Price range</h3>
+          <div className={style.dropdown_box_range_slider_box}>
+          
+            <ReactSlider
+              ariaLabel={['Min Price', 'Max Price']}
+              ariaValuetext={(state) =>
+                `Min price value: ${state[0]}, Max price value: ${state[1]}`
+              }
+              defaultValue={[0, 100]}
+              value={priceRangeValue}
+              min={0.01}
+              max={10}
+              step={0.03}
+              className={style.dropdown_box_range_slider}
+              thumbClassName={style.range_thumbs}
+              trackClassName={style.range_track}
+              onBeforeChange={(value, index) =>
+                console.log(
+                  `onBeforeChange: ${JSON.stringify({ value, index })}`
+                )
+              }
+              onChange={(value, index) => {
+                setPriceRangeValue(value);
+                console.log(`onChange: ${JSON.stringify({ value, index })}`);
+              }}
+              onAfterChange={(value, index) =>
+                console.log(
+                  `onAfterChange: ${JSON.stringify({ value, index })}`
+                )
+              }
+            />
+          </div>
+          <div className={style.dropdown_box_range_slider_box_prices_box}>
+            <div className={style.dropdown_box_range_slider_box_minPrice}>
+              <label htmlFor="minPrice">Min Price</label>
+              <div className={style.dropdown_box_range_slider_box_minPrice_input_div}>
+                <span>ETH</span>
+                <input
+                  type="text"
+                  value={`${priceRangeValue[0]}`}
+                  name="minPrice"
+                  aria-label="Min Price"
+                  disabled
+                />
+              </div>
+            </div>
+            <div className={style.dropdown_box_range_slider_box_minPrice}>
+              <label htmlFor="maxPrice">Max Price</label>
+              <div className={style.dropdown_box_range_slider_box_minPrice_input_div}>
+                <span>ETH</span>
+                <input
+                  type="text"
+                  value={`${priceRangeValue[1]}`}
+                  name="maxPrice"
+                  aria-label="Max Price"
+                  disabled
+                />
+              </div>
+            </div>
+          </div>
+        </>
+      ) : (
+        children.map((name, i) => (
+          <div className={style.dropdown_box_input_box} key={i}>
+            <input
+              type={inputType}
+              aria-label={name}
+              name="inputGroup"
+              id={`${name}-${i}`}
+              ref={(el) => (refs.current[i] = el)}
+              onClick={() => {
+                handleSelect(name, i);
+              }}
+              defaultChecked={selectedItems?.includes(name)}
+            />
+            <label htmlFor={`${name}-${i}`}>
+              <span aria-label={name}>{name}</span>
+            </label>
+          </div>
+        ))
+      )}
       <div className={style.dropdown_box_buttons_box}>
         <Button
           btnName="Clear"
