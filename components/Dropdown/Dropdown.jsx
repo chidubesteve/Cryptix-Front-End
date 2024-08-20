@@ -17,10 +17,6 @@ const Dropdown = ({
   priceRangeValue,
 }) => {
   const refs = useRef([]);
-  const range = useRef(null);
-  // Creating the refs
-  const minValRef = useRef(null);
-  const maxValRef = useRef(null);
 
   const handleClear = () => {
     if (inputType === 'range') {
@@ -56,18 +52,16 @@ const Dropdown = ({
     openDropDown(false);
   };
 
-  const classname = `${style.dropdown} ${className ? className : ''}`;
   return (
     <div className={style.dropdown_box}>
       {inputType === 'range' ? (
         <>
-        <h3>Price range</h3>
+          <h3>Price range</h3>
           <div className={style.dropdown_box_range_slider_box}>
-          
             <ReactSlider
               ariaLabel={['Min Price', 'Max Price']}
               ariaValuetext={(state) =>
-                `Min price value: ${state[0]}, Max price value: ${state[1]}`
+                `Min price value: ${state.value[0]}, Max price value: ${state.value[1]}`
               }
               defaultValue={[0, 100]}
               value={priceRangeValue}
@@ -76,7 +70,19 @@ const Dropdown = ({
               step={0.03}
               className={style.dropdown_box_range_slider}
               thumbClassName={style.range_thumbs}
-              trackClassName={style.range_track}
+              renderTrack={(props, state) => (
+                <div
+                  {...props}
+                  className={`${style.track} ${
+                    state.index === 2
+                      ? style.track_sides
+                      : state.index === 1
+                      ? style.track_middle
+                      : style.track_sides
+                  }`}
+                />
+              )}
+              trackClassName={`${style.track}`}
               onBeforeChange={(value, index) =>
                 console.log(
                   `onBeforeChange: ${JSON.stringify({ value, index })}`
@@ -86,17 +92,16 @@ const Dropdown = ({
                 setPriceRangeValue(value);
                 console.log(`onChange: ${JSON.stringify({ value, index })}`);
               }}
-              onAfterChange={(value, index) =>
-                console.log(
-                  `onAfterChange: ${JSON.stringify({ value, index })}`
-                )
-              }
             />
           </div>
           <div className={style.dropdown_box_range_slider_box_prices_box}>
             <div className={style.dropdown_box_range_slider_box_minPrice}>
               <label htmlFor="minPrice">Min Price</label>
-              <div className={style.dropdown_box_range_slider_box_minPrice_input_div}>
+              <div
+                className={
+                  style.dropdown_box_range_slider_box_minPrice_input_div
+                }
+              >
                 <span>ETH</span>
                 <input
                   type="text"
@@ -109,7 +114,11 @@ const Dropdown = ({
             </div>
             <div className={style.dropdown_box_range_slider_box_minPrice}>
               <label htmlFor="maxPrice">Max Price</label>
-              <div className={style.dropdown_box_range_slider_box_minPrice_input_div}>
+              <div
+                className={
+                  style.dropdown_box_range_slider_box_minPrice_input_div
+                }
+              >
                 <span>ETH</span>
                 <input
                   type="text"
