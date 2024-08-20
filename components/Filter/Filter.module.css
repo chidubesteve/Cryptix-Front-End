@@ -95,7 +95,7 @@
 .filter_box_item_box_applied_filter {
   background: var(--highlight-pink-bg-color);
   color: var(--highlight-pink-text-color) !important;
-  border: 1px solid var(--highlight-pink-text-color) !important
+  border: 1px solid var(--highlight-pink-text-color) !important;
 }
 
 .filter_box_items_box_item,
@@ -122,17 +122,21 @@
 }
 
 @media screen and (max-width: 1023px) {
+  .filter {
+    position: relative;
+  }
   .filter_box {
     flex-direction: column;
   }
-  .filter_box_left {
+  .filter_box_left, .filter_box_items {
     display: flex;
     gap: 2rem;
     overflow-x: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
-  .filter_box_left::-webkit-scrollbar {
+
+  .filter_box_left::-webkit-scrollbar,  .filter_box_items::-webkit-scrollbar {
     display: none;
   }
   .filter_box_right {
@@ -147,21 +151,18 @@
     position: absolute;
     right: 1.5rem;
   }
+  /*
+//remove the relative positioning to prevent the dropdown from scrolling behind the page */
+.filter_box_items_box {
+  min-width: fit-content;
+  position: unset;
+}
+
 }
 @media screen and (max-width: 600px) {
   .filter_box_items_box {
     justify-content: center;
   }
-  .filter_box_items {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
+
 }
-@media screen and (min-width: 601px) and (max-width: 1023px) {
-  .filter_box_items {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 1rem;
-  }
-}
+
