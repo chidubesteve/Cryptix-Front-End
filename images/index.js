@@ -10,12 +10,12 @@ import creatorbackground8 from "./creatorbackground-8.jpg";
 import creatorbackground9 from "./creatorbackground-9.jpg";
 import creatorbackground10 from "./creatorbackground-10.jpg";
 import creatorbackground11 from "./creatorbackground-11.jpg";
-import category1 from "./category-1.png"
-import category2 from "./category-2.png"
-import category3 from "./category-3.png"
-import category4 from "./category-4.png"
-import category5 from "./category-5.png"
-import category6 from "./category-6.png"
+import category1 from "./category-1.png";
+import category2 from "./category-2.png";
+import category3 from "./category-3.png";
+import category4 from "./category-4.png";
+import category5 from "./category-5.png";
+import category6 from "./category-6.png";
 import user1 from "./user-1.png";
 import user2 from "./user-2.png";
 import user3 from "./user-3.png";
@@ -39,8 +39,15 @@ import youtube from "./youtube.svg";
 import vimeo from "./vimeo.svg";
 import vector from "./VectorHIW.svg";
 import zgcmq from "./zgcmq.svg";
-import newsletter from './newsletter.png'
+import newsletter from "./newsletter.png";
 import hero from "./hero.png";
+
+import clonef_1291 from "./clone_f1291.png";
+import clonef_1324 from "./clone_f1324.png";
+import clonef_1175 from "./clonef_1175.png";
+import clonef_1192 from "./clonef_1192.png";
+import clonef_1923 from "./clonef_1923.png";
+import clonef_1778 from "./clonef_1778.png";
 
 import getAble from "./getable.png";
 import nft_image_1 from "./nft-image-1.png";
@@ -64,6 +71,12 @@ export default {
   getAble,
   newsletter,
   hero,
+  clonef_1291,
+  clonef_1324,
+  clonef_1175,
+  clonef_1192,
+  clonef_1923,
+  clonef_1778,
   category1,
   category2,
   category3,
