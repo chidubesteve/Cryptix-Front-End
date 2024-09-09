@@ -144,6 +144,7 @@
   align-items: baseline;
   justify-content: center;
   line-height: 0;
+  max-width: 6.5rem;
 }
 .NFTCard_box_update_details_price_box_bid small {
   background-color: var(--shadow-light-color);
