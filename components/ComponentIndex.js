@@ -11,4 +11,20 @@ import Category from './Category/Category';
 import Filter from './Filter/Filter';
 import Dropdown from './Dropdown/Dropdown';
 import Like from './Like/Like';
-export { Button, Footer, NavBar, HeroSection, Service, NFT_Slider, NewsLetter, Title, NavigationArrows, Category, Filter, Dropdown, Like };
+import NFTCards from './NFTCards/NFTCards';
+export {
+  Button,
+  Footer,
+  NavBar,
+  HeroSection,
+  Service,
+  NFT_Slider,
+  NewsLetter,
+  Title,
+  NavigationArrows,
+  Category,
+  Filter,
+  Dropdown,
+  Like,
+  NFTCards,
+};

@@ -1,5 +1,5 @@
 .bigNftSlider {
-  background-color: #f5f6f7;
+  background-color: var(--alternate-bg-color);
 }
 .bigNftSlider_box {
   margin: 0 auto;

@@ -6,8 +6,9 @@ import {
   NFT_Slider,
   NewsLetter,
   Category,
-  Filter
-} from '../components/ComponentIndex';
+  Filter,
+  NFTCards,
+} from "../components/ComponentIndex";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Service />
       <NFT_Slider />
       <Filter />
+      <NFTCards />
       <Category />
       <NewsLetter />
     </div>
