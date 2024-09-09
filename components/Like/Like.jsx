@@ -4,9 +4,13 @@ import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 //internal imports
 import style from "./Like.module.css";
 
-const Like = ({ isLiked, noOfLikes, handleClick }) => {
+const Like = ({ isLiked, noOfLikes, handleClick, customStyle }) => {
   return (
-    <div className={style.like_box} onClick={() => handleClick()}>
+    <div
+      className={style.like_box}
+      style={customStyle}
+      onClick={() => handleClick()}
+    >
       {isLiked ? (
         <AiFillHeart
           className={style.like_icon}

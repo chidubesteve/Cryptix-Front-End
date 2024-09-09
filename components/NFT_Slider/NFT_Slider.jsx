@@ -1,21 +1,21 @@
-import React, { useState, useCallback } from 'react';
-import Image from 'next/future/image';
-import { BsCameraVideo } from 'react-icons/bs';
-import { MdVerified } from 'react-icons/md';
-import { LuTimer } from 'react-icons/lu';
+import React, { useState, useCallback } from "react";
+import Image from "next/future/image";
+import { BsCameraVideo } from "react-icons/bs";
+import { MdVerified } from "react-icons/md";
+import { LuTimer } from "react-icons/lu";
 
 //internal imports
-import style from './NFT_Slider.module.css';
-import images from '../../images';
-import { Button, NavigationArrows, Like } from '../ComponentIndex';
+import style from "./NFT_Slider.module.css";
+import images from "../../images";
+import { Button, NavigationArrows, Like } from "../ComponentIndex";
 
 const NFTSliderData = [
   {
-    title: 'BearX #3636',
+    title: "BearX #3636",
     id: 1,
-    name: 'John Doe',
-    collection: 'virtual Worlds',
-    price: '1.00 ETH',
+    name: "John Doe",
+    collection: "virtual Worlds",
+    price: "1.00 ETH",
     likes: 256,
     image: images.user1,
     nftImage: images.nft_image_1,
@@ -27,11 +27,11 @@ const NFTSliderData = [
     },
   },
   {
-    title: 'Wolf Face #1', //
+    title: "Wolf Face #1", //
     id: 2,
-    name: 'Jane Doe',
-    collection: 'nature',
-    price: '0.25 ETH',
+    name: "Jane Doe",
+    collection: "nature",
+    price: "0.25 ETH",
     likes: 136,
     image: images.user2,
     nftImage: images.nft_image_2,
@@ -45,9 +45,9 @@ const NFTSliderData = [
   {
     title: 'Wolf Face #2"',
     id: 3,
-    name: 'Alexa Dean',
-    collection: 'nature',
-    price: '0.060 ETH',
+    name: "Alexa Dean",
+    collection: "nature",
+    price: "0.060 ETH",
     likes: 99,
     image: images.user3,
     nftImage: images.nft_image_3,
@@ -59,11 +59,11 @@ const NFTSliderData = [
     },
   },
   {
-    title: 'Bow Tie NFT',
+    title: "Bow Tie NFT",
     id: 4,
-    name: 'Jada amin',
-    collection: 'aesthetic',
-    price: '0.098756 ETH',
+    name: "Jada amin",
+    collection: "aesthetic",
+    price: "0.098756 ETH",
     likes: 409,
     image: images.user4,
     nftImage: images.nft_image_4,
@@ -75,11 +75,11 @@ const NFTSliderData = [
     },
   },
   {
-    title: 'Cartoon Art',
+    title: "Cartoon Art",
     id: 5,
-    name: 'Mike Wilson',
-    collection: 'aesthetic',
-    price: '1.00 ETH',
+    name: "Mike Wilson",
+    collection: "aesthetic",
+    price: "1.00 ETH",
     likes: 23,
     image: images.user5,
     nftImage: images.nft_image_5,
@@ -91,11 +91,11 @@ const NFTSliderData = [
     },
   },
   {
-    title: 'Rebels #3301',
+    title: "Rebels #3301",
     id: 6,
-    name: 'Dreamer',
-    collection: 'aesthetic',
-    price: '0.005 ETH',
+    name: "Dreamer",
+    collection: "aesthetic",
+    price: "0.005 ETH",
     likes: 12,
     image: images.user6,
     nftImage: images.nft_image_6,
@@ -159,7 +159,7 @@ const NFT_Slider = () => {
               <div className={style.bigNftSlider_box_left_creator_profile_text}>
                 <p>Creator</p>
                 <h4>
-                  {NFTSliderData[idNumber].name}{' '}
+                  {NFTSliderData[idNumber].name}{" "}
                   <span>
                     <MdVerified />
                   </span>
@@ -249,19 +249,27 @@ const NFT_Slider = () => {
           </div>
         </div>
         {/* navigation arrows */}
-        <NavigationArrows handleNext={handleNext} handlePrev={handlePrev} className={style.navArrowsStyle}/>
+        <NavigationArrows
+          handleNext={handleNext}
+          handlePrev={handlePrev}
+          className={style.navArrowsStyle}
+        />
 
         <div className={style.bigNftSlider_box_right}>
           <div className={style.bigNftSlider_box_right_box}>
             <Image
               src={NFTSliderData[idNumber].nftImage}
-              alt={`${NFTSliderData[idNumber].title} nft image}`
-              }
+              alt={`${NFTSliderData[idNumber].title} nft image}`}
               className={style.bigNftSlider_box_right_box_nftImage}
               placeholder="blur"
             />
 
-           <Like isLiked={likedStatus[idNumber]} noOfLikes={likes[idNumber]} handleClick={handleLike}/>
+            <Like
+              isLiked={likedStatus[idNumber]}
+              noOfLikes={likes[idNumber]}
+              handleClick={handleLike}
+              customStyle={{ top: "2rem", right: "2rem" }}
+            />
             <div className={style.bigNftSlider_box_right_box_view}>
               <BsCameraVideo
                 className={style.bigNftSlider_box_right_box_view_icon}
