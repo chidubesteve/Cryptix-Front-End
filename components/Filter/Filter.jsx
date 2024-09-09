@@ -119,24 +119,24 @@ const Filter = () => {
   return (
     <div className={style.filter}>
       <div className={style.filter_box_title}>
-        {' '}
+        {" "}
         <Title
           title="Featured NFTs"
           paragraph="Discover the most outstanding NFts in all topics of life."
-        />{' '}
+        />{" "}
       </div>
       <div className={style.filter_box}>
         <div className={style.filter_box_left}>
-          {['All NFTs', 'Arts', 'Music', 'Sports', 'Photography'].map(
+          {["All NFTs", "Arts", "Music", "Sports", "Photography"].map(
             (name) => (
               <button
                 key={name}
-                className={activeButton === name ? style.activeButton : ''}
+                className={activeButton === name ? style.activeButton : ""}
                 onClick={() => {
                   handleButtonClick(name);
                 }}
               >
-                {name}{' '}
+                {name}{" "}
               </button>
             )
           )}
@@ -157,15 +157,15 @@ const Filter = () => {
               tabIndex={0}
               onClick={openNFTPriceRangeFilter}
             >
-              <BsWallet2 />{' '}
+              <BsWallet2 style={{ minWidth: "fit-content" }} />{" "}
               <span>
                 {priceRangeValue[0]} ETH - {priceRangeValue[1]} ETH
               </span>
-              <IoCloseCircle />
+              <IoCloseCircle style={{ minWidth: "fit-content" }} />
             </div>
             {openPriceFilter && (
               <Dropdown
-                inputType={'range'}
+                inputType={"range"}
                 openDropDown={setOpenPriceFilter}
                 setPriceRangeValue={setPriceRangeValue}
                 priceRangeValue={priceRangeValue}
@@ -184,7 +184,7 @@ const Filter = () => {
               onClick={openSalesTypes}
               tabIndex={0}
             >
-              <IoImagesOutline /> <span>Sales types</span>{' '}
+              <IoImagesOutline /> <span>Sales types</span>{" "}
               {salesTypesDropDown ? (
                 <IoCloseCircle
                   onClick={() => handleClearSalesTypesSelection()}
@@ -195,7 +195,7 @@ const Filter = () => {
             </div>
             {salesTypesDropDown && (
               <Dropdown
-                inputType={'checkbox'}
+                inputType={"checkbox"}
                 children={salesTypeArrayNames}
                 openDropDown={setSalesTypesDropDown}
                 handleChoice={handleSalesTypesSelection}
@@ -212,12 +212,12 @@ const Filter = () => {
               }              ${
                 fileTypesSelected.length > 0
                   ? style.filter_box_item_box_applied_filter
-                  : ''
+                  : ""
               }`}
               onClick={openFileTypes}
               tabIndex={0}
             >
-              <LuFiles /> <span>File types</span>{' '}
+              <LuFiles /> <span>File types</span>{" "}
               {openFileTypesDropDown ? (
                 <IoCloseCircle
                   onClick={() => handleClearFileTypesSelection()}
@@ -228,7 +228,7 @@ const Filter = () => {
             </div>
             {openFileTypesDropDown && (
               <Dropdown
-                inputType={'checkbox'}
+                inputType={"checkbox"}
                 children={fileTypeArrayNames}
                 openDropDown={setOpenFileTypesDropDown}
                 handleChoice={handleFilterTypesSelection}
@@ -241,12 +241,12 @@ const Filter = () => {
           <div className={style.filter_box_items_box}>
             <div
               className={`${style.filter_box_items_box_item_transaction}  ${
-                sortOrderChoices ? style.filter_box_item_box_applied_filter : ''
+                sortOrderChoices ? style.filter_box_item_box_applied_filter : ""
               }`}
               onClick={openSortOrder}
               tabIndex={0}
             >
-              <BiSort /> <span>{selectedSortOrder}</span>{' '}
+              <BiSort /> <span>{selectedSortOrder}</span>{" "}
               {openSortOrderDropDown ? (
                 <IoCloseCircle
                   onClick={() => handleClearSortOrderSelection()}
@@ -279,11 +279,12 @@ const Filter = () => {
                 setIsVerifiedFilterRemoved(!isVerifiedFilterRemoved)
               }
               title={`Verified creators filter: ${
-                isVerifiedFilterRemoved ? 'off' : 'on'
+                isVerifiedFilterRemoved ? "off" : "on"
               }`}
             >
-              <FaRegUser /> <span>Verified creators</span>
-              <MdVerified />
+              <FaRegUser style={{ minWidth: "fit-content" }} />{" "}
+              <span>Verified creators</span>
+              <MdVerified style={{ minWidth: "fit-content" }} />
             </div>
           </div>
         </div>
