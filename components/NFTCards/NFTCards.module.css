@@ -71,12 +71,12 @@
   justify-content: flex-end;
 }
 .NFTCard_box_likedBy_Avatars {
-  margin-left: 5px;
+  margin-left: clamp(5px, 0.5vw, 15px);
   display: none;
 }
 .NFTCard_box_likedBy_Avatars_avatar {
-  width: 1.3rem;
-  height: 1.3rem;
+  width: clamp(1.3rem, 1.5vw, 1.5rem);
+  height: clamp(1.3rem, 1.5vw, 1.5rem);
   flex-shrink: 0;
   display: inline-flex;
   border-radius: 9999px;
@@ -101,10 +101,11 @@
 .NFTCard_box_update_right_info {
   transform: skewX(-45deg);
   padding-inline: 1.3rem;
+  white-space: nowrap;
 }
 
 .NFTCard_box_update_details {
-  grid-column: 1/-1;
+  grid-column: 1 / span 3;
   grid-row: 3 / -1;
   line-height: 0;
   z-index: 111;
@@ -123,7 +124,6 @@
 }
 .NFTCard_box_update_details_name {
   transform: skewX(-45deg);
-  /* padding-left: 3rem; */
   padding-bottom: 5px;
 }
 .NFTCard_box_update_details_name h4 {
@@ -165,7 +165,7 @@
 }
 
 .NFTCard_box_update_details_price_box_stock {
-  text-align: end;
+  text-align: center;
   color: gray;
   line-height: 1;
 }
@@ -190,9 +190,11 @@
   .NFTCard_box_update_details_name h4 {
     font-size: 0.98rem;
   }
-
+  .NFTCard_box_update_right {
+    margin-right: -1.418rem;
+  }
   .NFTCard_box_update_details {
-    grid-template-columns: 3fr 1fr;
+    grid-column: 1 / span 4;
   }
 
   .NFTCard_box_update_details_nftType {
@@ -209,6 +211,11 @@
   }
 }
 
+@media screen and (min-width: 400px) and (max-width: 440px) {
+  .NFTCard_box_update_details {
+    grid-column: 1 / span 4;
+  }
+}
 @media screen and (max-width: 640px) {
   .NFTCard {
     grid-template-columns: 1fr;
@@ -224,6 +231,9 @@
 @media screen and (min-width: 641px) and (max-width: 1280px) {
   .NFTCard {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .NFTCard_box_update_details {
+    grid-column: 1 / span 4;
   }
 }
 
