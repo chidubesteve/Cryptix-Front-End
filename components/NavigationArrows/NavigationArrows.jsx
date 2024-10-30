@@ -1,12 +1,12 @@
-import React from 'react';
-import { HiArrowLeft, HiArrowRight } from 'react-icons/hi2';
+import React from "react";
+import { HiArrowLeft, HiArrowRight } from "react-icons/hi2";
 
 //internal imports
-import style from './NavigationArrows.module.css';
+import style from "./NavigationArrows.module.css";
 
-const NavigationArrows = ({ handleNext, handlePrev, className }) => {
+export const LeftNavigationArrow = ({ handlePrev, className }) => {
   const classname = `${style.navigation_arrows_box} ${
-    className ? className : ''
+    className ? className : ""
   }`;
   return (
     <div className={classname}>
@@ -17,6 +17,16 @@ const NavigationArrows = ({ handleNext, handlePrev, className }) => {
           title="previous"
         />
       </span>
+    </div>
+  );
+};
+
+export const RightNavigationArrow = ({ handleNext, className }) => {
+  const classname = `${style.navigation_arrows_box} ${
+    className ? className : ""
+  }`;
+  return (
+    <div className={classname}>
       <span>
         <HiArrowRight
           className={style.navigation_arrows_box_arrow_right}
@@ -27,5 +37,3 @@ const NavigationArrows = ({ handleNext, handlePrev, className }) => {
     </div>
   );
 };
-
-export default NavigationArrows;
