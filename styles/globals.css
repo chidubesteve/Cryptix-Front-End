@@ -5,7 +5,7 @@
   --icons-light-color: #4c577341;
   --icons-bg-color: #eef0f2;
   --minor-text-color: rgba(128, 128, 128, 0.665);
-  --shadow-dark-color: #f6f1f1;
+  --shadow-dark-color: #dcd8d8;
   --alternate-bg-color: #f5f6f7;
   --shadow-light-color: #fff;
   --highlight-blue-bg-color: #DBEAFE;
@@ -25,8 +25,8 @@
   --box-shadow: 1rem 1rem 1rem var(--shadow-dark-color),
     -1rem -1rem 1rem var(--shadow-light-color);
 
-  --box-shadow-2: 0rem 0rem 0rem var(--shadow-dark-color),
-    -0.3rem -0.3rem 1rem var(--shadow-dark-color);
+  --box-shadow-2: 0rem 10px 15px -3px var(--shadow-dark-color),
+    0 4px 6px -4px var(--shadow-dark-color);
 }
 
 html,
