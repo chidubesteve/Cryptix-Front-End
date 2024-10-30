@@ -78,14 +78,14 @@ const Category = () => {
           title="Browse by category"
           paragraph="Explore the NFTs in the most featured categories."
         />
-        <LeftNavigationArrow
-          handlePrev={handlePrevious}
-          className={style.navigationArrows}
-        />
-        <RightNavigationArrow
-          handleNext={handleNext}
-          className={style.navigationArrows}
-        />
+        <div className={style.navigationArrowsBox}>
+          <LeftNavigationArrow
+            handlePrev={handlePrevious}
+          />
+          <RightNavigationArrow
+            handleNext={handleNext}
+          />
+        </div>
       </div>
       <Slider
         {...sliderSettings}

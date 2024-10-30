@@ -12,6 +12,12 @@
   justify-content: space-between;
   align-items: center;
 }
+.navigationArrowsBox {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  width: fit-content;
+}
 .category_box {
   max-width: calc(100vw - 8rem);
   display: grid;
@@ -68,7 +74,7 @@
     flex-direction: column;
     gap: 0.5rem;
   }
-  .navigationArrows {
+  .navigationArrowsBox {
     align-self: flex-end;
   }
   .category_box_item {
