@@ -7,7 +7,12 @@ import { LuTimer } from "react-icons/lu";
 //internal imports
 import style from "./NFT_Slider.module.css";
 import images from "../../images";
-import { Button, NavigationArrows, Like } from "../ComponentIndex";
+import {
+  Button,
+  RightNavigationArrow,
+  LeftNavigationArrow,
+  Like,
+} from "../ComponentIndex";
 
 const NFTSliderData = [
   {
@@ -249,11 +254,15 @@ const NFT_Slider = () => {
           </div>
         </div>
         {/* navigation arrows */}
-        <NavigationArrows
-          handleNext={handleNext}
-          handlePrev={handlePrev}
-          className={style.navArrowsStyle}
-        />
+
+        <div className={style.bigNftSlider_box_left_navigationArrows}>
+          <LeftNavigationArrow
+            handlePrev={handlePrev}
+          />
+          <RightNavigationArrow
+            handleNext={handleNext}
+          />
+        </div>
 
         <div className={style.bigNftSlider_box_right}>
           <div className={style.bigNftSlider_box_right_box}>

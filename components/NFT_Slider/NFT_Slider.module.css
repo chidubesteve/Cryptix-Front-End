@@ -152,6 +152,16 @@
   font-size: 1.3rem;
   text-align: center;
 }
+
+/* navigation arrows */
+.bigNftSlider_box_left_navigationArrows {
+  display: flex;
+  width: fit-content;
+  gap: 0.7rem;
+  position: absolute;
+  bottom: 11rem;
+  margin-inline-start: 3rem;
+}
 /*  buttons */
 .bigNftSlider_box_left_buttons_box {
   display: flex;
@@ -193,11 +203,6 @@
   object-fit: cover;
   cursor: pointer;
   height: 100%;
-}
-.navArrowsStyle {
-  position: absolute;
-  bottom: 11rem;
-  margin-inline-start: 3rem;
 }
 
 /* view icon */
@@ -299,7 +304,7 @@
   }
 
   /* navigation arrows */
-  .navArrowsStyle {
+  .bigNftSlider_box_left_navigationArrows {
     bottom: 5rem;
   }
 
@@ -344,7 +349,7 @@
     padding: 0;
   }
   /* navigation arrows */
-  .navArrowsStyle {
+  .bigNftSlider_box_left_navigationArrows {
     bottom: 5rem;
   }
 
