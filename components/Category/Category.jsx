@@ -1,27 +1,30 @@
-import React, { useRef } from 'react';
-import { FaCircle } from 'react-icons/fa';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import React, { useRef } from "react";
+import { FaCircle } from "react-icons/fa";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // internal imports
-import style from './Category.module.css';
-import images from '../../images';
-import Image from 'next/future/image';
-import { NavigationArrows, Title } from '../ComponentIndex';
+import style from "./Category.module.css";
+import images from "../../images";
+import Image from "next/future/image";
+import {
+  LeftNavigationArrow,
+  RightNavigationArrow,
+  Title,
+} from "../ComponentIndex";
 
 const Category = () => {
   let sliderRef = useRef(null);
   const categoryRef = useRef(null);
   const CategoryArray = [
-    { id: 1, title: 'Entertainment', count: '1169 NFTs', image: 'category1' },
-    { id: 2, title: 'Art', count: '1202 NFTs', image: 'category2' },
-    { id: 3, title: 'Music', count: '8706 NFTs', image: 'category3' },
-    { id: 4, title: 'Gaming', count: '1544 NFTs', image: 'category4' },
-    { id: 5, title: 'Science', count: '432 NFTs', image: 'category5' },
-    { id: 6, title: 'Sports', count: '6272 NFTs', image: 'category6' },
+    { id: 1, title: "Entertainment", count: "1169 NFTs", image: "category1" },
+    { id: 2, title: "Art", count: "1202 NFTs", image: "category2" },
+    { id: 3, title: "Music", count: "8706 NFTs", image: "category3" },
+    { id: 4, title: "Gaming", count: "1544 NFTs", image: "category4" },
+    { id: 5, title: "Science", count: "432 NFTs", image: "category5" },
+    { id: 6, title: "Sports", count: "6272 NFTs", image: "category6" },
   ];
-
 
   const handleNext = () => {
     sliderRef.slickNext();
@@ -44,7 +47,6 @@ const Category = () => {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
-
         },
       },
       {
@@ -76,9 +78,12 @@ const Category = () => {
           title="Browse by category"
           paragraph="Explore the NFTs in the most featured categories."
         />
-        <NavigationArrows
-          handleNext={handleNext}
+        <LeftNavigationArrow
           handlePrev={handlePrevious}
+          className={style.navigationArrows}
+        />
+        <RightNavigationArrow
+          handleNext={handleNext}
           className={style.navigationArrows}
         />
       </div>
