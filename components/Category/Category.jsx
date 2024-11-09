@@ -38,7 +38,7 @@ const Category = () => {
     infinite: true,
     swipeToSlide: true,
     arrows: false,
-    speed: 1000,
+    speed: 1300,
     slidesToShow: 5,
     slidesToScroll: 1,
     responsive: [
@@ -70,6 +70,7 @@ const Category = () => {
       },
     ],
   };
+
 
   return (
     <div className={style.category}>
