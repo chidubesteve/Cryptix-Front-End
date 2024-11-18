@@ -147,7 +147,6 @@ const Collection = () => {
                 <li
                   key={index}
                   className={style.collectionSlider_list_item}
-                  // ref={collectionRef}
                 >
                   <CollectionTabs />
                 </li>
@@ -177,7 +176,6 @@ const Collection = () => {
                 <li
                   key={index + 1}
                   className={style.collectionSlider_list_item}
-                  ref={collectionRef}
                 >
                   <CollectionTabs />
                 </li>
@@ -207,7 +205,6 @@ const Collection = () => {
                 <li
                   key={index + 1}
                   className={style.collectionSlider_list_item}
-                  ref={collectionRef}
                 >
                   <CollectionTabs />
                 </li>
