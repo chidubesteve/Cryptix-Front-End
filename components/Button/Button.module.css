@@ -7,7 +7,7 @@
     color: var(--shadow-light-color);
     transition: all .2s ease-in;
     border-radius: 2rem;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--shadow-dark-color) 0px 3px 8px;
     word-spacing: 2px;
 }
 
