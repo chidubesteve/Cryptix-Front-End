@@ -1,0 +1,113 @@
+.creatorCard_box {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  border: 1px solid white;
+  background: #fff;
+  transition: box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.creatorCard_box:hover {
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+}
+.creatorCard_box_img_box {
+  position: relative;
+  flex-shrink: 0;
+  height: 9rem;
+}
+.creatorCard_box_img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-shrink: 0;
+  border-radius: inherit;
+  position: relative;
+  inset: 0;
+}
+.creatorCard_box_img_img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.creatorCard_box_info {
+  padding-inline: 1rem;
+  padding-top: 0.357rem;
+  padding-bottom: 1.25rem;
+}
+.creatorCard_box_info_svg_box {
+  text-align: center;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.creatorCard_box_info_user_avatar_box {
+  position: absolute;
+  top: -1.60rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* svg */
+.creatorCard_box_info_svg_box_svg {
+  margin-inline: auto;
+  color: white;
+  height: 3.5rem;
+  margin-top: -28px;
+  display: block;
+  /* background: red; */
+}
+
+.creatorCard_box_info_user_avatar_box_avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.creatorCard_box_info_info_box {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: .625rem;
+}
+.creatorCard_box_info_info_box_name {
+  display: flex;
+  flex-direction: column;
+}
+.creatorCard_box_info_info_box_name h3 {
+  font-weight: 600;
+  margin: 0;
+}
+.creatorCard_box_info_info_box_name span {
+  display: inline-block;
+  width: fit-content;
+}
+.creatorCard_box_info_info_box_follow_box_btn {
+  padding-block: .5rem;
+  font-weight: 500;
+  font-size: .875rem;
+  line-height: 1.2rem;
+  padding-inline: 1.5rem;
+  color: #fff;
+  border: rgb(226, 232, 240) 1px solid;
+  border-radius: 9999px;
+  background: var(--gradient-color);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: color,background-color,border-color,fill,stroke,text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  height: auto;
+  width: auto;
+  min-width: 84px;
+  z-index: 10;
+}

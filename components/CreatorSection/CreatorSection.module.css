@@ -1,0 +1,132 @@
+.creator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+  margin: 2.5rem 1.5rem;
+  border-radius: 1.8rem;
+  background-color: var(--alternate-bg-color);
+  padding-block: 4rem;
+}
+.creator_title {
+  width: 100%;
+  margin-inline: auto;
+  text-align: center;
+}
+.creator_tabs {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-block: 3rem;
+}
+.creator_tabs_list {
+  padding: 0.25rem;
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  background-color: #fff;
+  box-shadow: var(--box-shadow-2);
+  margin-inline: auto;
+  width: auto;
+}
+.creator_tabs_list_btn {
+  white-space: nowrap;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 0.975rem;
+  line-height: 1.25rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  transition: color 0.15s ease-in-out;
+  background: transparent;
+  color: grey;
+  border: none;
+  outline: none;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+.creator_tabs_list_btn:hover {
+  color: currentColor;
+}
+.creator_tabs_list_btn.active {
+  background: var(--gradient-color);
+  color: #fff;
+}
+.creator_tabs_list_btn:active,
+.creator_tabs_list_btn:focus {
+  outline: none;
+  border: none;
+}
+
+/* grid */
+.creator_card_grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  width: 100%;
+  justify-self: center;
+  max-width: calc(100% - 15%);
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .creator_card_grid{
+      max-width: calc(100% - 17%);
+
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .creator_card_grid {
+    max-width: calc(100% - 10%);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .creator_tabs {
+    margin-bottom: 3.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .creator_tabs {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+@media screen and (max-width: 640px) {
+  .creator {
+    margin-inline: 0;
+  }
+  .creator_tabs {
+    margin-block: 2rem;
+    line-height: 1.5rem;
+  }
+  .tabIcons {
+    display: none;
+  }
+  .creator_tabs_list_btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .creator_card_grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .creator_card_grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 639px) {
+  .creator_card_grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
