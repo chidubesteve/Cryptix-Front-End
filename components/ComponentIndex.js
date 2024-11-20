@@ -13,6 +13,7 @@ import Dropdown from './Dropdown/Dropdown';
 import Like from './Like/Like';
 import NFTCards from './NFTCards/NFTCards';
 import Collection from './Collection/Collection';
+import CreatorSection from './CreatorSection/CreatorSection';
 export {
   Button,
   Footer,
@@ -28,6 +29,7 @@ export {
   Filter,
   Dropdown,
   Like,
+  CreatorSection,
   Collection,
   NFTCards,
 };
