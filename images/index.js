@@ -49,7 +49,7 @@ import clonef_1192 from "./clonef_1192.png";
 import clonef_1923 from "./clonef_1923.png";
 import clonef_1778 from "./clonef_1778.png";
 
-import getAble from "./getable.png";
+import getAble from "./getable.jpg";
 import nft_image_1 from "./nft-image-1.png";
 import nft_image_2 from "./nft-image-2.png";
 import nft_image_3 from "./nft-image-3.png";
