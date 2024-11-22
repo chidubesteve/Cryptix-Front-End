@@ -1,9 +1,10 @@
-import React from 'react';
-import { FiArrowRight } from "react-icons/fi";import Image from 'next/future/image';
+import React from "react";
+import { FiArrowRight } from "react-icons/fi";
+import Image from "next/future/image";
 
 // internal imports
-import style from './NewsLetter.module.css';
-import images from '../../images';
+import style from "./NewsLetter.module.css";
+import images from "../../images";
 const NewsLetter = () => {
   return (
     <div className={style.subscribe}>
@@ -19,7 +20,8 @@ const NewsLetter = () => {
             </span>
             <ul className={style.subscribe_box_left_list}>
               <li>
-                <span className={style.subscribe_box_left_list_span1}>01</span><p>Get more discount</p>
+                <span className={style.subscribe_box_left_list_span1}>01</span>
+                <p>Get more discount</p>
               </li>
               <li>
                 <span className={style.subscribe_box_left_list_span2}>02</span>

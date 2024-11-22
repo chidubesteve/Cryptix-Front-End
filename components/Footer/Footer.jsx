@@ -22,7 +22,13 @@ const Footer = () => {
     <div className={style.footer}>
       <div className={style.footer_box}>
         <div className={style.footer_box_social}>
-          <Image src={images.logo} alt="Cryptix logo" height={125} width={135} className={style.footer_logo} />
+          <Image
+            src={images.logo}
+            alt="Cryptix logo"
+            height={125}
+            width={135}
+            className={style.footer_logo}
+          />
           <p>
             The world's first and largest digital marketplace for crypto
             collectibles and non-fungible token (NFTs). Buy, sell, and discover

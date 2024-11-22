@@ -1,19 +1,19 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
+import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 // Import icons
-import { HiOutlineBell } from 'react-icons/hi2';
-import { BsSearch } from 'react-icons/bs';
-import { CgMenuRight } from 'react-icons/cg';
-import { FiSun } from 'react-icons/fi';
-import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
+import { HiOutlineBell } from "react-icons/hi2";
+import { BsSearch } from "react-icons/bs";
+import { CgMenuRight } from "react-icons/cg";
+import { FiSun } from "react-icons/fi";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 // internal imports
-import styles from './NavBar.module.css';
-import { Discover, HelpCenter, Notification, Profile, SideBar } from './index';
-import { Button } from '../ComponentIndex';
-import images from '../../images';
-import useCloseOnOutsideClick from '../../utils/useCloseOnOutsideClick';
+import styles from "./NavBar.module.css";
+import { Discover, HelpCenter, Notification, Profile, SideBar } from "./index";
+import { Button } from "../ComponentIndex";
+import images from "../../images";
+import useCloseOnOutsideClick from "../../utils/useCloseOnOutsideClick";
 
 const NavBar = () => {
   // ----USESTATE
@@ -28,12 +28,12 @@ const NavBar = () => {
   const helpRef = useRef(null);
 
   const openMenu = (menu) => {
-    if (menu === 'Discover') {
+    if (menu === "Discover") {
       setDiscover(true);
       setHelp(false);
       setNotification(false);
       setProfile(false);
-    } else if (menu === 'Help Center') {
+    } else if (menu === "Help Center") {
       setDiscover(false);
       setHelp(true);
       setNotification(false);
@@ -112,13 +112,13 @@ const NavBar = () => {
             ref={discoverRef}
           >
             {/* DISCOVER MENU */}
-            <p data-menu="Discover" onClick={() => openMenu('Discover')}>
+            <p data-menu="Discover" onClick={() => openMenu("Discover")}>
               Discover &nbsp;
               <MdOutlineKeyboardArrowDown
                 size={30}
                 style={{
-                  color: 'rgba(128, 128, 128, 0.418)',
-                  width: 'fit-content',
+                  color: "rgba(128, 128, 128, 0.418)",
+                  width: "fit-content",
                 }}
               />
             </p>
@@ -130,13 +130,13 @@ const NavBar = () => {
           </div>
           {/* HELP CENTER */}
           <div className={styles.navbar_container_right_help} ref={helpRef}>
-            <p data-menu="Help Center" onClick={() => openMenu('Help Center')}>
+            <p data-menu="Help Center" onClick={() => openMenu("Help Center")}>
               Help Center &nbsp;
               <MdOutlineKeyboardArrowDown
                 size={30}
                 style={{
-                  color: 'rgba(128, 128, 128, 0.418)',
-                  width: 'fit-content',
+                  color: "rgba(128, 128, 128, 0.418)",
+                  width: "fit-content",
                 }}
               />
             </p>

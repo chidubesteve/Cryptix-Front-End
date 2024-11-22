@@ -1,9 +1,9 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 // internal imports
-import images from '../../images';
-import style from './Service.module.css';
+import images from "../../images";
+import style from "./Service.module.css";
 
 const Service = () => {
   return (
@@ -17,12 +17,17 @@ const Service = () => {
             height={100}
           />
           <p className={style.service_box_item_step}>
-            <span style={{ backgroundColor: 'var(--highlight-blue-bg-color)', color: 'var(--highlight-blue-text-color)' }}>Step 1</span>
+            <span
+              style={{
+                backgroundColor: "var(--highlight-blue-bg-color)",
+                color: "var(--highlight-blue-text-color)",
+              }}
+            >
+              Step 1
+            </span>
           </p>
           <h3>Filter & Discover</h3>
-          <p>
-            Discover, filer and find NFTs you love.
-          </p>
+          <p>Discover, filer and find NFTs you love.</p>
         </div>
         <div className={style.service_box_item}>
           <Image
@@ -32,12 +37,17 @@ const Service = () => {
             height={100}
           />
           <p className={style.service_box_item_step}>
-            <span style={{backgroundColor: 'var(--highlight-red-bg-color)', color: 'var(--highlight-red-text-color)'}}>Step 2</span>
+            <span
+              style={{
+                backgroundColor: "var(--highlight-red-bg-color)",
+                color: "var(--highlight-red-text-color)",
+              }}
+            >
+              Step 2
+            </span>
           </p>
           <h3>Connect Wallet</h3>
-          <p>
-            Connect your wallet, to buy NFTs
-          </p>
+          <p>Connect your wallet, to buy NFTs</p>
         </div>
 
         <div className={style.service_box_item}>
@@ -48,12 +58,17 @@ const Service = () => {
             height={100}
           />
           <p className={style.service_box_item_step}>
-            <span style={{ backgroundColor: 'var(--highlight-green-bg-color)', color: 'var(--highlight-green-text-color)' }}>Step 3</span>
+            <span
+              style={{
+                backgroundColor: "var(--highlight-green-bg-color)",
+                color: "var(--highlight-green-text-color)",
+              }}
+            >
+              Step 3
+            </span>
           </p>
           <h3>Start Trading</h3>
-          <p>
-           Buy, sell, or resell NFTs and earn money.
-          </p>
+          <p>Buy, sell, or resell NFTs and earn money.</p>
         </div>
         <div className={style.service_box_item}>
           <Image
@@ -63,7 +78,14 @@ const Service = () => {
             height={100}
           />
           <p className={style.service_box_item_step}>
-            <span style={{ backgroundColor: 'var(--highlight-yellow-bg-color)', color: 'var(--highlight-yellow-text-color)' }}>Step 4</span>
+            <span
+              style={{
+                backgroundColor: "var(--highlight-yellow-bg-color)",
+                color: "var(--highlight-yellow-text-color)",
+              }}
+            >
+              Step 4
+            </span>
           </p>
           <h3>Earn Money</h3>
           <p>

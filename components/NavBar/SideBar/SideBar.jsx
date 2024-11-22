@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { GrClose } from 'react-icons/gr';
+import React, { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { GrClose } from "react-icons/gr";
 import {
   TiSocialInstagram,
   TiSocialLinkedin,
@@ -9,15 +9,15 @@ import {
   TiSocialYoutube,
   TiArrowSortedDown,
   TiArrowSortedUp,
-} from 'react-icons/ti';
-import { TbWorld } from 'react-icons/tb';
-import { FaGithub } from 'react-icons/fa';
+} from "react-icons/ti";
+import { TbWorld } from "react-icons/tb";
+import { FaGithub } from "react-icons/fa";
 
 // Internal import
-import style from './SideBar.module.css';
-import images from '../../../images';
-import Button from '../../Button/Button';
-import { discover, helpCenter } from '../NavMenus';
+import style from "./SideBar.module.css";
+import images from "../../../images";
+import Button from "../../Button/Button";
+import { discover, helpCenter } from "../NavMenus";
 
 const SideBar = ({ setOpenSideMenu }) => {
   const [openDiscover, setOpenDiscover] = useState(false);
@@ -42,8 +42,6 @@ const SideBar = ({ setOpenSideMenu }) => {
   const closeSideBar = () => {
     setOpenSideMenu(false);
   };
-
-
 
   return (
     <>
@@ -94,7 +92,7 @@ const SideBar = ({ setOpenSideMenu }) => {
             onClick={() => openDiscoverMenu()}
           >
             <p>Discover</p>
-            <TiArrowSortedDown style={{ width: 'fit-content' }} />
+            <TiArrowSortedDown style={{ width: "fit-content" }} />
           </div>
 
           {openDiscover && (
@@ -114,7 +112,7 @@ const SideBar = ({ setOpenSideMenu }) => {
             onClick={() => openHelpMenu()}
           >
             <p>Help Center</p>
-            <TiArrowSortedDown style={{ width: 'fit-content' }} />
+            <TiArrowSortedDown style={{ width: "fit-content" }} />
           </div>
           {openHelp && (
             <div className={style.sideBar_discover}>

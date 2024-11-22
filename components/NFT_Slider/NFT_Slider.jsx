@@ -256,12 +256,8 @@ const NFT_Slider = () => {
         {/* navigation arrows */}
 
         <div className={style.bigNftSlider_box_left_navigationArrows}>
-          <LeftNavigationArrow
-            handlePrev={handlePrev}
-          />
-          <RightNavigationArrow
-            handleNext={handleNext}
-          />
+          <LeftNavigationArrow handlePrev={handlePrev} />
+          <RightNavigationArrow handleNext={handleNext} />
         </div>
 
         <div className={style.bigNftSlider_box_right}>

@@ -1,12 +1,12 @@
-import React from 'react';
-import Image from 'next/image';
-import { LuPencilLine } from 'react-icons/lu';
-import { IoIosSearch } from 'react-icons/io';
+import React from "react";
+import Image from "next/image";
+import { LuPencilLine } from "react-icons/lu";
+import { IoIosSearch } from "react-icons/io";
 
 // Internal Imports
-import style from './HeroSection.module.css';
-import { Button } from '../ComponentIndex';
-import images from '../../images';
+import style from "./HeroSection.module.css";
+import { Button } from "../ComponentIndex";
+import images from "../../images";
 
 function HeroSection() {
   return (
@@ -41,7 +41,7 @@ function HeroSection() {
             alt="Three column nfts"
             width={900}
             height={500}
-            style={{width: 'auto', height: 'auto'}}
+            style={{ width: "auto", height: "auto" }}
             placeholder="blur"
           />
         </div>

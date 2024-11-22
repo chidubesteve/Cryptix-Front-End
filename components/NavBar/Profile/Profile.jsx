@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from 'next/link'
+import Link from "next/link";
 import React from "react";
 import { FaUserAlt, FaRegImage, FaUserEdit } from "react-icons/fa";
 import { MdHelpCenter } from "react-icons/md";
@@ -42,7 +42,7 @@ const Profile = () => {
           <div className={style.profile_menu_one_item}>
             <FaUserEdit />
             <p>
-              <Link href={{pathname: '/edit-profile'}}>Edit Profile</Link>
+              <Link href={{ pathname: "/edit-profile" }}>Edit Profile</Link>
             </p>
           </div>
         </div>
@@ -55,7 +55,7 @@ const Profile = () => {
             </p>
           </div>
           <div className={style.profile_menu_one_item}>
-            <TbWorldOff/>
+            <TbWorldOff />
             <p>
               <Link href={{ pathname: "/disconnect" }}>Disconnect</Link>
             </p>

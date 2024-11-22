@@ -71,7 +71,6 @@ const Category = () => {
     ],
   };
 
-
   return (
     <div className={style.category}>
       <div className={style.category_box_title}>
@@ -80,12 +79,8 @@ const Category = () => {
           paragraph="Explore the NFTs in the most featured categories."
         />
         <div className={style.navigationArrowsBox}>
-          <LeftNavigationArrow
-            handlePrev={handlePrevious}
-          />
-          <RightNavigationArrow
-            handleNext={handleNext}
-          />
+          <LeftNavigationArrow handlePrev={handlePrevious} />
+          <RightNavigationArrow handleNext={handleNext} />
         </div>
       </div>
       <Slider
