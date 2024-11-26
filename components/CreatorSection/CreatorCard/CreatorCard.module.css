@@ -46,11 +46,11 @@
 }
 .creatorCard_box_info_user_avatar_box {
   position: absolute;
-  top: -1.60rem;
+  top: -1.75rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 2.8rem;
+  height: 2.8rem;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -60,9 +60,25 @@
   margin-inline: auto;
   color: white;
   height: 3.5rem;
-  margin-top: -28px;
+  margin-top: -38px;
   display: block;
   /* background: red; */
+}
+
+@media screen and (max-width: 1580px) {
+  .creatorCard_box_info_svg_box_svg {
+    margin-top: -35px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .creatorCard_box_info_svg_box_svg {
+    margin-top: -33.5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .creatorCard_box_info_svg_box_svg {
+    margin-top: -32px;
+  }
 }
 
 .creatorCard_box_info_user_avatar_box_avatar {
