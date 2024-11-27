@@ -6,22 +6,19 @@ import style from "./Like.module.css";
 
 const Like = ({ isLiked, noOfLikes, handleClick, customStyle }) => {
   return (
-    <div
+    <button
       className={style.like_box}
       style={customStyle}
-      onClick={() => handleClick()}
+      onClick={handleClick}
+      aria-pressed={isLiked} // Optional for accessibility
     >
       {isLiked ? (
-        <AiFillHeart
-          className={style.like_icon}
-          fill="red"
-          onClick={() => handleClick()}
-        />
+        <AiFillHeart className={style.like_icon} fill="red" />
       ) : (
         <AiOutlineHeart className={style.like_icon} />
       )}
       {noOfLikes && <span>{noOfLikes}</span>}
-    </div>
+    </button>
   );
 };
 
