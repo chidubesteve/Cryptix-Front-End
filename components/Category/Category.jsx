@@ -101,7 +101,7 @@ const Category = () => {
               alt="category"
               width={350}
               height={150}
-              placeholder="data:image/ ..."
+              placeholder="data:image/..."
               className={style.category_image}
             />
             <div className={style.category_box_item_title}>

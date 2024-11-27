@@ -21,7 +21,7 @@ const CreatorCard = ({ creatorPic, backgroundImage }) => {
               width={300}
               height={98}
               className={style.creatorCard_box_img_img}
-              placeholder="data:image/ ..."
+              placeholder="data:image/..."
               quality={90}
             />
           </div>
@@ -50,7 +50,7 @@ const CreatorCard = ({ creatorPic, backgroundImage }) => {
                   alt="creator"
                   width={100}
                   height={100}
-                  placeholder="data:image/ ..."
+                  placeholder="data:image/..."
                   className={style.creatorCard_box_info_user_avatar_box_avatar}
                 />{" "}
               </div>
