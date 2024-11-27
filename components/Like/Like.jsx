@@ -20,7 +20,7 @@ const Like = ({ isLiked, noOfLikes, handleClick, customStyle }) => {
       ) : (
         <AiOutlineHeart className={style.like_icon} />
       )}
-      <span>{noOfLikes}</span>
+      {noOfLikes && <span>{noOfLikes}</span>}
     </div>
   );
 };
