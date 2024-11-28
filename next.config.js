@@ -2,8 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    formats: ["image/webp", "image/avif"],
+  },
   experimental: {
-    images: { allowFutureImage: true, formats: ["image/webp", "image/avif"] },
+    images: { allowFutureImage: true },
   },
 };
 
