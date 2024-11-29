@@ -6,7 +6,7 @@ import Link from "next/link";
 import style from "./horizontalAudioCard.module.css";
 import images from "../../../../images";
 import GradientIcon from "../../../../utils/GradientIcon";
-import useAudio from "../../../hooks/useAudio";
+import useAudio from "../../../../hooks/useAudio";
 
 const HorizontalAudioCard = ({ title, bgImage }) => {
   const [isPlaying, setIsPlaying] = useState(false);

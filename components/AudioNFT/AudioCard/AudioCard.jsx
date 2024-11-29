@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { FaPlay } from "react-icons/fa";
 import Link from "next/link";
-import { HiOutlinePause } from "react-icons/hi2";
 
 // INTERNAL IMPORTS
 import style from "./AudioCard.module.css";
@@ -9,7 +7,7 @@ import Image from "next/future/image";
 import { Like } from "../../ComponentIndex";
 import images from "../../../images";
 import GradientIcon from "../../../utils/GradientIcon";
-import useAudio from "../../hooks/useAudio";
+import useAudio from "../../../hooks/useAudio";
 const AudioCard = ({ title, image, usersImgs }) => {
   const [liked, setLiked] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
