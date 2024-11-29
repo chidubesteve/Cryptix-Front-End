@@ -1,0 +1,152 @@
+.horizontalAudioCard_box {
+  background-color: var(--alternate-bg-color);
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  transition: box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.horizontalAudioCard_box:hover {
+  /* box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1) */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.horizontalAudioCard_box_left_box {
+  display: flex;
+  flex-grow: 1;
+  margin-inline-end: 1rem;
+}
+.horizontalAudioCard_box_left_box_img_box {
+  position: relative;
+  width: 4rem;
+}
+@media screen and (min-width: 640px) {
+  .horizontalAudioCard_box_left_box_img_box {
+    width: 7rem;
+  }
+}
+.horizontalAudioCard_box_left_box_img {
+  width: 100%;
+  border-radius: 1rem;
+  height: 100%;
+  object-fit: cover;
+}
+.horizontalAudioCard_box_left_box_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  margin-left: 1rem;
+}
+.horizontalAudioCard_box_left_box_info h1 {
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-block: 0px;
+  white-space: nowrap;
+}
+.horizontalAudioCard_box_left_box_info_lower_box {
+  padding-top: 0.75rem;
+  margin-top: 0.375rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* users div */
+.horizontalAudioCard_box_left_box_info_lower_box_users {
+  display: none;
+}
+@media screen and (min-width: 640px) {
+  .horizontalAudioCard_box_left_box_info_lower_box_users {
+    display: flex;
+    width: fit-content;
+  }
+}
+.horizontalAudioCard_box_left_box_info_lower_box_users_imgs {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  display: inline-flex;
+  border-radius: 9999px;
+  margin-left: -0.375rem;
+  object-fit: cover;
+  outline: 2px solid #fff;
+  box-shadow: 0 0 0 calc(2+0) #fff;
+  outline-offset: 0;
+}
+.horizontalAudioCard_box_left_box_info_lower_box_price {
+  border: 2.5px solid #22c55e;
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.4rem;
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  line-height: 0;
+  max-width: 6.5rem;
+}
+.horizontalAudioCard_box_left_box_info_lower_box_price small {
+  background-color: var(--alternate-bg-color);
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  position: absolute;
+  top: -0.67rem;
+  left: 0.6rem;
+  width: fit-content;
+  font-weight: 400;
+  color: gray;
+}
+.horizontalAudioCard_box_left_box_info_lower_box_price p {
+  font-weight: 00;
+  color: #22c55e;
+  text-align: center;
+  width: fit-content;
+}
+.horizontalAudioCard_box_left_box_info_lower_box_quantity {
+  display: block;
+  color: gray;
+  width: fit-content;
+}
+
+/* right */
+.horizontalAudioCard_box_right_box {
+  margin-left: 0.5rem;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  position: relative;
+  align-self: center;
+  width: fit-content;
+}
+.horizontalAudioCard_box_right_box_btn {
+  outline: none;
+  border: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .9rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+.horizontalAudioCard_box_right_box_btn:focus,
+.horizontalAudioCard_box_right_box_btn:active {
+  outline: none;
+  border: none;
+}
+@media screen  and (min-width: 640px) {
+    
+    .horizontalAudioCard_box_right_box_btn {
+        width: 2.75rem;
+        height: 2.75rem
+    }
+}

@@ -10,6 +10,7 @@ import creatorbackground8 from "./creatorbackground-8.jpg";
 import creatorbackground9 from "./creatorbackground-9.jpg";
 import creatorbackground10 from "./creatorbackground-10.jpg";
 import creatorbackground11 from "./creatorbackground-11.jpg";
+import creatorbackground12 from './music-background.png';
 import category1 from "./category-1.png";
 import category2 from "./category-2.png";
 import category3 from "./category-3.png";
@@ -94,6 +95,7 @@ export default {
   creatorbackground9,
   creatorbackground10,
   creatorbackground11,
+  creatorbackground12,
   user1,
   user2,
   user3,

@@ -9,7 +9,8 @@ import {
   Filter,
   NFTCards,
   Collection,
-  CreatorSection
+  CreatorSection,
+  AudioNFT
 } from "../components/ComponentIndex";
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
       <HeroSection />
       <Service />
       <NFT_Slider />
+      <AudioNFT />
       <CreatorSection />
       <Collection />
       <Filter />

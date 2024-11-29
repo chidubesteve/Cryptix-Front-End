@@ -1,0 +1,57 @@
+.AudioNFT {
+  margin-block: 5rem;
+  max-width: 100dvw;
+  width: 100%;
+}
+@media screen and (min-width: 1024px){
+  .AudioNFT {
+    margin-block: 7rem;
+  }
+}
+.AudioNFT_box {
+  max-width: max-content;
+  width: 100%;
+  margin-inline: auto;
+  padding: 1rem;
+}
+@media screen and (min-width: 640px){
+  .AudioNFT_box {
+    padding: 0;
+  }
+}
+.AudioNFT_box_title {
+  margin-bottom: 2.5rem;
+}
+/* grid */
+.AudioNFT_box_grid_box {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+@media screen and (min-width: 640px) {
+    .AudioNFT_box_grid_box {
+        gap: 2rem;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .AudioNFT_box_grid_box {
+    gap: 2.5rem;
+  }
+}
+.AudioNFT_box_grid_box_horizontal_box {
+      display: grid;
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem
+}
+@media screen and (min-width: 640px) {
+    .AudioNFT_box_grid_box_horizontal_box {
+        grid-column: span 6 / span 6;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .AudioNFT_box_grid_box_horizontal_box {
+        grid-column: span 2 / span 2;
+        gap: 2rem;
+    }
+}

@@ -14,6 +14,7 @@ import Like from './Like/Like';
 import NFTCards from './NFTCards/NFTCards';
 import Collection from './Collection/Collection';
 import CreatorSection from './CreatorSection/CreatorSection';
+import AudioNFT from './AudioNFT/AudioNFT';
 export {
   Button,
   Footer,
@@ -32,4 +33,5 @@ export {
   CreatorSection,
   Collection,
   NFTCards,
+  AudioNFT
 };

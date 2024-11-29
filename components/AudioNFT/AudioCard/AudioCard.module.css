@@ -1,0 +1,208 @@
+.audioCard_box {
+  position: relative;
+}
+@media screen and (min-width: 640px) {
+  .audioCard_box {
+    grid-column: span 3 / span 3;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .audioCard_box {
+    grid-column: span 2 / span 2;
+  }
+}
+.audioCard_box_img {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  width: 100%;
+  display: block;
+  position: relative;
+  padding-bottom: calc((10 / 12) * 100%);
+}
+
+.audioCard_box_img_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.audioCard_box_img_img:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+/* like */
+.audioCard_box_like_box {
+  position: absolute;
+  top: 0.625rem;
+  left: 0.625rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+/* remaining time */
+.audioCard_box_time_box {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  display: flex;
+  justify-content: flex-end;
+  /* z-index: 10; */
+  width: 100%;
+}
+.audioCard_box_time_box_svg {
+  color: #fff;
+  width: 11rem;
+}
+@media screen and (min-width: 768px) {
+  .audioCard_box_time_box_svg {
+    width: 200px;
+  }
+}
+.audioCard_box_time_box_time {
+  position: absolute;
+  top: 50%;
+  right: 1.25rem;
+  transform: translateY(-50%);
+  font-weight: 600;
+  width: fit-content;
+}
+.audioCard_box_time_box_time_span1 {
+  letter-spacing: 0.025rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  color: rgb(107, 114, 128);
+  display: block;
+  width: fit-content;
+}
+.audioCard_box_time_box_time_span2 {
+  display: block;
+  font-weight: 600;
+  width: fit-content;
+}
+@media screen and (min-width: 768px) {
+  .audioCard_box_time_box_time_span2 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+/* music player and nft info div */
+.audioCard_box_music_info_box {
+  position: relative;
+  max-width: 360px;
+  width: 91.666667%;
+  margin-top: -8rem;
+  z-index: 10;
+}
+.audioCard_box_music_info_box_music_box {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-inline: 1.25rem;
+}
+
+.audioCard_box_music_info_box_music_box_music_img {
+  object-fit: contain;
+}
+
+.audioCard_box_music_info_box_music_box_music_play_icon {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; /* Standard syntax */
+  cursor: pointer;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem;
+  width: 3.5rem;
+  height: 3.2rem;
+  border: none;
+  outline: none;
+}
+.audioCard_box_music_info_box_music_box_music_play_icon:active,
+.audioCard_box_music_info_box_music_box_music_play_icon:focus {
+  outline: none;
+  border: none;
+}
+.audioCard_box_music_info_box_nft_info_box {
+  border-radius: 1.5rem;
+  border-top-left-radius: 0;
+  padding: 1.25rem;
+  background-color: #fff;
+  margin-top: 1.25rem;
+  display: block;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+.audioCard_box_music_info_box_nft_info_box_upper_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.audioCard_box_music_info_box_nft_info_box_upper_box h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.75rem;
+  margin-block: 7px;
+}
+.audioCard_box_music_info_box_nft_info_box_upper_box_avatars {
+  display: flex;
+  justify-content: flex-end;
+}
+.audioCard_box_music_info_box_nft_info_box_upper_box_avatars_avatar {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  display: inline-flex;
+  border-radius: 9999px;
+  margin-left: -0.375rem;
+  object-fit: cover;
+  outline: 2px solid #fff;
+  box-shadow: 0 0 0 calc(2+0) #fff;
+  outline-offset: 0;
+}
+.audioCard_box_music_info_box_nft_info_box_lower_box {
+  width: 100%;
+  margin-top: 0.375rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.audioCard_box_music_info_box_nft_info_box_lower_box_price {
+  border: 2.5px solid #22c55e;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.4rem;
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  line-height: 0;
+  max-width: 6.5rem;
+}
+.audioCard_box_music_info_box_nft_info_box_lower_box_price small {
+  background-color: var(--shadow-light-color);
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  position: absolute;
+  top: -0.67rem;
+  left: 0.6rem;
+  width: fit-content;
+  font-weight: 400;
+  color: gray;
+}
+.audioCard_box_music_info_box_nft_info_box_lower_box_price p {
+  font-weight: 600;
+  color: #22c55e;
+  text-align: center;
+  width: fit-content;
+}
+.audioCard_box_music_info_box_nft_info_box_lower_box span {
+    width: fit-content;
+}
