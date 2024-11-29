@@ -3,6 +3,8 @@
   position: absolute;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
   width: fit-content;
   border: none;
   outline: none;
@@ -10,13 +12,15 @@
   padding: 0.5rem 0.9rem;
   color: #fff;
   cursor: pointer;
+  font-weight: 500;
+  font-size: .98rem;
+
 }
 .like_box:focus, .like_box:active{
   outline: none;
 }
 .like_icon {
   font-size: 1.5rem;
-  margin-right: 0.6rem;
 }
 @media screen and (max-width: 1023px) {
   .like_box {
