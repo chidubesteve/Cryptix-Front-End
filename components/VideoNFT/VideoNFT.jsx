@@ -12,7 +12,6 @@ import {
   LeftNavigationArrow,
   RightNavigationArrow,
 } from "../NavigationArrows/NavigationArrows";
-import SeeMore from "../SeeMore/SeeMore";
 
 const VideoNFT = () => {
   const sliderRef = useRef(null);
