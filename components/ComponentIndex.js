@@ -15,6 +15,7 @@ import NFTCards from './NFTCards/NFTCards';
 import Collection from './Collection/Collection';
 import CreatorSection from './CreatorSection/CreatorSection';
 import AudioNFT from './AudioNFT/AudioNFT';
+import VideoNFT from './VideoNFT/VideoNFT';
 export {
   Button,
   Footer,
@@ -33,5 +34,6 @@ export {
   CreatorSection,
   Collection,
   NFTCards,
-  AudioNFT
+  AudioNFT,
+  VideoNFT
 };

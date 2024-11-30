@@ -1,0 +1,172 @@
+.VideoNFTCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.VideoNFTCard_box_upper_box {
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 1.5rem;
+  padding-bottom: calc((9 / 16) * 100%);
+  width: 100%;
+  overflow: hidden;
+}
+/* video */
+.VideoNFTCard_box_upper_box_video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  object-fit: cover;
+}
+/* controls */
+.VideoNFTCard_box_upper_box_video_controls {
+  position: absolute;
+  z-index: 10;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem;
+}
+.VideoNFTCard_box_upper_box_video_controls:active,
+.VideoNFTCard_box_upper_box_video_controls:focus {
+  outline: none;
+  border: none;
+  
+}
+
+/* cover image */
+.VideoNFTCard_box_upper_box_video_coverImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.VideoNFTCard_box_upper_box_video_coverImg_img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.VideoNFTCard_box_upper_box_video_coverImg_img:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+/*  */
+/* lower box */
+.VideoNFTCard_box_lower_box {
+  padding: 1.25rem;
+  position: relative;
+}
+
+.VideoNFTCard_box_lower_box_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.VideoNFTCard_box_lower_box_title h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  margin-block: 0.4rem;
+}
+
+.VideoNFTCard_box_lower_box_title_user_quantity {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.VideoNFTCard_box_lower_box_title_user_quantity_users {
+  display: flex;
+  width: fit-content;
+  flex-wrap: nowrap;
+  margin-right: 0.8rem;
+  display: none;
+}
+@media screen and (min-width: 640px) {
+  .VideoNFTCard_box_lower_box_title_user_quantity_users {
+    display: flex;
+  }
+}
+.VideoNFTCard_box_lower_box_title_user_quantity_users_img {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: -0.5rem;
+  outline: 2px solid #fff;
+}
+.VideoNFTCard_box_lower_box_title_user_quantity_users_img:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+.VideoNFTCard_box_lower_box_title_user_quantity_quantity {
+  width: fit-content;
+  font-size: small;
+}
+
+.VideoNFTCard_box_lower_box_price_time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.875rem;
+}
+
+/* price */
+.VideoNFTCard_box_lower_box_price_time_price {
+  border: 2.5px solid #22c55e;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.4rem;
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  line-height: 0;
+  max-width: 6.5rem;
+}
+.VideoNFTCard_box_lower_box_price_time_price small {
+  background-color: var(--shadow-light-color);
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  position: absolute;
+  top: -0.67rem;
+  left: 0.6rem;
+  width: fit-content;
+  font-weight: 400;
+  color: gray;
+}
+.VideoNFTCard_box_lower_box_price_time_price p {
+  font-weight: 600;
+  color: #22c55e;
+  text-align: center;
+  width: fit-content;
+}
+
+/* time */
+.VideoNFTCard_box_lower_box_price_time_time {
+  width: fit-content;
+}
+.VideoNFTCard_box_lower_box_price_time_time_span {
+  letter-spacing: 0.025rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  color: rgb(107, 114, 128);
+  display: block;
+}
+.VideoNFTCard_box_lower_box_price_time_time_time {
+  font-weight: 600;
+}

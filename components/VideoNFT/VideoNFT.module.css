@@ -1,0 +1,67 @@
+.VideoNFT {
+  margin-block: 5rem;
+  max-width: 100dvw;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .VideoNFT {
+    margin-block: 7rem;
+  }
+}
+
+.VideoNFT_box {
+  max-width: max-content;
+  width: 100%;
+  padding: 1rem;
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 640px) {
+  .VideoNFT_box {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
+
+.VideoNFT_box_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  .VideoNFT_box_title {
+    margin-bottom: 4rem;
+  }
+}
+@media screen and (min-width: 640px) {
+  .VideoNFT_box_title {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+.VideoNFT_box_title_arrows {
+  display: flex;
+  justify-content: flex-end;
+}
+.VideoNFT_box_cards {
+  display: flex;
+  list-style: none;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+}
+
+.VideoNFT_box_cards_card {
+  position: relative;
+  flex-shrink: 0;
+  display: inline-block;
+  padding-inline: 0.5rem;
+}
+@media screen and (min-width: 1280px) {
+  .VideoNFT_box_cards_card {
+    padding-inline: 1rem;
+  }
+}
