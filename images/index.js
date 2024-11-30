@@ -59,6 +59,12 @@ import nft_image_5 from "./nft-image-5.png";
 import nft_image_6 from "./nft-image-6.png";
 import musicWave from "./musicwave.png";
 
+import videocover1 from './videocover1.png';
+import videocover2 from './videocover2.png';
+import videocover3 from './videocover3.png';
+import videocover4 from './videocover4.png';
+
+
 export default {
   collection,
   musicWave,
@@ -118,4 +124,8 @@ export default {
   vimeo,
   youtube,
   zgcmq,
+  videocover1,
+  videocover2,
+  videocover3,
+  videocover4
 };
