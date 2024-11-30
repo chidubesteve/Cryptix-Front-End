@@ -26,7 +26,6 @@
   display: flex;
   justify-content: center;
   list-style-type: none;
-  background-color: #fff;
   box-shadow: var(--box-shadow-2);
   margin-inline: auto;
   width: auto;
