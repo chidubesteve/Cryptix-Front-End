@@ -9,11 +9,10 @@ export const LeftNavigationArrow = ({ handlePrev, className }) => {
     className ? className : ""
   }`;
   return (
-    <div className={classname}>
+    <div className={classname} onClick={handlePrev}>
       <span>
         <HiArrowLeft
           className={style.navigation_arrows_box_arrow_left}
-          onClick={handlePrev}
           title="previous"
         />
       </span>
@@ -26,11 +25,10 @@ export const RightNavigationArrow = ({ handleNext, className }) => {
     className ? className : ""
   }`;
   return (
-    <div className={classname}>
+    <div className={classname} onClick={handleNext}>
       <span>
         <HiArrowRight
           className={style.navigation_arrows_box_arrow_right}
-          onClick={handleNext}
           title="next"
         />
       </span>
