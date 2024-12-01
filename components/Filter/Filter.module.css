@@ -9,6 +9,9 @@
   margin: 0 auto;
   padding-top: 1rem;
 }
+.filter_box_title p {
+  margin-bottom: .5rem;
+}
 .filter_box {
   width: 90%;
   margin: 0 auto;
