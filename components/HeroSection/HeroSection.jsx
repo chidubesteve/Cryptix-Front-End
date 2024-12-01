@@ -7,6 +7,7 @@ import { IoIosSearch } from "react-icons/io";
 import style from "./HeroSection.module.css";
 import { Button } from "../ComponentIndex";
 import images from "../../images";
+import Link from "next/link";
 
 function HeroSection() {
   return (
@@ -23,16 +24,21 @@ function HeroSection() {
           </p>
 
           <div className={style.btnsContainer}>
+            <Link href="/search" passHref>
+
             <Button
               btnName="Explore"
               icon={<IoIosSearch className={style.btnIcon} />}
               className={style.btn1}
             />
-            <Button
-              btnName="Create"
-              icon={<LuPencilLine className={style.btnIcon} />}
-              className={style.btn}
-            />
+            </Link>
+            <Link href='/create-item' passHref>
+              <Button
+                btnName="Create"
+                icon={<LuPencilLine className={style.btnIcon} />}
+                className={style.btn}
+              />
+            </Link>
           </div>
         </div>
         <div className={style.heroSection_box_right}>

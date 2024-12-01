@@ -13,6 +13,7 @@ import {
   LeftNavigationArrow,
   Like,
 } from "../ComponentIndex";
+import Link from "next/link";
 
 const NFTSliderData = [
   {
@@ -240,16 +241,20 @@ const NFT_Slider = () => {
             </div>
 
             <div className={style.bigNftSlider_box_left_buttons_box}>
-              <Button
-                btnName="Place a bid"
-                handleClick={() => {}}
-                className={style.place_bid_btn}
-              />
-              <Button
-                btnName="View item"
-                handleClick={() => {}}
-                className={style.view_item_btn}
-              />
+              <Link href={"/nft-detail"} passHref>
+                <Button
+                  btnName="Place a bid"
+                  handleClick={() => {}}
+                  className={style.place_bid_btn}
+                />
+              </Link>
+              <Link href={"/nft-detail"} passHref>
+                <Button
+                  btnName="View item"
+                  handleClick={() => {}}
+                  className={style.view_item_btn}
+                />
+              </Link>
             </div>
           </div>
         </div>
