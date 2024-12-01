@@ -44,6 +44,7 @@ const Brand = () => {
             alt="mine crypto with cryptix"
             placeholder="blur"
             className={style.brand_box_right_img}
+            quality={90}
           />
         </div>
       </div>
