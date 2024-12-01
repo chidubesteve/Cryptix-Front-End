@@ -1,16 +1,28 @@
-import React from 'react'
+import React, { forwardRef } from "react";
+import { useRouter } from "next/router";
 
 // internal import
-import style from './Button.module.css'
+import style from "./Button.module.css";
 
-const Button = ({btnName, handleClick, className, icon}) => {
+const Button = forwardRef(({ btnName, handleClick, className, icon, href }, ref) => {
+  const router = useRouter();
 
-  const classNames = `${style.button} ${className ? className : ''}`
+  const onClickHandler = () => {
+    if (href) {
+      router.push(href); // Navigate to the specified href
+    }
+    if (handleClick) {
+      handleClick(); // Call additional custom logic
+    }
+  };
+
+  const classNames = `${style.button} ${className ? className : ""}`;
   return (
-    <>
-      <button className={classNames} onClick={() => handleClick()}> {btnName} {icon && icon}</button>
-      </>
-  )
-}
+    <button ref={ref} className={classNames} onClick={onClickHandler}>
+      {btnName} {icon && icon}
+    </button>
+  );
+});
+Button.displayName = 'Button'
 
-export default Button
+export default Button;
