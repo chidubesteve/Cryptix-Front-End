@@ -18,7 +18,7 @@
   display: flex;
   position: relative;
   justify-content: center;
-  margin-block: 3rem;
+  margin-block: 2rem;
 }
 .collection_collections_list {
   padding: 0.25rem;
@@ -62,78 +62,68 @@
   border: none;
 }
 .collection_box {
-  display: grid;
-  grid-template-columns: 5% auto 5%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 .collectionSlider_list {
   padding: 0;
   margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto, minmax(0, 1fr));
-  gap: 2rem;
+  display: flex;
 }
 .collectionSlider {
-  /* max-width: calc(100vw - 8rem); */
   width: auto;
-  display: grid;
-  grid-template-columns: 3, 1fr;
-  grid-auto-flow: column;
-  gap: 2rem;
   margin: 0;
   padding: 0;
-  margin-block: 3rem;
+  margin-block: 1rem;
   overflow-x: scroll;
   touch-action: pan-x;
   scroll-behavior: smooth;
-  transition: all 0.3s ease-in-out;
-  touch-action: pan-x;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  /* background-color: red; */
 }
 
 .collectionSlider_list_item {
   list-style-type: none;
   position: relative;
   height: 100%;
-  display: flex !important;
-  justify-content: center !important;
-  /* max-width: calc(100vw - 8rem); */
+  padding-inline: 0.5rem;
 }
-
 
 .leftArrow,
 .rightArrow {
   display: flex;
   align-self: center;
   justify-self: center;
-  height: auto;
+  height: fit-content;
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1024px) {
   .collection_box {
     display: flex;
     max-width: 90%;
     margin-inline: auto;
+
+  }
+  .collectionSlider_list_item {
+    padding-inline: .875rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .collection_collections {
-    margin-bottom: 3.5rem;
+    margin-bottom: 2.87rem;
   }
 }
 @media screen and (max-width: 860px) {
-  .collection_box {
-    display: flex;
-    flex-direction: row;
-  }
-  .collectionSlider {
-    display: grid;
-    gap: 1.7rem;
-  }
   .leftArrow,
   .rightArrow {
     display: none;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+  .collectionSlider_list {
+    width: 80%;
+    margin-inline: auto;
   }
 }
 @media screen and (min-width: 768px) {
@@ -146,6 +136,7 @@
 @media screen and (max-width: 640px) {
   .collection {
     margin-inline: 0;
+    padding-inline: 0.875rem;
   }
   .collection_collections {
     margin-block: 2rem;

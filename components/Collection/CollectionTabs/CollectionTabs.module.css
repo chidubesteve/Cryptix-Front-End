@@ -6,7 +6,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  max-width: 25.3125rem;
+  /* max-width: 25.3125rem; */
   width: 100%;
 }
 
@@ -98,13 +98,13 @@
 }
 @media screen and (min-width: 1024px) and (max-width: 1280px) {  
   .collectionTabs {
-    max-width: 23em;
+    /* max-width: 23em; */
     width: 100%;
   }
 }
 
 @media screen and (min-width: 480px) and (max-width: 800px) {
 .collectionTabs {
-  max-width: 22.3125rem;
+  /* max-width: 22rem; */
 }
 }
