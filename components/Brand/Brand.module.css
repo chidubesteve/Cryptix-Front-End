@@ -1,7 +1,3 @@
-/* .brand {
-    max-width: 100dvw;
-    width: 100%;
-} */
 .brand_box {
   display: flex;
   justify-content: space-between;
