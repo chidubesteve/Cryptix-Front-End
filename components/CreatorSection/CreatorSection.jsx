@@ -4,7 +4,7 @@ import { MdOutlineNewReleases } from "react-icons/md";
 
 // internal imports
 import style from "./CreatorSection.module.css";
-import { Title } from "../ComponentIndex";
+import { Button, Title } from "../ComponentIndex";
 import { LuUserPlus } from "react-icons/lu";
 import CreatorCard from "./CreatorCard/CreatorCard";
 import images from "../../images";
@@ -107,6 +107,10 @@ const CreatorSection = () => {
               creatorPic={images[`user${index + 1}`]}
             />
           ))}
+      </div>
+      <div className={style.creator_btns}>
+        <Button btnName="Become a Creator" className={style.creator_btn} />
+        <Button btnName="Show me more" className={style.showMore_btn}  />
       </div>
     </div>
   );
