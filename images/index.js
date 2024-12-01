@@ -58,6 +58,7 @@ import nft_image_4 from "./nft-image-4.png";
 import nft_image_5 from "./nft-image-5.png";
 import nft_image_6 from "./nft-image-6.png";
 import musicWave from "./musicwave.png";
+import brand from './eran.png'
 
 import videocover1 from './videocover1.png';
 import videocover2 from './videocover2.png';
@@ -127,5 +128,6 @@ export default {
   videocover1,
   videocover2,
   videocover3,
-  videocover4
+  videocover4,
+  brand
 };
