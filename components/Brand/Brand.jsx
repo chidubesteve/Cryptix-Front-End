@@ -1,11 +1,11 @@
 import Image from "next/future/image";
 import React from "react";
+import Link from "next/link";
 
 // internal imports
 import style from "./Brand.module.css";
 import images from "../../images";
 import { Button } from "../ComponentIndex";
-import Link from "next/link";
 
 const Brand = () => {
   return (
