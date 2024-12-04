@@ -121,8 +121,11 @@
   width: 15rem;
   border-radius: 1rem;
   border: 1px solid rgba(128, 128, 128, 0.438);
-
   background-color: var(--main-bg-color);
+}
+.dark_navbar_container_right_discover_box,
+.dark_navbar_container_right_help_box {
+  box-shadow: var(--dark-box-shadow) !important;
 }
 
 .navbar_container_right_discover p,

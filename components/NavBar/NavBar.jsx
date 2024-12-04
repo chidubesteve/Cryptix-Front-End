@@ -136,7 +136,7 @@ const NavBar = () => {
               />
             </p>
             {discover && (
-              <div className={styles.navbar_container_right_discover_box}>
+            <div className={`${styles.navbar_container_right_discover_box} ${theme === "dark" ? styles.dark_navbar_container_right_discover_box : ""}`}>
                 <Discover setDiscover={setDiscover} />
               </div>
             )}
@@ -158,7 +158,7 @@ const NavBar = () => {
               />
             </p>
             {help && (
-              <div className={styles.navbar_container_right_help_box}>
+              <div className={`${styles.navbar_container_right_help_box} ${theme === "dark" ? styles.dark_navbar_container_right_help_box : ""}`}>
                 <HelpCenter setHelpCenter={setHelp} />
               </div>
             )}
