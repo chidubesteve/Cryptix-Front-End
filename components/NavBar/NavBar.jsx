@@ -6,7 +6,9 @@ import { HiOutlineBell } from "react-icons/hi2";
 import { BsSearch } from "react-icons/bs";
 import { CgMenuRight } from "react-icons/cg";
 import { FiSun } from "react-icons/fi";
+import { FaMoon } from "react-icons/fa";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { useTheme } from "next-themes";
 
 // internal imports
 import styles from "./NavBar.module.css";
@@ -22,6 +24,14 @@ const NavBar = () => {
   const [notification, setNotification] = useState(false);
   const [profile, setProfile] = useState(false);
   const [openSideMenu, setOpenSideMenu] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  // Ensure component is mounted before accessing theme
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
 
   const discoverRef = useRef(null);
   const notificationRef = useRef(null);
@@ -86,12 +96,11 @@ const NavBar = () => {
   );
 
   return (
-    <div className={styles.navbar}>
       <div className={styles.navbar_container}>
         <div className={styles.navbar_container_left}>
           <div className={styles.logo}>
             <Image
-              src={images.logo}
+              src={theme === "light" ? images.logo : images.logoLight}
               alt="NFT Marketplace logo"
               width={135}
               height={125}
@@ -112,8 +121,12 @@ const NavBar = () => {
             ref={discoverRef}
           >
             {/* DISCOVER MENU */}
-            <p data-menu="Discover" onClick={() => openMenu("Discover")}>
-              Discover &nbsp;
+            <p
+              data-menu="Discover"
+              onClick={() => openMenu("Discover")}
+              style={{ margin: 0 }}
+            >
+              Discover
               <MdOutlineKeyboardArrowDown
                 size={30}
                 style={{
@@ -130,8 +143,12 @@ const NavBar = () => {
           </div>
           {/* HELP CENTER */}
           <div className={styles.navbar_container_right_help} ref={helpRef}>
-            <p data-menu="Help Center" onClick={() => openMenu("Help Center")}>
-              Help Center &nbsp;
+            <p
+              data-menu="Help Center"
+              onClick={() => openMenu("Help Center")}
+              style={{ margin: 0 }}
+            >
+              Help Center
               <MdOutlineKeyboardArrowDown
                 size={30}
                 style={{
@@ -159,14 +176,35 @@ const NavBar = () => {
             {notification && <Notification />}
           </div>
           <div className={styles.verticalBar}></div>
-          <FiSun className={styles.themeIcon} />
+          {
+            // Prevent rendering during SSR
+            !mounted ? null : (
+              <button
+                onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+                aria-label="Toggle Theme"
+                className={styles.themeSwitcher}
+              >
+                {theme === "dark" ? (
+                  <FaMoon
+                    className={styles.themeIcon}
+                    title="switch to light mode"
+                  />
+                ) : (
+                  <FiSun
+                    className={styles.themeIcon}
+                    title="switch to dark mode"
+                  />
+                )}
+              </button>
+            )
+          }
           {/* CREATE & CONNECT WALLET BUTTON SECTION */}
           <div className={styles.navbar_container_right_button}>
-            <Button btnName="Create" handleClick={() => {}} />
+            <Button btnName="Create" handleClick={() => {}} className={theme === "dark" && styles.createBtn}/>
             <Button
               btnName="Connect Wallet"
               handleClick={() => {}}
-              className={styles.connectWalletBtn}
+              className={`${styles.connectWalletBtn } ${theme === "dark" && styles.darkConnectWalletBtn}`}
             />
           </div>
 
@@ -196,15 +234,14 @@ const NavBar = () => {
             />
           </div>
         </div>
+        {/* SIDEBAR COMPONENT*/}
+        {openSideMenu && (
+          <div className={styles.sideBar}>
+            <SideBar setOpenSideMenu={setOpenSideMenu} />
+          </div>
+        )}
       </div>
 
-      {/* SIDEBAR COMPONENT*/}
-      {openSideMenu && (
-        <div className={styles.sideBar}>
-          <SideBar setOpenSideMenu={setOpenSideMenu} />
-        </div>
-      )}
-    </div>
   );
 };
 

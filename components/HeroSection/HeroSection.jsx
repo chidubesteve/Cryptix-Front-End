@@ -2,14 +2,16 @@ import React from "react";
 import Image from "next/image";
 import { LuPencilLine } from "react-icons/lu";
 import { IoIosSearch } from "react-icons/io";
+import Link from "next/link";
+import { useTheme } from "next-themes";
 
 // Internal Imports
 import style from "./HeroSection.module.css";
 import { Button } from "../ComponentIndex";
 import images from "../../images";
-import Link from "next/link";
 
 function HeroSection() {
+  const { theme } = useTheme();
   return (
     <div className={style.heroSection}>
       <div className={style.heroSection_box}>
@@ -25,18 +27,17 @@ function HeroSection() {
 
           <div className={style.btnsContainer}>
             <Link href="/search" passHref>
-
-            <Button
-              btnName="Explore"
-              icon={<IoIosSearch className={style.btnIcon} />}
-              className={style.btn1}
-            />
+              <Button
+                btnName="Explore"
+                icon={<IoIosSearch className={style.btnIcon} />}
+                className={`${style.btn1} ${theme === "dark" && style.darkBtn1}`}
+              />
             </Link>
-            <Link href='/create-item' passHref>
+            <Link href="/create-item" passHref>
               <Button
                 btnName="Create"
                 icon={<LuPencilLine className={style.btnIcon} />}
-                className={style.btn}
+                className={`${style.btn} ${theme === "dark" && style.darkBtn}`}
               />
             </Link>
           </div>

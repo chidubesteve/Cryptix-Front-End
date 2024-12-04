@@ -1,7 +1,7 @@
 .button{
     background: var(--gradient-color);
     padding: .8rem 1.15rem;
-    border: .8px solid transparent;
+    border: .5px solid transparent;
     font-size: 1rem;
     font-weight: 550;
     color: var(--shadow-light-color);

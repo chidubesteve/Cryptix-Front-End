@@ -4,7 +4,7 @@
     z-index: 22222222222;
 }
 .discover:hover{
-    background-color: var(--icons-bg-color);
+    background-color: var(--hover-bg-color);
     color: var(--icons-color);
     border-radius: .3rem;
 }

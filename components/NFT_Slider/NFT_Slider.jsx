@@ -3,6 +3,8 @@ import Image from "next/future/image";
 import { BsCameraVideo } from "react-icons/bs";
 import { MdVerified } from "react-icons/md";
 import { LuTimer } from "react-icons/lu";
+import Link from "next/link";
+import { useTheme } from "next-themes";
 
 //internal imports
 import style from "./NFT_Slider.module.css";
@@ -13,7 +15,6 @@ import {
   LeftNavigationArrow,
   Like,
 } from "../ComponentIndex";
-import Link from "next/link";
 
 const NFTSliderData = [
   {
@@ -116,6 +117,7 @@ const NFTSliderData = [
 
 const NFT_Slider = () => {
   const [idNumber, setIdNumber] = useState(0);
+  const {theme} = useTheme();
 
   const [likes, setLikes] = useState(NFTSliderData.map((nft) => nft.likes));
   const [likedStatus, setLikedStatus] = useState(
@@ -245,14 +247,14 @@ const NFT_Slider = () => {
                 <Button
                   btnName="Place a bid"
                   handleClick={() => {}}
-                  className={style.place_bid_btn}
+                  className={`${style.place_bid_btn} ${theme === "dark" && style.dark_place_bid_btn}`}
                 />
               </Link>
               <Link href={"/nft-detail"} passHref>
                 <Button
                   btnName="View item"
                   handleClick={() => {}}
-                  className={style.view_item_btn}
+                  className={`${style.view_item_btn} ${theme === "dark" && style.dark_view_item_btn}`}
                 />
               </Link>
             </div>
@@ -265,7 +267,7 @@ const NFT_Slider = () => {
           <RightNavigationArrow handleNext={handleNext} />
         </div>
 
-        <div className={style.bigNftSlider_box_right}>
+        <div className={`${style.bigNftSlider_box_right} ${theme === "dark" && style.dark_bigNftSlider_box_right}`}>
           <div className={style.bigNftSlider_box_right_box}>
             <Image
               src={NFTSliderData[idNumber].nftImage}

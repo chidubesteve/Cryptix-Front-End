@@ -1,6 +1,7 @@
 .heroSection {
   width: 90%;
-  margin: 3rem auto;
+  margin-top: 15rem;
+  margin-inline: auto;
 }
 
 .heroSection_box {
@@ -25,7 +26,8 @@
   margin-bottom: 2rem;
   font-weight: 500;
   font-size: 1.2rem;
-  opacity: .8;
+  color: var(--minor-text-color);
+  /* opacity: .8; */
 }
 
 .btnsContainer {
@@ -39,6 +41,10 @@
   font-size: 1.2rem;
   display: flex;
   align-items: center;
+}
+.darkBtn1 {
+  color: #fff;
+  box-shadow: none;
 }
 .btn {
   padding: 1rem 1.3rem;
@@ -55,6 +61,14 @@
   border: 0.8px solid rgba(128, 128, 128, 0.718);
   color: var(--icons-color);
 }
+.darkBtn {
+  background: rgb(17 24 39);
+  border: 1px solid rgb(55 65 81) !important;
+  box-shadow: none;
+}
+.darkBtn:hover {
+  background: var(--buttons-hover-color);
+}
 .btnIcon {
   margin-left: 0.6rem;
   font-size: 30px;
@@ -65,7 +79,7 @@
   justify-content: center;
 }
 
-@media screen  and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
   .heroSection {
     width: 90%;
     margin: 1rem auto;

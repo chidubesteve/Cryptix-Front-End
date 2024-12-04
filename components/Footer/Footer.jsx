@@ -11,19 +11,21 @@ import { FaXTwitter } from "react-icons/fa6";
 import { TbWorld } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa";
 import { RiSendPlaneFill } from "react-icons/ri";
-import images from "../../images";
-import { Discover, HelpCenter } from "../NavBar/index";
+import { useTheme } from "next-themes";
 
 // INTERNAL IMPORTS
 import style from "./Footer.module.css";
+import { Discover, HelpCenter } from "../NavBar/index";
+import images from "../../images";
 
 const Footer = () => {
+  const { theme } = useTheme();
   return (
     <div className={style.footer}>
       <div className={style.footer_box}>
         <div className={style.footer_box_social}>
           <Image
-            src={images.logo}
+            src={theme === "light" ? images.logo : images.logoLight}
             alt="Cryptix logo"
             height={125}
             width={135}

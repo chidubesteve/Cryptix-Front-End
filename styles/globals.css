@@ -4,37 +4,43 @@
   --icons-color: #25272bdd;
   --icons-light-color: #4c577341;
   --icons-bg-color: #eef0f2;
-  --minor-text-color: rgba(128, 128, 128, 0.665);
+  --minor-text-color: rgb(115 115 115);
   --shadow-dark-color: #dcd8d8;
   --alternate-bg-color: #f5f6f7;
   --shadow-light-color: #fff;
-  --highlight-blue-bg-color: #DBEAFE;
-  --highlight-blue-text-color: #1E40A5;
-  --highlight-red-bg-color: #FCE7F3;
-  --highlight-red-text-color: #9D174D;
-  --highlight-green-bg-color: #ECFDF5;
+  --highlight-blue-bg-color: #dbeafe;
+  --highlight-blue-text-color: #1e40a5;
+  --highlight-red-bg-color: #fce7f3;
+  --highlight-red-text-color: #9d174d;
+  --highlight-green-bg-color: #ecfdf5;
   --highlight-green-text-color: #166534;
-  --highlight-yellow-bg-color: #FDF8C2;
-  --highlight-yellow-text-color: #854D0E;
-  --gradient-color: linear-gradient(225deg, rgba(27,57,160,1) 0%, rgba(135,40,144,1) 40%, rgba(255,44,137,1) 100%);
+  --highlight-yellow-bg-color: #fdf8c2;
+  --highlight-yellow-text-color: #854d0e;
+  --gradient-color: linear-gradient(
+    225deg,
+    rgba(27, 57, 160, 1) 0%,
+    rgba(135, 40, 144, 1) 40%,
+    rgba(255, 44, 137, 1) 100%
+  );
   --main-bg-color: #ffffff;
-  --highlight-pink-bg-color: #FEF2F8;
-  --highlight-pink-text-color: #DB2777;
- --highlight-purple-bg-color: #F5F3FF;
- --highlight-purple-text-color: #7C3AED;
+  --highlight-pink-bg-color: #fef2f8;
+  --highlight-pink-text-color: #db2777;
+  --highlight-purple-bg-color: #f5f3ff;
+  --highlight-purple-text-color: #7c3aed;
   --box-shadow: 1rem 1rem 1rem var(--shadow-dark-color),
     -1rem -1rem 1rem var(--shadow-light-color);
 
   --box-shadow-2: 0rem 10px 15px -3px var(--shadow-dark-color),
     0 4px 6px -4px var(--shadow-dark-color);
+  --hover-bg-color: rgb(245 245 245);
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  font-size: clamp(.89rem, 1vw, 1.3rem); 
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(0.89rem, 1vw, 1.3rem);
   background-color: var(--main-bg-color);
   color: var(--icons-color);
   scroll-behavior: smooth;
@@ -57,7 +63,7 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: .62rem;
+  width: 0.62rem;
   border: 1px solid var(--main-bg-color);
 }
 ::-webkit-scrollbar-track {
@@ -70,16 +76,22 @@ a {
   background: var(--icons-color);
   width: 0.5rem;
 }
-button:active, button:focus{
+button:active,
+button:focus {
   outline: 2px solid #95298f; /* Adds a border-like effect, and doesn't affect the box model */
   outline-offset: 2px; /* Creates space between the outline and the element */
 }
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-} */
+[data-theme="dark"] {
+  --main-bg-color: #111827;
+  --alternate-bg-color: #0e131f;
+  --icons-light-color: #9ca3af; /* Lighter shade for hover or secondary items */
+  --hover-bg-color: #1F2937;
+  --icons-bg-color: #1f2937;
+  --icons-color: rgb(209 213 219);
+  --minor-text-color: rgb(163 163 163)
+   --shadow-dark-color: #2f4f7f;
+  --shadow-light-color: #65737e;
+  --dark-box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);;
+  --dark-box-shadow-2: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --buttons-hover-color: rgb(31 41 55);
+}

@@ -7,13 +7,19 @@ import style from "./horizontalAudioCard.module.css";
 import images from "../../../../images";
 import GradientIcon from "../../../../utils/GradientIcon";
 import useAudio from "../../../../hooks/useAudio";
+import { useTheme } from "next-themes";
 
 const HorizontalAudioCard = ({ title, bgImage }) => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const { theme } = useTheme();
   const { play, pause } = useAudio({ isPlaying });
 
   return (
-    <div className={style.horizontalAudioCard_box}>
+    <div
+      className={`${style.horizontalAudioCard_box} ${
+        theme === "dark" && style.dark_horizontalAudioCard_box
+      }`}
+    >
       {/* left box */}
       <Link href={"/nft-detail"}>
         <div className={style.horizontalAudioCard_box_left_box}>
@@ -67,7 +73,7 @@ const HorizontalAudioCard = ({ title, bgImage }) => {
               </div>
               <div
                 className={
-                  style.horizontalAudioCard_box_left_box_info_lower_box_price
+                  `${style.horizontalAudioCard_box_left_box_info_lower_box_price} ${theme === "dark" && style.dark_horizontalAudioCard_box_left_box_info_lower_box_price}`
                 }
               >
                 {" "}

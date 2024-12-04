@@ -7,6 +7,9 @@
   justify-content: space-between;
   transition: box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
+.dark_horizontalAudioCard_box {
+  background-color: var(--buttons-hover-color);
+}
 .horizontalAudioCard_box:hover {
   /* box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 8px 10px -6px rgba(0, 0, 0, 0.1) */
@@ -100,6 +103,9 @@
   width: fit-content;
   font-weight: 400;
   color: gray;
+}
+.dark_horizontalAudioCard_box_left_box_info_lower_box_price small {
+  background-color: var(--buttons-hover-color);
 }
 .horizontalAudioCard_box_left_box_info_lower_box_price p {
   font-weight: 00;

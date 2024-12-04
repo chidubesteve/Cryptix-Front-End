@@ -2,17 +2,23 @@
   width: 100%;
   padding-block: 1rem;
   position: relative;
-  z-index: 111111111;
+  background-color: blue;
 }
 
 .navbar_container {
-  width: inherit;
+  width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 2fr);
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  position: fixed;
+  top: -1rem;
+  left: 0;
+  background-color: var(--main-bg-color);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.438);
+  z-index: 111111111;
 }
 
 .logo {
@@ -55,20 +61,33 @@
 .search_icon {
   cursor: pointer;
   font-size: 1.4rem;
-  width: fit-content
+  width: fit-content;
 }
 
 /* RIGHT SECTION */
 
 .navbar_container_right {
   display: grid;
-  grid-template-columns: 1fr 1fr 0.5fr 0.1fr 0.5fr 1fr;   /* removed profile from home */
+  grid-template-columns: 1fr 1fr 0.5fr 0.1fr 0.5fr 1fr; /* removed profile from home */
   align-items: center;
   margin-inline-end: 0.8rem;
 }
 
 .navbar_container_right > * {
   justify-self: center;
+}
+.navbar_container_right_discover p,
+.navbar_container_right_help p {
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+  padding: 0.5rem 1rem;
+}
+
+.navbar_container_right_discover:hover,
+.navbar_container_right_help:hover {
+  background-color: var(--hover-bg-color);
+  border-radius: 30px;
 }
 
 .navbar_container_right_discover,
@@ -101,7 +120,8 @@
   box-shadow: var(--box-shadow);
   width: 15rem;
   border-radius: 1rem;
-  border: 1px solid rgba(211, 211, 211, 0.622);
+  border: 1px solid rgba(128, 128, 128, 0.438);
+
   background-color: var(--main-bg-color);
 }
 
@@ -110,14 +130,29 @@
   display: flex;
   align-items: center;
 }
+.navbar_container_right_notify {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
 
 .notify {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
+.navbar_container_right_notify:hover {
+  border-radius: 50%;
+  background-color: var(--hover-bg-color);
+}
+
 .verticalBar {
   width: 1px;
   height: 1.98rem;
   background-color: rgba(128, 128, 128, 0.438);
+}
+.createBtn {
+  box-shadow: none;
+  color: #fff;
 }
 
 .connectWalletBtn {
@@ -132,6 +167,12 @@
   border: 0.8px solid rgba(128, 128, 128, 0.524);
   color: var(--icons-color);
 }
+.darkConnectWalletBtn {
+  box-shadow: none;
+}
+.darkConnectWalletBtn:hover {
+  background: var(--buttons-hover-color);
+}
 
 .navbar_container_right_profile {
   border-radius: 50%;
@@ -140,8 +181,25 @@
 .navbar_container_right_menuBtn {
   display: none;
 }
+.themeSwitcher {
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+}
+.themeSwitcher:hover {
+  cursor: pointer;
+  background-color: var(--hover-bg-color);
+}
+.themeSwitcher:focus,
+.themeSwitcher:active {
+  outline: none;
+}
 .themeIcon {
-  font-size: 2.18rem;
+  font-size: 1.8rem;
+  color: var(--icons-color);
 }
 
 .menuIcon {
@@ -208,9 +266,9 @@
 }
 
 @media screen and (min-device-width: 650px) and (max-device-width: 1023px) {
-  .navbar_container_left  {
+  .navbar_container_left {
     grid-template-columns: 1fr 1fr;
-    gap: 1rem
+    gap: 1rem;
   }
 }
 
@@ -219,7 +277,7 @@
     grid-template-columns: 1fr 1fr;
     padding-inline: 3rem;
   }
-  .navbar_container_left_box_input{
+  .navbar_container_left_box_input {
     width: 100%;
     justify-self: center;
   }
