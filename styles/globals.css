@@ -81,17 +81,17 @@ button:focus {
   outline: 2px solid #95298f; /* Adds a border-like effect, and doesn't affect the box model */
   outline-offset: 2px; /* Creates space between the outline and the element */
 }
-[data-theme="dark"] {
+[data-theme="dark"], [color-scheme="dark"] {
   --main-bg-color: #111827;
   --alternate-bg-color: #0e131f;
   --icons-light-color: #9ca3af; /* Lighter shade for hover or secondary items */
   --hover-bg-color: #1F2937;
   --icons-bg-color: #1f2937;
   --icons-color: rgb(209 213 219);
-  --minor-text-color: rgb(163 163 163)
-   --shadow-dark-color: #2f4f7f;
+  --minor-text-color: rgb(163 163 163);
   --shadow-light-color: #65737e;
   --dark-box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);;
   --dark-box-shadow-2: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --buttons-hover-color: rgb(31 41 55);
+  --bg-slate: rgb(15 23 42);
 }

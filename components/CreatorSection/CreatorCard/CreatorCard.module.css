@@ -11,6 +11,13 @@
   box-shadow: var(--box-shadow);
   cursor: pointer;
 }
+.dark_creatorCard_box {
+  border: 1px solid var(--main-bg-color);
+  background: var(--hover-bg-color);
+}
+.dark_creatorCard_box:hover {
+  box-shadow: var(--dark-box-shadow-2);
+}
 .creatorCard_box_img_box {
   position: relative;
   flex-shrink: 0;
@@ -64,6 +71,9 @@
   display: block;
   /* background: red; */
 }
+.dark_creatorCard_box_info_svg_box_svg {
+  color: var(--hover-bg-color);
+}
 
 @media screen and (max-width: 1580px) {
   .creatorCard_box_info_svg_box_svg {
@@ -94,6 +104,9 @@
   justify-content: space-between;
   margin-top: .625rem;
 }
+.dark_creatorCard_box_info_info_box {
+  background-color: var(--hover-bg-color);
+}
 .creatorCard_box_info_info_box_name {
   display: flex;
   flex-direction: column;
@@ -113,7 +126,7 @@
   line-height: 1.2rem;
   padding-inline: 1.5rem;
   color: #fff;
-  border: rgb(226, 232, 240) 1px solid;
+  border: rgba(226, 232, 240, 0.397) 1px solid;
   border-radius: 9999px;
   background: var(--gradient-color);
   cursor: pointer;
@@ -126,4 +139,12 @@
   width: auto;
   min-width: 84px;
   z-index: 10;
+}
+.dark_creatorCard_box_info_info_box_follow_box_btn {
+  border: transparent;
+  color: #fff!important;
+}
+.dark_creatorCard_box_info_info_box_follow_box_btn:hover {
+  border: 1px solid rgba(226, 232, 240, 0.397);
+  background: var(--buttons-hover-color) !important;
 }

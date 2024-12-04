@@ -26,10 +26,14 @@
   display: flex;
   justify-content: center;
   list-style-type: none;
-  background-color: #fff;
+  background-color: var(--main-bg-color);
   box-shadow: var(--box-shadow-2);
   margin-inline: auto;
   width: auto;
+}
+.dark_creator_tabs_list {
+  background-color: var(--hover-bg-color);
+  box-shadow: var(--dark-box-shadow-2) !important;
 }
 .creator_tabs_list_btn {
   white-space: nowrap;
@@ -55,6 +59,9 @@
 .creator_tabs_list_btn.active {
   background: var(--gradient-color);
   color: #fff;
+}
+.creator_tabs_list_btn.active_dark {
+  background: var(--bg-slate);
 }
 .creator_tabs_list_btn:active,
 .creator_tabs_list_btn:focus {
@@ -85,6 +92,16 @@
   font-size: 0.875rem;
   line-height: 1, 25rem;
   width: auto;
+}
+.dark_creator_btn {
+  box-shadow: none;
+  color: #fff;
+}
+.dark_showMore_btn {
+  box-shadow: none;
+}
+.dark_showMore_btn:hover {
+  background: var(--buttons-hover-color) !important;
 }
 
 @media screen and (min-width: 640px) {

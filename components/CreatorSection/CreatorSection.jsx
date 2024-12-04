@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import { RiUserFollowLine } from "react-icons/ri";
 import { MdOutlineNewReleases } from "react-icons/md";
+import { useTheme } from "next-themes";
+import { LuUserPlus } from "react-icons/lu";
 
 // internal imports
 import style from "./CreatorSection.module.css";
 import { Button, Title } from "../ComponentIndex";
-import { LuUserPlus } from "react-icons/lu";
 import CreatorCard from "./CreatorCard/CreatorCard";
 import images from "../../images";
 
 const CreatorSection = () => {
   // use a single state to manage selected tab
   const [selectedTab, setSelectedTab] = useState("popular");
+  const {resolvedTheme} = useTheme();
 
   const handleSelectedTab = (tab) => {
     setSelectedTab(tab);
@@ -22,13 +24,21 @@ const CreatorSection = () => {
       <div className={style.creator_title}>
         <Title title="Top List Creators." />
       </div>
-      <nav className={style.creator_tabs}>
-        <ul className={style.creator_tabs_list}>
+      <nav className={`${style.creator_tabs}`}>
+        <ul
+          className={`${style.creator_tabs_list} ${
+            resolvedTheme === "dark" && style.dark_creator_tabs_list
+          }`}
+        >
           <li onClick={() => handleSelectedTab("popular")}>
             <button
-              className={`${style.creator_tabs_list_btn} ${
-                selectedTab === "popular" && style.active
-              }`}
+              className={
+                `${style.creator_tabs_list_btn} ` +
+                (selectedTab === "popular" ? style.active : "") +
+                (resolvedTheme === "dark" && selectedTab === "popular"
+                  ? ` ${style.active_dark}`
+                  : "")
+              }
             >
               <RiUserFollowLine
                 style={{
@@ -44,9 +54,13 @@ const CreatorSection = () => {
           <li onClick={() => handleSelectedTab("following")}>
             {" "}
             <button
-              className={`${style.creator_tabs_list_btn} ${
-                selectedTab === "following" && style.active
-              }`}
+              className={
+                `${style.creator_tabs_list_btn} ` +
+                (selectedTab === "following" ? style.active : "") +
+                (resolvedTheme === "dark" && selectedTab === "following"
+                  ? ` ${style.active_dark}`
+                  : "")
+              }
             >
               <LuUserPlus
                 style={{
@@ -63,9 +77,13 @@ const CreatorSection = () => {
           <li onClick={() => handleSelectedTab("new&NoteWorthy")}>
             {" "}
             <button
-              className={`${style.creator_tabs_list_btn} ${
-                selectedTab === "new&NoteWorthy" && style.active
-              }`}
+              className={
+                `${style.creator_tabs_list_btn} ` +
+                (selectedTab === "new&NoteWorthy" ? style.active : "") +
+                (resolvedTheme === "dark" && selectedTab === "new&NoteWorthy"
+                  ? ` ${style.active_dark}`
+                  : "")
+              }
             >
               <MdOutlineNewReleases
                 style={{
@@ -109,8 +127,8 @@ const CreatorSection = () => {
           ))}
       </div>
       <div className={style.creator_btns}>
-        <Button btnName="Become a Creator" className={style.creator_btn} />
-        <Button btnName="Show me more" className={style.showMore_btn}  />
+        <Button btnName="Become a Creator" className={`${style.creator_btn} ${resolvedTheme === "dark" && style.dark_creator_btn}`} />
+        <Button btnName="Show me more" className={`${style.showMore_btn} ${resolvedTheme === "dark" && style.dark_showMore_btn}`} />
       </div>
     </div>
   );
