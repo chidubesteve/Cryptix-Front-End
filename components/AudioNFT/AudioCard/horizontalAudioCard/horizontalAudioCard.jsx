@@ -11,13 +11,13 @@ import { useTheme } from "next-themes";
 
 const HorizontalAudioCard = ({ title, bgImage }) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const { play, pause } = useAudio({ isPlaying });
 
   return (
     <div
       className={`${style.horizontalAudioCard_box} ${
-        theme === "dark" && style.dark_horizontalAudioCard_box
+        resolvedTheme === "dark" && style.dark_horizontalAudioCard_box
       }`}
     >
       {/* left box */}
@@ -73,7 +73,7 @@ const HorizontalAudioCard = ({ title, bgImage }) => {
               </div>
               <div
                 className={
-                  `${style.horizontalAudioCard_box_left_box_info_lower_box_price} ${theme === "dark" && style.dark_horizontalAudioCard_box_left_box_info_lower_box_price}`
+                  `${style.horizontalAudioCard_box_left_box_info_lower_box_price} ${resolvedTheme === "dark" && style.dark_horizontalAudioCard_box_left_box_info_lower_box_price}`
                 }
               >
                 {" "}

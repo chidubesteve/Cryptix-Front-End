@@ -11,7 +11,7 @@ import { Button } from "../ComponentIndex";
 import images from "../../images";
 
 function HeroSection() {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   return (
     <div className={style.heroSection}>
       <div className={style.heroSection_box}>
@@ -30,14 +30,14 @@ function HeroSection() {
               <Button
                 btnName="Explore"
                 icon={<IoIosSearch className={style.btnIcon} />}
-                className={`${style.btn1} ${theme === "dark" && style.darkBtn1}`}
+                className={`${style.btn1} ${resolvedTheme === "dark" && style.darkBtn1}`}
               />
             </Link>
             <Link href="/create-item" passHref>
               <Button
                 btnName="Create"
                 icon={<LuPencilLine className={style.btnIcon} />}
-                className={`${style.btn} ${theme === "dark" && style.darkBtn}`}
+                className={`${style.btn} ${resolvedTheme === "dark" && style.darkBtn}`}
               />
             </Link>
           </div>

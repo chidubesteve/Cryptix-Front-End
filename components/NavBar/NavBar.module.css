@@ -168,10 +168,10 @@
   color: var(--icons-color);
 }
 .darkConnectWalletBtn {
-  box-shadow: none;
+  box-shadow: none !important;
 }
 .darkConnectWalletBtn:hover {
-  background: var(--buttons-hover-color);
+  background: var(--buttons-hover-color) !important;
 }
 
 .navbar_container_right_profile {
