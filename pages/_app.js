@@ -38,9 +38,8 @@ const MyApp = ({ Component, pageProps }) => (
 
     <ThemeProvider
       defaultTheme="light"
-      enableSystem
+      enableSystem={false}
       disableTransitionOnChange
-      suppressHydrationWarning={true}
     >
       <NavBar />
       <Component {...pageProps} />
