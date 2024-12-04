@@ -1,9 +1,9 @@
 .dropdown_box {
-  background-color: #fff;
+  background-color: var(--main-bg-color);
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
-  border: 1px solid lightgray;
+  border: 1px solid var(--icons-bg-color);
   border-radius: 1rem;
   width: 29rem;
   align-self: flex-start;
@@ -83,6 +83,10 @@
 .clear_btn {
   padding: 0.8rem 1.7rem;
   width: fit-content;
+}
+.dark_clear_btn, .dark_apply_btn {
+  box-shadow: none !important;
+  color: #fff;
 }
 .dropdown_box_range_slider_box {
   height: 1rem;

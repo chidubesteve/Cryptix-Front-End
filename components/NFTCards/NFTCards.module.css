@@ -2,11 +2,11 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2.5rem;
-  padding: 2rem;
+  padding: 3rem;
   background-color: var(--alternate-bg-color);
+  margin-bottom: 5rem;
 }
 .NFTCard_box {
-  background-color: var(--shadow-light-color);
   border-radius: 1.5rem;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -15,17 +15,19 @@
   position: relative;
   /* overflow: hidden; */
   padding: 0.625rem;
-  background-color: var(--shadow-light-color);
+  background-color: var(--main-bg-color);
 }
 .NFTCard_box:hover {
   box-shadow: var(--box-shadow-2);
+}
+.dark_NFTCard_box:hover {
+  box-shadow: var(--dark-box-shadow-2);
 }
 .NFTCard_box_img {
   grid-column: 1/-1;
   grid-row: 1 / end;
   padding: 0.3rem;
   position: relative;
-  /* border: 0.4rem solid var(--shadow-light-color); */
 }
 .NFTCard_box_img_img {
   overflow: hidden;
@@ -91,7 +93,7 @@
 }
 
 .NFTCard_box_update_right {
-  background-color: var(--shadow-light-color);
+  background-color: var(--main-bg-color);
   padding: 0.5rem;
   /* text-align: center; */
   transform: skewX(45deg);
@@ -115,7 +117,7 @@
   overflow: hidden;
 }
 .NFTCard_box_update_details_box {
-  background-color: var(--shadow-light-color);
+  background-color: var(--main-bg-color);
   margin-left: -3rem;
   transform: skewX(45deg);
   border-top-right-radius: 1rem;
@@ -147,7 +149,7 @@
   max-width: 6.5rem;
 }
 .NFTCard_box_update_details_price_box_bid small {
-  background-color: var(--shadow-light-color);
+  background-color: var(--main-bg-color);
   border-radius: 0.2rem;
   padding: 0.5rem;
   position: absolute;

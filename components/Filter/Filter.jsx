@@ -6,6 +6,7 @@ import { IoImagesOutline, IoCloseCircle } from 'react-icons/io5';
 import { BsWallet2 } from 'react-icons/bs';
 import { LuFiles } from 'react-icons/lu';
 import { BiSort } from 'react-icons/bi';
+import { useTheme } from 'next-themes';
 
 //internal imports
 import style from './Filter.module.css';
@@ -14,6 +15,7 @@ import { Dropdown } from '../ComponentIndex';
 import { handleSelection } from '../../utils/handleDropDownCheckBoxesSelection';
 const Filter = () => {
   const [filter, setFilter] = useState(true);
+  const {resolvedTheme} = useTheme();
   const [openPriceFilter, setOpenPriceFilter] = useState(false);
   const [priceRangeValue, setPriceRangeValue] = useState([0.01, 10]);
   const [salesTypesDropDown, setSalesTypesDropDown] = useState(false);
@@ -126,7 +128,7 @@ const Filter = () => {
         />{" "}
       </div>
       <div className={style.filter_box}>
-        <div className={style.filter_box_left}>
+        <div className={`${style.filter_box_left} ${resolvedTheme === "dark" ? style.darkFilterBoxLeft : ""}`}>
           {["All NFTs", "Arts", "Music", "Sports", "Photography"].map(
             (name) => (
               <button
@@ -142,7 +144,7 @@ const Filter = () => {
           )}
         </div>
         <div className={style.filter_box_right}>
-          <button className={style.filter_box_right_box} onClick={openFilter}>
+          <button className={`${style.filter_box_right_box} ${resolvedTheme === "dark" ? style.darkFilterBoxRight : ""}`} onClick={openFilter}>
             <TbFilterSearch className={style.filter_box_right_box_icon} />
             <span>Filter</span> &nbsp;
             {filter ? <FaAngleDown /> : <FaAngleUp />}

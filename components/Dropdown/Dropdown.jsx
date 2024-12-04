@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import ReactSlider from 'react-slider';
+import { useTheme } from 'next-themes';
 
 import style from './Dropdown.module.css';
 import { Button } from '../ComponentIndex';
@@ -16,6 +17,7 @@ const Dropdown = ({
   priceRangeValue,
 }) => {
   const refs = useRef([]);
+  const { resolvedTheme } = useTheme();
 
   const handleClear = () => {
     if (inputType === 'range') {
@@ -154,12 +156,12 @@ const Dropdown = ({
         <Button
           btnName="Clear"
           handleClick={handleClear}
-          className={style.clear_btn}
+          className={`${style.clear_btn} ${resolvedTheme === 'dark' ? style.dark_clear_btn : ''}`}
         />
         <Button
           btnName="Apply"
           handleClick={handleApply}
-          className={style.apply_btn}
+          className={`${style.apply_btn} ${resolvedTheme === 'dark' ? style.dark_apply_btn : ''}`}
         />
       </div>
     </div>

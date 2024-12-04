@@ -10,7 +10,7 @@
   padding-top: 1rem;
 }
 .filter_box_title p {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 .filter_box {
   width: 90%;
@@ -49,6 +49,25 @@
   box-shadow: var(--box-shadow);
   cursor: pointer;
 }
+/* Dark Mode */
+.darkFilterBoxLeft button:hover {
+  background: var(--buttons-hover-color) !important;
+  color: var(--icons-color);
+  box-shadow: var(--dark-box-shadow) !important;
+}
+/* Ensure activeButton styles override hover in dark mode */
+.darkFilterBoxLeft .activeButton {
+  background-color: var(--highlight-pink-bg-color) !important;
+  color: var(--highlight-pink-text-color) !important;
+}
+
+/* Prevent hover styles from affecting the activeButton */
+.darkFilterBoxLeft .activeButton:hover {
+  background-color: var(--highlight-pink-bg-color) !important;
+  color: var(--highlight-pink-text-color) !important;
+  box-shadow: none; /* Optional, remove hover shadow */
+}
+
 .filter_box_right {
   display: flex;
   justify-content: flex-end;
@@ -69,6 +88,9 @@
   box-shadow: var(--box-shadow);
   font-weight: 500;
   color: white;
+}
+.darkFilterBoxRight {
+  box-shadow: var(--dark-box-shadow-2) !important;
 }
 .filter_box_right_box_icon {
   font-size: 1.8rem;
@@ -134,7 +156,8 @@
   .filter_box {
     flex-direction: column;
   }
-  .filter_box_left, .filter_box_items {
+  .filter_box_left,
+  .filter_box_items {
     display: flex;
     gap: 2rem;
     overflow-x: scroll;
@@ -142,7 +165,8 @@
     -ms-overflow-style: none;
   }
 
-  .filter_box_left::-webkit-scrollbar,  .filter_box_items::-webkit-scrollbar {
+  .filter_box_left::-webkit-scrollbar,
+  .filter_box_items::-webkit-scrollbar {
     display: none;
   }
   .filter_box_right {
@@ -159,16 +183,13 @@
   }
   /*
 //remove the relative positioning to prevent the dropdown from scrolling behind the page */
-.filter_box_items_box {
-  min-width: fit-content;
-  position: unset;
-}
-
+  .filter_box_items_box {
+    min-width: fit-content;
+    position: unset;
+  }
 }
 @media screen and (max-width: 600px) {
   .filter_box_items_box {
     justify-content: center;
   }
-
 }
-
