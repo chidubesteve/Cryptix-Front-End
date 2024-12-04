@@ -5,6 +5,7 @@ import { IoMdStopwatch } from "react-icons/io";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useTheme } from "next-themes";
 
 //internal imports
 import style from "./Collection.module.css";
@@ -14,6 +15,7 @@ import { LeftNavigationArrow, RightNavigationArrow } from "../ComponentIndex";
 
 const Collection = () => {
   const sliderRef = useRef(null);
+  const { resolvedTheme } = useTheme();
   // using a single state to tract selected tab
   const [selectedTab, setSelectedTab] = useState("last24Hours");
   //
@@ -55,7 +57,6 @@ const Collection = () => {
           slidesToScroll: 1,
         },
       },
-
     ],
   };
 
@@ -67,12 +68,20 @@ const Collection = () => {
           paragraph="Discover the new creative economy."
         />
       </div>
-      <nav className={style.collection_collections}>
-        <ul className={style.collection_collections_list}>
+      <nav className={`${style.collection_collections}`}>
+        <ul
+          className={`${style.collection_collections_list} ${
+            resolvedTheme === "dark" ? style.dark_collection_collections_list : ""
+          }`}
+        >
           <li onClick={() => handleSelectedTab("last24Hours")}>
             <button
               className={`${style.collection_collections_list_btn} ${
-                selectedTab === "last24Hours" && style.active
+                selectedTab === "last24Hours" ? style.active : ""
+              } ${
+                resolvedTheme === "dark" && selectedTab === "last24Hours"
+                  ? style.dark_active_btn
+                  : ""
               }`}
             >
               <IoMdStopwatch
@@ -90,7 +99,11 @@ const Collection = () => {
             {" "}
             <button
               className={`${style.collection_collections_list_btn} ${
-                selectedTab === "last7Days" && style.active
+                selectedTab === "last7Days" ? style.active : ""
+              } ${
+                resolvedTheme === "dark" && selectedTab === "last7Days"
+                  ? style.dark_active_btn
+                  : ""
               }`}
             >
               <FaCalendarWeek
@@ -108,7 +121,11 @@ const Collection = () => {
             {" "}
             <button
               className={`${style.collection_collections_list_btn} ${
-                selectedTab === "last30Days" && style.active
+                selectedTab === "last30Days" ? style.active : ""
+              } ${
+                resolvedTheme === "dark" && selectedTab === "last30Days"
+                  ? style.dark_active_btn
+                  : ""
               }`}
             >
               <MdOutlineCalendarMonth
@@ -139,10 +156,7 @@ const Collection = () => {
               className={style.collectionSlider}
             >
               {Array.from({ length: 7 }).map((el, index) => (
-                <li
-                  key={index}
-                  className={style.collectionSlider_list_item}
-                >
+                <li key={index} className={style.collectionSlider_list_item}>
                   <CollectionTabs />
                 </li>
               ))}

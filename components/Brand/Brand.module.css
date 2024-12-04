@@ -88,6 +88,15 @@
   width: auto;
   margin-right: 0.5rem;
 }
+.dark_brand_box_left_btns_btn2, .dark_brand_box_left_btns_btn1 {
+box-shadow: none;
+}
+.dark_brand_box_left_btns_btn1 {
+  color: #fff;
+}
+.dark_brand_box_left_btns_btn2:hover {
+  background: var(--buttons-hover-color) !important;
+}
 @media screen and (min-width: 640px) {
   .brand_box_left_btns_btn1,
   .brand_box_left_btns_btn2 {

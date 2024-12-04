@@ -1,6 +1,7 @@
 import Image from "next/future/image";
 import React from "react";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 // internal imports
 import style from "./Brand.module.css";
@@ -8,6 +9,7 @@ import images from "../../images";
 import { Button } from "../ComponentIndex";
 
 const Brand = () => {
+  const { resolvedTheme } = useTheme();
   return (
     <div className={style.brand}>
       <div className={style.brand_box}>
@@ -25,13 +27,17 @@ const Brand = () => {
             <Link href="/create-item" passHref>
               <Button
                 btnName={"Create item"}
-                className={style.brand_box_left_btns_btn1}
+                className={`${style.brand_box_left_btns_btn1} ${
+                  resolvedTheme === "dark" ? style.dark_brand_box_left_btns_btn1 : ""
+                }`}
               />
             </Link>
             <Link href="/search" passHref>
               <Button
                 btnName={"Discover more"}
-                className={style.brand_box_left_btns_btn2}
+                className={`${style.brand_box_left_btns_btn2} ${
+                  resolvedTheme === "dark" ? style.dark_brand_box_left_btns_btn2 : ""
+                }`}
               />
             </Link>
           </div>
