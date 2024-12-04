@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useTheme } from "next-themes";
 
 // internal imports
 import style from "./VideoNFT.module.css";
@@ -14,6 +15,9 @@ import {
 } from "../NavigationArrows/NavigationArrows";
 
 const VideoNFT = () => {
+
+  const { resolvedTheme } = useTheme();
+
   const sliderRef = useRef(null);
   const videoCardRef = useRef(null);
 
@@ -75,6 +79,7 @@ const VideoNFT = () => {
                 <VideoNFTCard
                   coverImgs={images[`videocover${index + 1}`]}
                   nftNames={`NFT video #150${index + 1}`}
+                  isDarkMode={resolvedTheme === "dark"}
                 />
               </li>
             ))}

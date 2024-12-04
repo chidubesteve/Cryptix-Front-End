@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/future/image";
 
 //internal imports
 import style from "./VideoNFTCard.module.css";
-import Image from "next/future/image";
 import GradientIcon from "../../../utils/GradientIcon";
 import Like from "../../Like/Like";
 import images from "../../../images";
@@ -66,18 +66,18 @@ const VideoNFTCard = ({ coverImgs, nftNames }) => {
             className={style.VideoNFTCard_box_upper_box_video_coverImg_img}
           />
         </div>
-          <Like
-            isLiked={isLiked}
-            handleClick={handleLike}
-            customStyle={{
-              padding: "0px",
-              width: "40px",
-              height: "40px",
-              textAlign: "center",
-              top: ".5rem",
-              right: ".5rem",
-            }}
-          />
+        <Like
+          isLiked={isLiked}
+          handleClick={handleLike}
+          customStyle={{
+            padding: "0px",
+            width: "40px",
+            height: "40px",
+            textAlign: "center",
+            top: ".5rem",
+            right: ".5rem",
+          }}
+        />
         {/* </div> */}
       </div>
       {/* lower section */}

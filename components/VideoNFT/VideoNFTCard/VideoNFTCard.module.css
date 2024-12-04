@@ -139,7 +139,7 @@
   max-width: 6.5rem;
 }
 .VideoNFTCard_box_lower_box_price_time_price small {
-  background-color: var(--shadow-light-color);
+  background-color: var(--main-bg-color);
   border-radius: 0.2rem;
   padding: 0.5rem;
   position: absolute;
@@ -149,6 +149,7 @@
   font-weight: 400;
   color: gray;
 }
+
 .VideoNFTCard_box_lower_box_price_time_price p {
   font-weight: 600;
   color: #22c55e;
