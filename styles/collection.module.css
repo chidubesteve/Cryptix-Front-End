@@ -1,0 +1,314 @@
+.collection {
+  width: 100%;
+}
+
+.collection_box {
+  top: 7.5rem;
+  position: relative;
+  /* margin-bottom: 10rem; */
+}
+@media screen and (max-width: 400px) {
+    .collection_box {
+        top: 5.5rem;
+    }
+}
+.collection_box_collection_profile_box {
+  position: relative;
+  margin-top: -3.5rem;
+  width: 100%;
+  max-width: calc(100dvw - 4rem);
+  margin-inline: auto;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .collection_box_collection_profile_box {
+    margin-top: -5rem;
+    margin-bottom: 5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .collection_box_collection_profile_box {
+    max-width: calc(100dvw - 12%);
+  }
+}
+
+.collection_box_collection_profile_box_box {
+  background-color: var(--main-bg-color);
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--box-shadow-2);
+}
+.collection_box_collection_profile_box_box_dark_theme {
+  border: 1px solid var(--neutral-700);
+  box-shadow: var(--dark-box-shadow-2);
+}
+@media screen and (min-width: 768px) {
+  .collection_box_collection_profile_box_box {
+    border-radius: 40px;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .collection_box_collection_profile_box_box {
+    padding: 2rem;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .collection_box_collection_profile_box_box {
+    gap: 3.5rem;
+  }
+}
+
+.collection_box_collection_profile_box_box_nft_box {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+@media screen and (min-width: 640px) {
+  .collection_box_collection_profile_box_box_nft_box {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 768px) {
+  .collection_box_collection_profile_box_box_nft_box {
+    display: block;
+  }
+}
+.collection_box_collection_profile_box_box_nft_box_img {
+  width: 10rem;
+}
+
+@media screen and (min-width: 640px) {
+  .collection_box_collection_profile_box_box_nft_box_img {
+    width: 12rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .collection_box_collection_profile_box_box_nft_box_img {
+    width: 14rem;
+  }
+}
+
+.collection_box_collection_profile_box_box_nft_box_img_img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  border-radius: 1.5rem;
+  position: relative;
+}
+.collection_box_collection_profile_box_box_nft_box_socials_box {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 640px) {
+  .collection_box_collection_profile_box_box_nft_box_socials_box {
+    justify-content: center;
+  }
+}
+
+.collection_box_collection_profile_box_box_nft_box_socials_box_line {
+  width: 1px;
+  height: 2rem;
+  background-color: var(--neutral-200);
+  margin-inline: 0.5rem;
+  height: 1.25rem;
+}
+.dark_collection_box_collection_profile_box_box_nft_box_socials_box_line {
+  background-color: var(--neutral-700);
+}
+.collection_box_collection_profile_box_box_nft_box_socials_box div {
+  display: flex;
+  justify-content: space-around;
+}
+.socials_icon {
+  background-color: var(--hover-bg-color);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--icons-color);
+}
+.socials_icon:hover {
+  background-color: var(--icons-bg-color);
+}
+@media screen and (min-width: 768px) {
+  .socials_icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+.dark_socials_icon:hover {
+  background-color: var(--neutral-700);
+}
+.socials_icon:focus,
+.socials_icon:active {
+  outline: none;
+}
+
+.collection_box_collection_profile_box_box_collection_info {
+  display: flex;
+  flex-grow: 1;
+  margin-top: 1.25rem;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .collection_box_collection_profile_box_box_collection_info {
+    margin-top: 0;
+  }
+}
+
+.collection_box_collection_profile_box_box_collection_info_name_details {
+  max-width: 640px;
+}
+.collection_box_collection_profile_box_box_collection_info_name_details h2 {
+  display: inline-block;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 640px) {
+  .collection_box_collection_profile_box_box_collection_info_name_details h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .collection_box_collection_profile_box_box_collection_info_name_details h2 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+.collection_box_collection_profile_box_box_collection_info_name_details span {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  display: block;
+  margin-top: 1rem;
+  color: var(--minor-text-color);
+}
+
+.collection_box_collection_profile_box_box_collection_info_stats_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 640px) {
+  .collection_box_collection_profile_box_box_collection_info_stats_grid {
+    gap: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .collection_box_collection_profile_box_box_collection_info_stats_grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .collection_box_collection_profile_box_box_collection_info_stats_grid {
+    margin-top: 2rem;
+    gap: 1.5rem;
+  }
+}
+.dark_collection_box_collection_profile_box_box_collection_info_stats_grid div {
+  background-color: var(--buttons-hover-color) !important;
+}
+@media screen and (min-width: 1024px) {
+  .collection_box_collection_profile_box_box_collection_info_stats_grid_box1,
+  .collection_box_collection_profile_box_box_collection_info_stats_grid_box2,
+  .collection_box_collection_profile_box_box_collection_info_stats_grid_box3,
+  .collection_box_collection_profile_box_box_collection_info_stats_grid_box4
+    div {
+    padding: 1.5rem;
+  }
+}
+
+.collection_box_collection_profile_box_box_collection_info_stats_grid_box1 {
+  background-color: var(--highlight-green-bg-color);
+}
+
+.collection_box_collection_profile_box_box_collection_info_stats_grid_box1,
+.collection_box_collection_profile_box_box_collection_info_stats_grid_box2,
+.collection_box_collection_profile_box_box_collection_info_stats_grid_box3,
+.collection_box_collection_profile_box_box_collection_info_stats_grid_box4 {
+  padding: 1.25rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
+  align-items: center;
+  text-align: center;
+}
+@media screen and (max-width: 330px) {
+    .collection_box_collection_profile_box_box_collection_info_stats_grid_box1,
+.collection_box_collection_profile_box_box_collection_info_stats_grid_box2,
+.collection_box_collection_profile_box_box_collection_info_stats_grid_box3,
+.collection_box_collection_profile_box_box_collection_info_stats_grid_box4 {
+    padding-inline: 1rem;
+}
+}
+
+.collection_box_collection_profile_box_box_collection_info_stats_grid_box2 {
+  background-color: var(--highlight-blue-bg-color);
+}
+
+.collection_box_collection_profile_box_box_collection_info_stats_grid_box3 {
+  background-color: var(--highlight-yellow-bg-color);
+}
+
+.collection_box_collection_profile_box_box_collection_info_stats_grid_box4 {
+  background-color: var(--highlight-pink-bg-color);
+}
+.collection_box_collection_profile_box_box_collection_info_stats_grid_box1 span,
+.collection_box_collection_profile_box_box_collection_info_stats_grid_box2 span,
+.collection_box_collection_profile_box_box_collection_info_stats_grid_box3 span,
+.collection_box_collection_profile_box_box_collection_info_stats_grid_box4
+  span {
+  color: var(--minor-text-color);
+  margin-top: 0.5rem;
+}
+
+.collection_box_collection_profile_box_box_collection_info_stats_grid_box1 h4,
+.collection_box_collection_profile_box_box_collection_info_stats_grid_box2 h4,
+.collection_box_collection_profile_box_box_collection_info_stats_grid_box3 h4,
+.collection_box_collection_profile_box_box_collection_info_stats_grid_box4 h4 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 640px) {
+  .collection_box_collection_profile_box_box_collection_info_stats_grid_box1 h4,
+  .collection_box_collection_profile_box_box_collection_info_stats_grid_box2 h4,
+  .collection_box_collection_profile_box_box_collection_info_stats_grid_box3 h4,
+  .collection_box_collection_profile_box_box_collection_info_stats_grid_box4
+    h4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-wrap: wrap;
+    white-space: wrap;
+  }
+}
