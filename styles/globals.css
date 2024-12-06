@@ -94,4 +94,7 @@ button:focus {
   --dark-box-shadow-2: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --buttons-hover-color: rgb(31 41 55);
   --bg-slate: rgb(15 23 42);
+  --neutral-700: rgb(55 65 81);
+  --neutral-300: rgb(209 213 219);
+  --neutral-200: rgb(229 231 235);
 }
