@@ -16,7 +16,12 @@ const Brand = () => {
         <div className={style.brand_box_left}>
           <div className={style.brand_box_left_logo}>
             <Link href={"/"}>
-              <Image src={images.logo} width={100} height={80} alt="logo" />
+              <Image
+                src={resolvedTheme === "dark" ? images.logoLight : images.logo}
+                width={100}
+                height={80}
+                alt="logo"
+              />
             </Link>
           </div>
           <div className={style.brand_box_left_text}>
@@ -28,7 +33,9 @@ const Brand = () => {
               <Button
                 btnName={"Create item"}
                 className={`${style.brand_box_left_btns_btn1} ${
-                  resolvedTheme === "dark" ? style.dark_brand_box_left_btns_btn1 : ""
+                  resolvedTheme === "dark"
+                    ? style.dark_brand_box_left_btns_btn1
+                    : ""
                 }`}
               />
             </Link>
@@ -36,7 +43,9 @@ const Brand = () => {
               <Button
                 btnName={"Discover more"}
                 className={`${style.brand_box_left_btns_btn2} ${
-                  resolvedTheme === "dark" ? style.dark_brand_box_left_btns_btn2 : ""
+                  resolvedTheme === "dark"
+                    ? style.dark_brand_box_left_btns_btn2
+                    : ""
                 }`}
               />
             </Link>
