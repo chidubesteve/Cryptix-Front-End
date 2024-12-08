@@ -26,14 +26,14 @@ function HeroSection() {
           </p>
 
           <div className={style.btnsContainer}>
-            <Link href="/search" passHref>
+            <Link href="/search" passHref legacyBehavior>
               <Button
                 btnName="Explore"
                 icon={<IoIosSearch className={style.btnIcon} />}
                 className={`${style.btn1} ${resolvedTheme === "dark" && style.darkBtn1}`}
               />
             </Link>
-            <Link href="/create-item" passHref>
+            <Link href="/create-item" passHref legacyBehavior>
               <Button
                 btnName="Create"
                 icon={<LuPencilLine className={style.btnIcon} />}

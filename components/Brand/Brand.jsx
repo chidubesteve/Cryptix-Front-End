@@ -29,7 +29,7 @@ const Brand = () => {
             <span>A digital marketplace that lead and inspires innovation</span>
           </div>
           <div className={style.brand_box_left_btns}>
-            <Link href="/create-item" passHref>
+            <Link href="/create-item" passHref legacyBehavior>
               <Button
                 btnName={"Create item"}
                 className={`${style.brand_box_left_btns_btn1} ${
@@ -39,7 +39,7 @@ const Brand = () => {
                 }`}
               />
             </Link>
-            <Link href="/search" passHref>
+            <Link href="/search" passHref legacyBehavior>
               <Button
                 btnName={"Discover more"}
                 className={`${style.brand_box_left_btns_btn2} ${

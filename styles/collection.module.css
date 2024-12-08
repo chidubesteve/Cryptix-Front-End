@@ -3,7 +3,7 @@
 }
 
 .collection_box {
-  top: 7.5rem;
+  top: 6.5rem;
   position: relative;
   /* margin-bottom: 10rem; */
 }
@@ -29,7 +29,7 @@
 }
 @media screen and (min-width: 1280px) {
   .collection_box_collection_profile_box {
-    max-width: calc(100dvw - 12%);
+    max-width: calc(100dvw - 17%);
   }
 }
 
@@ -40,6 +40,7 @@
   display: flex;
   flex-direction: column;
   box-shadow: var(--box-shadow-2);
+  position: relative;
 }
 .collection_box_collection_profile_box_box_dark_theme {
   border: 1px solid var(--neutral-700);
@@ -160,6 +161,10 @@
 .socials_icon:focus,
 .socials_icon:active {
   outline: none;
+}
+.misc_dropdown {
+  bottom: -35% !important;
+  left: 3.7rem !important;
 }
 
 .collection_box_collection_profile_box_box_collection_info {

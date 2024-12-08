@@ -243,14 +243,14 @@ const NFT_Slider = () => {
             </div>
 
             <div className={style.bigNftSlider_box_left_buttons_box}>
-              <Link href={"/nft-detail"} passHref>
+              <Link href={"/nft-detail"} passHref legacyBehavior>
                 <Button
                   btnName="Place a bid"
                   handleClick={() => {}}
                   className={`${style.place_bid_btn} ${resolvedTheme === "dark" && style.dark_place_bid_btn}`}
                 />
               </Link>
-              <Link href={"/nft-detail"} passHref>
+              <Link href={"/nft-detail"} passHref legacyBehavior>
                 <Button
                   btnName="View item"
                   handleClick={() => {}}
