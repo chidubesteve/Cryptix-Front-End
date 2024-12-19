@@ -15,7 +15,8 @@
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   width: fit-content;
-  font-size: 1.2rem;
+  font-size: 1.47rem;
+  color: var(--icons-color);
 }
 
 .sideBar_closeBtn:hover {

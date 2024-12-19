@@ -16,6 +16,7 @@ import { Discover, HelpCenter, Notification, Profile, SideBar } from "./index";
 import { Button } from "../ComponentIndex";
 import images from "../../images";
 import useCloseOnOutsideClick from "../../utils/useCloseOnOutsideClick";
+import Link from "next/link";
 
 const NavBar = () => {
   // ----USESTATE
@@ -99,12 +100,14 @@ const NavBar = () => {
       <div className={styles.navbar_container}>
         <div className={styles.navbar_container_left}>
           <div className={styles.logo}>
-            <Image
-              src={theme === "light" ? images.logo : images.logoLight}
-              alt="NFT Marketplace logo"
-              width={135}
-              height={125}
-            />
+            <Link href="/">
+              <Image
+                src={theme === "light" ? images.logo : images.logoLight}
+                alt="NFT Marketplace logo"
+                width={135}
+                height={125}
+              />
+            </Link>
           </div>
           <div className={styles.navbar_container_left_box_input}>
             <div className={styles.navbar_container_left_box_input_box}>

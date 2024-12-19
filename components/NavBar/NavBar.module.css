@@ -24,6 +24,7 @@
 .logo {
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .navbar_container_left {
@@ -56,6 +57,10 @@
   border: none;
   outline: none;
   background-color: transparent;
+}
+.navbar_container_left_box_input_box input::placeholder {
+  color: var(--icons-color);
+  
 }
 
 .search_icon {
@@ -217,7 +222,6 @@
   top: 0;
   width: 20rem;
   background-color: var(--main-bg-color);
-  box-shadow: var(--box-shadow);
   overflow-y: auto;
   height: 100%;
   z-index: 1111111;
