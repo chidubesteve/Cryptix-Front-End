@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { GrClose } from "react-icons/gr";
+import { MdClose } from "react-icons/md";
 import {
   TiSocialInstagram,
   TiSocialLinkedin,
@@ -12,6 +12,7 @@ import {
 } from "react-icons/ti";
 import { TbWorld } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa";
+import { useTheme } from "next-themes";
 
 // Internal import
 import style from "./SideBar.module.css";
@@ -22,6 +23,7 @@ import { discover, helpCenter } from "../NavMenus";
 const SideBar = ({ setOpenSideMenu }) => {
   const [openDiscover, setOpenDiscover] = useState(false);
   const [openHelp, setOpenHelp] = useState(false);
+  const { resolvedTheme } = useTheme();
 
   const openDiscoverMenu = () => {
     if (!openDiscover) {
@@ -48,12 +50,12 @@ const SideBar = ({ setOpenSideMenu }) => {
       <div className={style.sideBar_box}>
         <div className={style.sideBarLogoBox}>
           <Image
-            src={images.logo}
+            src={resolvedTheme === "dark" ? images.logoLight : images.logo}
             alt="Cryptix logo"
             width={100}
             height={100}
           />
-          <GrClose
+          <MdClose
             className={style.sideBar_closeBtn}
             onClick={() => closeSideBar()}
           />
