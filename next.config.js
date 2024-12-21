@@ -5,9 +5,6 @@ const nextConfig = {
   images: {
     formats: ["image/webp", "image/avif"],
   },
-  experimental: {
-    images: { allowFutureImage: true },
-  },
    webpack: (config) => {
     config.module.rules.push({
       test: /\.(mp3|wav|ogg)$/, // Match audio file types
