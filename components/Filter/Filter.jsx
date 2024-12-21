@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes';
 
 //internal imports
 import style from './Filter.module.css';
-import { Title } from '../ComponentIndex';
+import { NFTCards, Title } from '../ComponentIndex';
 
 import Filters from './Filters/Filters';
 const Filter = () => {
@@ -40,7 +40,11 @@ const Filter = () => {
         />{" "}
       </div>
       <div className={style.filter_box}>
-        <div className={`${style.filter_box_left} ${resolvedTheme === "dark" ? style.darkFilterBoxLeft : ""}`}>
+        <div
+          className={`${style.filter_box_left} ${
+            resolvedTheme === "dark" ? style.darkFilterBoxLeft : ""
+          }`}
+        >
           {["All NFTs", "Arts", "Music", "Sports", "Photography"].map(
             (name) => (
               <button
@@ -56,16 +60,20 @@ const Filter = () => {
           )}
         </div>
         <div className={style.filter_box_right}>
-          <button className={`${style.filter_box_right_box} ${resolvedTheme === "dark" ? style.darkFilterBoxRight : ""}`} onClick={openFilter}>
+          <button
+            className={`${style.filter_box_right_box} ${
+              resolvedTheme === "dark" ? style.darkFilterBoxRight : ""
+            }`}
+            onClick={openFilter}
+          >
             <TbFilterSearch className={style.filter_box_right_box_icon} />
             <span>Filter</span> &nbsp;
             {filter ? <FaAngleDown /> : <FaAngleUp />}
           </button>
         </div>
       </div>
-      {filter && (
-        <Filters />
-      )}
+      {filter && <Filters />}
+      <NFTCards />
     </div>
   );
 };

@@ -7,7 +7,6 @@ import {
   NewsLetter,
   Category,
   Filter,
-  NFTCards,
   Collection,
   CreatorSection,
   AudioNFT,
@@ -27,7 +26,6 @@ const Home = () => {
       <Collection />
       <Brand />
       <Filter />
-      <NFTCards />
       <Category />
       <NewsLetter />
     </div>
