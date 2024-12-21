@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { BsCameraVideo } from "react-icons/bs";
 import { IoImageOutline } from "react-icons/io5";
-import Image from "next/future/image";
+import Image from "next/image";
 import { useTheme } from "next-themes";
 
 // internal imports
@@ -10,7 +10,7 @@ import images from "../../images";
 import { Like } from "../ComponentIndex";
 const NFTCards = () => {
   const [idNumber, setIdNumber] = useState(0);
-  const {resolvedTheme} = useTheme()
+  const { resolvedTheme } = useTheme();
 
   const NFTCardsDemoData = [
     {
@@ -101,7 +101,12 @@ const NFTCards = () => {
   return (
     <div className={style.NFTCard}>
       {NFTCardsDemoData.map((nft, i) => (
-        <div className={`${style.NFTCard_box} ${resolvedTheme === "dark" ? style.dark_NFTCard_box : ""}`} key={nft.id}>
+        <div
+          className={`${style.NFTCard_box} ${
+            resolvedTheme === "dark" ? style.dark_NFTCard_box : ""
+          }`}
+          key={nft.id}
+        >
           <div className={style.NFTCard_box_img}>
             <Image
               src={nft.nftImage}
@@ -110,7 +115,6 @@ const NFTCards = () => {
               height={600}
               className={style.NFTCard_box_img_img}
               placeholder="blur"
-              layout="responsive" /* Ensure the image scales responsively */
             />
           </div>
 
