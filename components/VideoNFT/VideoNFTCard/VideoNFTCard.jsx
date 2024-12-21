@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/future/image";
+import Image from "next/image";
 
 //internal imports
 import style from "./VideoNFTCard.module.css";

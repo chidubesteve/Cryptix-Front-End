@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 // internal imports
 import style from "./Category.module.css";
 import images from "../../images";
-import Image from "next/future/image";
+import Image from "next/image";
 import {
   LeftNavigationArrow,
   RightNavigationArrow,

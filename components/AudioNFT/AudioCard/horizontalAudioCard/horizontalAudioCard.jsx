@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Image from "next/future/image";
+import Image from "next/image";
 import Link from "next/link";
 
 // INTERNAL IMPORTS
@@ -72,9 +72,12 @@ const HorizontalAudioCard = ({ title, bgImage }) => {
                 />
               </div>
               <div
-                className={
-                  `${style.horizontalAudioCard_box_left_box_info_lower_box_price} ${resolvedTheme === "dark" && style.dark_horizontalAudioCard_box_left_box_info_lower_box_price}`
-                }
+                className={`${
+                  style.horizontalAudioCard_box_left_box_info_lower_box_price
+                } ${
+                  resolvedTheme === "dark" &&
+                  style.dark_horizontalAudioCard_box_left_box_info_lower_box_price
+                }`}
               >
                 {" "}
                 <small>Price</small>

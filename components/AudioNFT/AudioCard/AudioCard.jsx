@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 
 // INTERNAL IMPORTS
 import style from "./AudioCard.module.css";
-import Image from "next/future/image";
+import Image from "next/image";
 import { Like } from "../../ComponentIndex";
 import images from "../../../images";
 import GradientIcon from "../../../utils/GradientIcon";
@@ -12,8 +12,8 @@ import useAudio from "../../../hooks/useAudio";
 const AudioCard = ({ title, image, usersImgs }) => {
   const [liked, setLiked] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const {resolvedTheme} = useTheme();
-  const {play, pause} = useAudio({isPlaying})
+  const { resolvedTheme } = useTheme();
+  const { play, pause } = useAudio({ isPlaying });
 
   const handleLike = () => {
     setLiked((prev) => !prev);
@@ -50,7 +50,9 @@ const AudioCard = ({ title, image, usersImgs }) => {
           viewBox="0 0 196 55"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className={`${style.audioCard_box_time_box_svg} ${resolvedTheme === "dark" && style.audioCard_box_time_box_svg_dark}`}
+          className={`${style.audioCard_box_time_box_svg} ${
+            resolvedTheme === "dark" && style.audioCard_box_time_box_svg_dark
+          }`}
         >
           <path
             d="M196 55V0H0.5V1H4.05286C12.4067 1 20.1595 5.34387 24.5214 12.4685L43.5393 43.5315C47.9012 50.6561 55.654 55 64.0078 55H196Z"
@@ -92,7 +94,12 @@ const AudioCard = ({ title, image, usersImgs }) => {
           </button>
         </div>
         <Link href={"/nft-detail"}>
-          <div className={`${style.audioCard_box_music_info_box_nft_info_box} ${resolvedTheme === "dark" && style.audioCard_box_music_info_box_nft_info_box_dark}`}>
+          <div
+            className={`${style.audioCard_box_music_info_box_nft_info_box} ${
+              resolvedTheme === "dark" &&
+              style.audioCard_box_music_info_box_nft_info_box_dark
+            }`}
+          >
             <div
               className={
                 style.audioCard_box_music_info_box_nft_info_box_upper_box
@@ -148,9 +155,12 @@ const AudioCard = ({ title, image, usersImgs }) => {
               }
             >
               <div
-                className={
-                  `${style.audioCard_box_music_info_box_nft_info_box_lower_box_price} ${resolvedTheme === "dark" && style.audioCard_box_music_info_box_nft_info_box_lower_box_price_dark}`
-                }
+                className={`${
+                  style.audioCard_box_music_info_box_nft_info_box_lower_box_price
+                } ${
+                  resolvedTheme === "dark" &&
+                  style.audioCard_box_music_info_box_nft_info_box_lower_box_price_dark
+                }`}
               >
                 <small>Price</small>
                 <p>0.055 ETH</p>

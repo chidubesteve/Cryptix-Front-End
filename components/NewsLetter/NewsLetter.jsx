@@ -1,6 +1,6 @@
 import React from "react";
 import { FiArrowRight } from "react-icons/fi";
-import Image from "next/future/image";
+import Image from "next/image";
 
 // internal imports
 import style from "./NewsLetter.module.css";
