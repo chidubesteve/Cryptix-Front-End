@@ -48,7 +48,7 @@ function HeroSection() {
             alt="Three column nfts"
             width={900}
             height={500}
-            style={{ width: "auto", height: "auto" }}
+            style={{ objectFit: "contain" }}
             placeholder="blur"
           />
         </div>

@@ -15,6 +15,7 @@ const Service = () => {
             alt="Filter and discover"
             width={100}
             height={100}
+            style={{ objectFit: "contain" }}
           />
           <p className={style.service_box_item_step}>
             <span
@@ -35,6 +36,7 @@ const Service = () => {
             alt="Connect Wallet"
             width={100}
             height={100}
+            style={{ objectFit: "contain" }}
           />
           <p className={style.service_box_item_step}>
             <span
@@ -56,6 +58,7 @@ const Service = () => {
             alt="Start Trading"
             width={100}
             height={100}
+            style={{ objectFit: "contain" }}
           />
           <p className={style.service_box_item_step}>
             <span
@@ -76,6 +79,7 @@ const Service = () => {
             alt="Earn Tokens"
             width={100}
             height={100}
+            style={{ objectFit: "contain" }}
           />
           <p className={style.service_box_item_step}>
             <span
