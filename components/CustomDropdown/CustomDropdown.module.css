@@ -1,6 +1,6 @@
 .dropdown {
   position: absolute;
-  bottom: -60%;
+  top: 15rem;
   left: 2.25rem;
   margin-top: 0.5rem;
   background-color: var(--main-bg-color);
@@ -8,8 +8,15 @@
   box-shadow: var(--box-shadow-2);
   border: 1px solid var(--neutral-700);
   z-index: 30;
-  width: 15rem;
+  width: 11rem;
 }
+
+@media screen and (min-width: 640px) {
+  .dropdown {
+    width: 15rem;
+  }
+}
+
 
 .dark_dropdown {
   box-shadow: var(--dark-box-shadow-2);
