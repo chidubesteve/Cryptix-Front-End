@@ -33,6 +33,11 @@
   }
 }
 
+@media screen and (min-width: 1560px) {
+.collection_box_collection_profile_box {
+  max-width: calc(100dvw - 20%);
+}
+}
 .collection_box_collection_profile_box_box {
   background-color: var(--main-bg-color);
   padding: 1.5rem;
@@ -40,7 +45,6 @@
   display: flex;
   flex-direction: column;
   box-shadow: var(--box-shadow-2);
-  position: relative;
 }
 .collection_box_collection_profile_box_box_dark_theme {
   border: 1px solid var(--neutral-700);
@@ -58,6 +62,7 @@
   .collection_box_collection_profile_box_box {
     padding: 2rem;
     align-items: center;
+    position: relative;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -69,7 +74,6 @@
 .collection_box_collection_profile_box_box_nft_box {
   display: flex;
   flex-direction: column;
-  width: fit-content;
 }
 
 @media screen and (min-width: 640px) {
@@ -77,11 +81,14 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: row;
+    width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
   .collection_box_collection_profile_box_box_nft_box {
     display: block;
+    position: relative;
+    width: auto;
   }
 }
 .collection_box_collection_profile_box_box_nft_box_img {
@@ -114,7 +121,8 @@
 }
 @media screen and (min-width: 640px) {
   .collection_box_collection_profile_box_box_nft_box_socials_box {
-    justify-content: center;
+    width: auto;
+    justify-content: flex-start;
   }
 }
 
@@ -128,10 +136,15 @@
 .dark_collection_box_collection_profile_box_box_nft_box_socials_box_line {
   background-color: var(--neutral-700);
 }
+.collection_box_collection_profile_box_box_nft_box_socials_box_div1 {
+
+  width: fit-content;
+}
 .collection_box_collection_profile_box_box_nft_box_socials_box div {
   display: flex;
-  justify-content: space-around;
+  gap: .875rem;
 }
+
 .socials_icon {
   background-color: var(--hover-bg-color);
   width: 2rem;
@@ -162,9 +175,26 @@
 .socials_icon:active {
   outline: none;
 }
-.misc_dropdown {
-  bottom: -35% !important;
-  left: 3.7rem !important;
+
+@media screen and (min-width: 640px) {
+
+  .misc_dropdown, .social_dropdown {
+    top: 4.5rem !important;
+    left: 60% !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+.misc_dropdown, .social_dropdown {
+top: 65% !important;
+left: 0 !important;
+}
+}
+
+@media screen and (min-width: 1024px) {
+  .misc_dropdown, .social_dropdown {
+  top: 100% !important;
+  }
 }
 
 .collection_box_collection_profile_box_box_collection_info {
