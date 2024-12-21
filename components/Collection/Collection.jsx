@@ -14,7 +14,7 @@ import CollectionTabs from "./CollectionTabs/CollectionTabs";
 import { LeftNavigationArrow, RightNavigationArrow } from "../ComponentIndex";
 
 const Collection = () => {
-  const sliderRef = useRef(null);
+  let sliderRef = useRef(null);
   const { resolvedTheme } = useTheme();
   // using a single state to tract selected tab
   const [selectedTab, setSelectedTab] = useState("last24Hours");

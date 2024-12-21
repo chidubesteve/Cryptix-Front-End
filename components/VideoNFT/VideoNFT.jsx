@@ -18,7 +18,7 @@ const VideoNFT = () => {
 
   const { resolvedTheme } = useTheme();
 
-  const sliderRef = useRef(null);
+  let sliderRef = useRef(null);
   const videoCardRef = useRef(null);
 
   const handleNext = () => {
