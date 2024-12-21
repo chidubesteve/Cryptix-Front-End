@@ -1,5 +1,5 @@
-import React, { useRef, useState } from "react";
-import Image from "next/future/image";
+import React, { useState } from "react";
+import Image from "next/image";
 import { FaDiscord, FaLinkedin, FaTelegram, FaXTwitter } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { CiExport } from "react-icons/ci";
@@ -16,8 +16,6 @@ import images from "../images";
 import NFTCards from "../components/NFTCards/NFTCards";
 import Filters from "../components/Filter/Filters/Filters";
 import CustomDropdown from "../components/CustomDropdown/CustomDropdown";
-import useCloseOnOutsideClick from "../utils/useCloseOnOutsideClick";
-import { style } from "motion/react-client";
 
 const collection = () => {
   const [customSocialsDropdown, setCustomSocialsDropdown] = useState(false);
@@ -41,7 +39,6 @@ const collection = () => {
       setMiscellaneousDropdown(false);
     }
   };
-
 
   const socialsObject = [
     {
@@ -110,7 +107,11 @@ const collection = () => {
                   Style.collection_box_collection_profile_box_box_nft_box_socials_box
                 }
               >
-                <div>
+                <div
+                  className={
+                    Style.collection_box_collection_profile_box_box_nft_box_socials_box_div1
+                  }
+                >
                   <button
                     className={`${Style.socials_icon} ${
                       resolvedTheme === "dark" ? Style.dark_socials_icon : ""
@@ -144,7 +145,7 @@ const collection = () => {
                     className={`${Style.socials_icon} ${
                       resolvedTheme === "dark" ? Style.dark_socials_icon : ""
                     }`}
-                      onClick={handleOpenCustomSocialsDropdown}
+                    onClick={handleOpenCustomSocialsDropdown}
                   >
                     <CiExport style={{ fontWeight: "700" }} />
                   </button>
@@ -152,19 +153,24 @@ const collection = () => {
                   <button
                     className={`${Style.socials_icon} ${
                       resolvedTheme === "dark" ? Style.dark_socials_icon : ""
-                      }`}
+                    }`}
                     onClick={handleOpenMiscellaneousDropdown}
                   >
-                    <BsThreeDots
-                    />
+                    <BsThreeDots />
                   </button>
                 </div>
               </div>
               {customSocialsDropdown && (
-                  <CustomDropdown childrenObj={socialsObject} className={""} />
+                <CustomDropdown
+                  childrenObj={socialsObject}
+                  className={Style.social_dropdown}
+                />
               )}
               {miscellaneousDropdown && (
-                  <CustomDropdown childrenObj={miscellaneousObject} className={Style.misc_dropdown} />
+                <CustomDropdown
+                  childrenObj={miscellaneousObject}
+                  className={Style.misc_dropdown}
+                />
               )}
             </div>
             <div
