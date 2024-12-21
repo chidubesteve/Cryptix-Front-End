@@ -3,7 +3,6 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2.5rem;
   padding: 3rem;
-  background-color: var(--alternate-bg-color);
   margin-bottom: 5rem;
 }
 .NFTCard_box {
@@ -243,6 +242,5 @@
   .NFTCard {
     width: 100%;
     padding: 0 10%;
-    background-color: var(--alternate-bg-color);
   }
 }
