@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
-import { TbFilterSearch } from 'react-icons/tb';
-import { FaAngleDown, FaAngleUp } from 'react-icons/fa6';
-import { useTheme } from 'next-themes';
+import React, { useState } from "react";
+import { TbFilterSearch } from "react-icons/tb";
+import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
+import { useTheme } from "next-themes";
 
 //internal imports
-import style from './Filter.module.css';
-import { NFTCards, Title } from '../ComponentIndex';
+import style from "./Filter.module.css";
+import { NFTCards, Title } from "../ComponentIndex";
 
-import Filters from './Filters/Filters';
-const Filter = () => {
+import Filters from "./Filters/Filters";
+const Filter = ({ bgColor }) => {
   const [filter, setFilter] = useState(true);
-  const {resolvedTheme} = useTheme();
+  const { resolvedTheme } = useTheme();
 
-  const [activeButton, setActiveButton] = useState('');
-
+  const [activeButton, setActiveButton] = useState("");
 
   //functions
   const openFilter = () => {
@@ -23,15 +22,13 @@ const Filter = () => {
       setFilter(false);
     }
   };
- 
 
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
   };
 
-
   return (
-    <div className={style.filter}>
+    <div className={style.filter} style={{ background: bgColor && bgColor }}>
       <div className={style.filter_box_title}>
         {" "}
         <Title
