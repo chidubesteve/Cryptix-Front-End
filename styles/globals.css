@@ -98,5 +98,6 @@ button:focus {
   --bg-slate: rgb(15 23 42);
   --neutral-300: rgb(209 213 219);
   --neutral-200: rgb(229 231 235);
-  --neutral-500: rgb(107, 114, 128)
+  --neutral-500: rgb(107, 114, 128);
+  --neutral-800: rgb(31,41,55);
 }
