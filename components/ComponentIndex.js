@@ -17,6 +17,8 @@ import CreatorSection from './CreatorSection/CreatorSection';
 import AudioNFT from './AudioNFT/AudioNFT';
 import VideoNFT from './VideoNFT/VideoNFT';
 import Brand from './Brand/Brand'
+import Banner from './Banner/Banner';
+import SearchBar from './SearchBar/SearchBar';
 export {
   Button,
   Footer,
@@ -37,5 +39,7 @@ export {
   NFTCards,
   AudioNFT,
   VideoNFT,
-  Brand
+  Brand,
+  Banner,
+  SearchBar
 };
