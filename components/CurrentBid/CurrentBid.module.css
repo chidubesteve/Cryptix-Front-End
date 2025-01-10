@@ -1,0 +1,49 @@
+.currentBid {
+  border: 3px solid #22c55e;
+  border-radius: 1rem;
+  padding: 0rem 1.5rem;
+  margin-block: 2rem;
+  position: relative;
+}
+.currentBid small {
+  background-color: var(--main-bg-color);
+  padding: 0.5rem;
+  font-size: 1rem;
+  position: absolute;
+  color: var(--minor-text-color);
+  top: -1.5rem;
+  width: fit-content;
+}
+
+.currentBid p {
+  font-size: 2.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #22c55e;
+}
+.currentBid p span {
+  font-size: 1.5rem;
+  margin-left: 15px;
+  font-weight: normal;
+  color: var(--minor-text-color);
+}
+
+@media screen and (max-width: 640px) {
+      /* Bidding section */
+  .currentBid {
+    padding: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .currentBid p span {
+    display: block;
+    font-size: 1.3rem;
+  }
+  .currentBid p {
+    font-size: 2rem;
+    font-weight: 600;
+    display: block;
+    margin: 0;
+  }
+
+}

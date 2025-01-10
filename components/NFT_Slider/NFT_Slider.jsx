@@ -2,7 +2,6 @@ import React, { useState, useCallback } from "react";
 import Image from "next/image";
 import { BsCameraVideo } from "react-icons/bs";
 import { MdVerified } from "react-icons/md";
-import { LuTimer } from "react-icons/lu";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
@@ -14,7 +13,9 @@ import {
   RightNavigationArrow,
   LeftNavigationArrow,
   Like,
+  AuctionTimer,
 } from "../ComponentIndex";
+import CurrentBid from "../CurrentBid/CurrentBid";
 
 const NFTSliderData = [
   {
@@ -198,50 +199,15 @@ const NFT_Slider = () => {
           </div>
 
           <div className={style.bigNftSlider_box_left_bidding}>
-            <div className={style.bigNftSlider_box_left_bidding_box}>
-              <small>Current Bid</small>
-              <p>
-                {NFTSliderData[idNumber].price} <span>(≈ $3,112.50)</span>
-              </p>
-            </div>
-            <p className={style.bigNftSlider_box_left_bidding_box_auction}>
-              <LuTimer
-                className={
-                  style.bigNftSlider_box_left_bidding_box_auction_timerIcon
-                }
-              />
-              <span>Auction ending in:</span>
-            </p>
-            <div className={style.bigNftSlider_box_left_bidding_box_timer}>
-              <div
-                className={style.bigNftSlider_box_left_bidding_box_timer_item}
-              >
-                <p>{NFTSliderData[idNumber].time.days}</p>
-                <span>Days</span>
+                <CurrentBid price={"1.00"} />
+              <div className={style.bigNftSlider_box_left_auction_timer_box}>
+                <AuctionTimer
+                  days={NFTSliderData[idNumber].time.days}
+                  minutes={NFTSliderData[idNumber].time.minutes}
+                  hours={NFTSliderData[idNumber].time.hours}
+                  seconds={NFTSliderData[idNumber].time.seconds}
+                />
               </div>
-
-              <div
-                className={style.bigNftSlider_box_left_bidding_box_timer_item}
-              >
-                <p>{NFTSliderData[idNumber].time.hours}</p>
-                <span>hours</span>
-              </div>
-
-              <div
-                className={style.bigNftSlider_box_left_bidding_box_timer_item}
-              >
-                <p>{NFTSliderData[idNumber].time.minutes}</p>
-                <span>mins</span>
-              </div>
-
-              <div
-                className={style.bigNftSlider_box_left_bidding_box_timer_item}
-              >
-                <p>{NFTSliderData[idNumber].time.seconds}</p>
-                <span>secs</span>
-              </div>
-            </div>
-
             <div className={style.bigNftSlider_box_left_buttons_box}>
               <Link href={"/nft-detail"} passHref legacyBehavior>
                 <Button
