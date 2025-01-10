@@ -1,0 +1,51 @@
+/* Auction timer */
+.auction {
+  display: flex;
+  color: var(--minor-text-color);
+  align-items: flex-end;
+  font-size: 1.2rem;
+  gap: 1rem;
+  margin-block: 10px;
+}
+
+.auction_timerIcon {
+  font-size: 2.3rem;
+  width: fit-content;
+}
+
+.auctionTimer_box {
+  display: flex;
+  gap: 2.5rem;
+  border-bottom: 2px solid var(--shadow-dark-color);
+  padding-bottom: 1.4rem;
+}
+
+.auctionTimer_box_item {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+.auctionTimer_box_item p {
+  font-size: 2.3rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+.auctionTimer_box_item span {
+  color: var(--minor-text-color);
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+  /* Auction timer */
+  .auction {
+    gap: 0.7rem;
+  }
+  .auctionTimer_box {
+    gap: 2rem;
+  }
+  .auction_timerIcon {
+    font-size: 2rem;
+  }
+}
