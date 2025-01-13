@@ -16,8 +16,7 @@
 .auctionTimer_box {
   display: flex;
   gap: 2.5rem;
-  border-bottom: 2px solid var(--shadow-dark-color);
-  padding-bottom: 1.4rem;
+
 }
 
 .auctionTimer_box_item {
