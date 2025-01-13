@@ -33,8 +33,15 @@
   --box-shadow-2: 0rem 10px 15px -3px var(--shadow-dark-color),
     0 4px 6px -4px var(--shadow-dark-color);
   --hover-bg-color: rgb(245 245 245);
-    --neutral-700: rgb(55 65 81);
-
+  --neutral-100: rgb(243, 244, 246);
+  --neutral-700: rgb(55 65 81);
+  --neutral-900: rgb(17, 24, 39);
+  --bg-slate: rgb(15 23 42);
+  --neutral-300: rgb(209 213 219);
+  --neutral-200: rgb(229 231 235);
+  --neutral-500: rgb(107, 114, 128);
+  --neutral-800: rgb(31, 41, 55);
+  --neutral-900: rgb(17, 24, 39);
 }
 
 html,
@@ -83,21 +90,19 @@ button:focus {
   outline: 2px solid #95298f; /* Adds a border-like effect, and doesn't affect the box model */
   outline-offset: 2px; /* Creates space between the outline and the element */
 }
-[data-theme="dark"], [color-scheme="dark"] {
+[data-theme="dark"],
+[color-scheme="dark"] {
   --main-bg-color: #111827;
   --alternate-bg-color: #0e131f;
   --icons-light-color: #9ca3af; /* Lighter shade for hover or secondary items */
-  --hover-bg-color: #1F2937;
+  --hover-bg-color: #1f2937;
   --icons-bg-color: #1f2937;
   --icons-color: rgb(209 213 219);
   --minor-text-color: rgb(163 163 163);
   --shadow-light-color: #65737e;
-  --dark-box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);;
-  --dark-box-shadow-2: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --dark-box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --dark-box-shadow-2: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
   --buttons-hover-color: rgb(31 41 55);
-  --bg-slate: rgb(15 23 42);
-  --neutral-300: rgb(209 213 219);
-  --neutral-200: rgb(229 231 235);
-  --neutral-500: rgb(107, 114, 128);
-  --neutral-800: rgb(31,41,55);
 }
