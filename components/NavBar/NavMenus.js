@@ -14,11 +14,11 @@
       link: "author-profile",
     },
     {
-      name: "NFT Details",
-      link: "nft-details",
+      name: "NFT Detail",
+      link: "nft-detail",
     },
     {
-      name: "Account Setting",
+      name: "Account settings",
       link: "account-setting",
     },
     // {
