@@ -64,6 +64,18 @@ const author = () => {
     }
   };
 
+  //function to copy text to clipboard
+  const copy = (text) => {
+    navigator.clipboard
+      ?.writeText(text)
+      .then(() => {
+        console.log("copied");
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
   const childrenObj = [
     {
       name: "Report abuse",
@@ -153,7 +165,10 @@ const author = () => {
                         }
                       >
                         0xab5801a....9aec9b{" "}
-                        <RxCopy className={style.copy_icon} />
+                        <RxCopy
+                          className={style.copy_icon}
+                          onClick={copy("0xab5801a....9aec9b")}
+                        />
                       </div>
                       <span
                         className={
@@ -303,20 +318,19 @@ const author = () => {
                       <ListboxOption
                         key={i}
                         value={selection}
-                        className={
-                          `${style.author_box_profile_box_selection_dropdown_option
+                        className={`${
+                          style.author_box_profile_box_selection_dropdown_option
                         } ${
-                            resolvedTheme === "dark" &&
-                            style.dark_author_box_profile_box_selection_dropdown_option
-                          }`
-                        }
+                          resolvedTheme === "dark" &&
+                          style.dark_author_box_profile_box_selection_dropdown_option
+                        }`}
                       >
                         {({ selected }) => (
                           <div className={style.option_content}>
                             {selected && (
-                              <div className={style.check_box} >
+                              <div className={style.check_box}>
                                 <FaCheck className={style.check_icon} />
-                                </div>
+                              </div>
                             )}
                             <span>{selection}</span>
                           </div>
