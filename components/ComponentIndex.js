@@ -19,6 +19,7 @@ import VideoNFT from './VideoNFT/VideoNFT';
 import Brand from './Brand/Brand'
 import Banner from './Banner/Banner';
 import SearchBar from './SearchBar/SearchBar';
+import AuctionTimer from './AuctionTimer/AuctionTimer';
 export {
   Button,
   Footer,
@@ -41,5 +42,6 @@ export {
   VideoNFT,
   Brand,
   Banner,
-  SearchBar
+  SearchBar,
+  AuctionTimer
 };
