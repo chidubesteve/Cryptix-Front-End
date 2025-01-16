@@ -19,7 +19,7 @@
     },
     {
       name: "Account settings",
-      link: "account-setting",
+      link: "account",
     },
     // {
     //   name: "Connect Wallet",
