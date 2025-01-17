@@ -1,0 +1,161 @@
+.form_fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form_fieldset label {
+  font-size: 1.175rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  color: var(--neutral-900);
+}
+.dark_form_fieldset label {
+  color: var(--neutral-200);
+}
+
+.form_fieldset_username_input,
+.form_fieldset_email_input,
+.form_fieldset_website_input,
+.form_fieldset_socials_grid_icon_input,
+.form_fieldset_bio,
+.form_fieldset_wallet_input {
+  display: block;
+  height: 2.75rem;
+  width: 100%;
+  border-radius: 1rem;
+  padding-inline: 1rem;
+  padding-block: 0.875rem;
+  line-height: 1.35rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  background-color: transparent;
+  border: 1px solid var(--neutral-200);
+}
+/*  to cancel out some styles i don't need for text area */
+.form_fieldset_bio {
+  height: auto;
+}
+
+.dark_form_fieldset input,
+.dark_form_fieldset textarea {
+  border: 1px solid var(--neutral-700);
+}
+.form_fieldset input:focus,
+.form_fieldset textarea:focus,
+.form_fieldset textarea:active,
+.form_fieldset input:active {
+  outline: 2px solid var(--highlight-pink-bg-color);
+}
+
+/* placeholder */
+.form_fieldset input:disabled,
+.form_fieldset input::placeholder,
+.form_fieldset textarea::placeholder {
+  color: var(--neutral-500);
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+/* first input */
+.form_fieldset_username_input,
+.form_fieldset_wallet_input {
+  margin-top: 0.375rem;
+}
+
+.form_fieldset_email,
+.form_fieldset_bio,
+.form_fieldset_website,
+.form_fieldset_wallet {
+  margin-top: 0.375rem;
+  display: flex;
+}
+
+.form_fieldset_email div,
+.form_fieldset_website div,
+.form_fieldset_socials_grid_icon div {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border: 1px solid var(--neutral-200);
+  border-right-width: 0;
+  background-color: var(--neutral-50);
+  padding-inline: 0.625rem;
+  width: 3rem;
+  height: 2.75rem;
+  line-height: 1.35rem;
+}
+/* dark mode for icon boxes */
+.dark_form_fieldset_email div,
+.dark_form_fieldset_website div,
+.dark_form_fieldset_socials_grid_icon div {
+  background-color: var(--neutral-800);
+  border: 1px solid var(--neutral-700);
+  border-right-width: 0 !important;
+}
+
+.form_fieldset_email_input,
+.form_fieldset_website_input,
+.form_fieldset_socials_grid_icon_input,
+.form_fieldset_socials_grid_icon_input,
+.form_fieldset_socials_grid_icon_input {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+/* grid */
+.form_fieldset_socials_grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+@media screen and (min-width: 640px) {
+  .form_fieldset_socials_grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.625rem;
+  }
+}
+.form_fieldset_socials_grid_icon {
+  display: flex;
+  align-items: center;
+}
+
+.form_fieldset_socials_grid_icon_icon,
+.form_fieldset_website_icon,
+.form_fieldset_email_icon,
+.form_fieldset_wallet_icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  color: var(--neutral-900);
+}
+.dark_form_fieldset_socials_grid_icon_icon,
+.dark_form_fieldset_website_icon,
+.dark_form_fieldset_email_icon,
+.dark_form_fieldset_wallet_icon {
+  color: white;
+}
+.form_fieldset_email_icon {
+  width: 1.5rem;
+}
+
+
+/* wallet input*/
+.form_fieldset_wallet {
+  position: relative;
+} 
+.form_fieldset_wallet_icon {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+}
+
+.form_btn {
+  box-shadow: none;
+  color: white;
+  padding-block: .875rem;
+}
+

@@ -1,0 +1,130 @@
+.account_page {
+  width: 100%;
+  margin-inline: auto;
+  margin-top: 15rem;
+  margin-bottom: 6rem;
+  padding-inline: 1rem;
+}
+@media screen and (min-width: 640px) {
+  .account_page {
+    max-width: 640px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .account_page {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .account_page {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .account_page {
+    max-width: 1280px;
+    padding-inline: 40px;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .account_page {
+    max-width: 1536px;
+    padding-inline: 40px;
+  }
+}
+
+.account_page_box {
+  margin-inline: auto;
+  margin-block: 3rem;
+  max-width: 56rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .account_page_box {
+    margin-block: 6rem;
+  }
+}
+.account_page_box_title {
+  max-width: 43rem;
+}
+.account_page_box_title p {
+  font-size: 1rem !important;
+}
+.account_page_demarcation_border {
+  width: 100%;
+  border: 1.5px solid var(--neutral-100);
+}
+.dark_account_page_demarcation_border {
+  border: 1.5px solid var(--neutral-700);
+}
+
+/* form section */
+.account_page_box_form_box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .account_page_box_form_box {
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+
+.account_page_box_form_box_profile_pic_upload_box {
+  inset: 0;
+  position: relative;
+  width: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.account_page_box_form_box_profile_pic_upload_box_img {
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  filter: brightness(0.35); /* Darkens the image */
+  backdrop-filter: blur(5px); /* Adds a blur effect */
+  position: relative;
+  overflow: hidden;
+}
+
+.account_page_box_form_box_profile_pic_upload_box_btn {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  z-index: 2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 128px;
+  height: 128px;
+}
+
+@media screen and (min-width: 768px) {
+  .account_page_box_form_box_profile_pic_upload_box_img,
+  .account_page_box_form_box_profile_pic_upload_box_btn {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.account_page_box_form_box_profile_pic_upload_box_btn_input {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+}
+.account_page_box_form_box_profile_pic_upload_box_btn_icon {
+  width: 2rem;
+  font-size: 2rem;
+}
+.account_page_box_form_box_profile_pic_upload_box_btn span {
+  font-size: smaller;
+  width: auto;
+}
