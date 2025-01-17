@@ -33,6 +33,7 @@
   --box-shadow-2: 0rem 10px 15px -3px var(--shadow-dark-color),
     0 4px 6px -4px var(--shadow-dark-color);
   --hover-bg-color: rgb(245 245 245);
+  --neutral-50: rgb(249, 250, 251);
   --neutral-100: rgb(243, 244, 246);
   --neutral-700: rgb(55 65 81);
   --neutral-900: rgb(17, 24, 39);
