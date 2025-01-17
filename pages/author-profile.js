@@ -34,6 +34,17 @@ const selections = [
   "Most liked",
   "Most viewed",
 ];
+  //function to copy text to clipboard
+  export const copy = (text) => {
+    navigator.clipboard
+      ?.writeText(text)
+      .then(() => {
+        console.log("copied");
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
 const author = () => {
   const [isFollowing, setIsFollowing] = useState(true);
   const [selectedDropDownFilter, setSelectedDropDownFilter] = useState(
@@ -64,17 +75,7 @@ const author = () => {
     }
   };
 
-  //function to copy text to clipboard
-  const copy = (text) => {
-    navigator.clipboard
-      ?.writeText(text)
-      .then(() => {
-        console.log("copied");
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-  };
+
 
   const childrenObj = [
     {
