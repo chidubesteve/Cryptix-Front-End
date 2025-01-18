@@ -14,17 +14,17 @@ import {
   Title,
 } from "../ComponentIndex";
 
+export const CategoryArray = [
+  { id: 1, title: "Entertainment", count: "1169 NFTs", image: "category1" },
+  { id: 2, title: "Art", count: "1202 NFTs", image: "category2" },
+  { id: 3, title: "Music", count: "8706 NFTs", image: "category3" },
+  { id: 4, title: "Gaming", count: "1544 NFTs", image: "category4" },
+  { id: 5, title: "Science", count: "432 NFTs", image: "category5" },
+  { id: 6, title: "Sports", count: "6272 NFTs", image: "category6" },
+];
 const Category = () => {
   let sliderRef = useRef(null);
   const categoryRef = useRef(null);
-  const CategoryArray = [
-    { id: 1, title: "Entertainment", count: "1169 NFTs", image: "category1" },
-    { id: 2, title: "Art", count: "1202 NFTs", image: "category2" },
-    { id: 3, title: "Music", count: "8706 NFTs", image: "category3" },
-    { id: 4, title: "Gaming", count: "1544 NFTs", image: "category4" },
-    { id: 5, title: "Science", count: "432 NFTs", image: "category5" },
-    { id: 6, title: "Sports", count: "6272 NFTs", image: "category6" },
-  ];
 
   const handleNext = () => {
     sliderRef.slickNext();
