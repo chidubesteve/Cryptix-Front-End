@@ -18,7 +18,7 @@ import {
   MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
 // internal imports
-import style from "../styles/author.module.css";
+import style from "../styles/pages/author.module.css";
 import images from "../images";
 import Banner from "../components/Banner/Banner";
 import { useTheme } from "next-themes";

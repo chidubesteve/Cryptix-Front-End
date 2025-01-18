@@ -16,7 +16,7 @@ import { CiExport, CiPercent } from "react-icons/ci";
 import { useTheme } from "next-themes";
 
 //internal imports
-import style from "../styles/nftDetail.module.css";
+import style from "../styles/pages/nftDetail.module.css";
 import images from "../images";
 import { AuctionTimer, Button, Like } from "../components/ComponentIndex";
 import VerifiedSvg from "../utils/verified";

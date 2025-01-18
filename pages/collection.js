@@ -10,7 +10,7 @@ import { TbFlag } from "react-icons/tb";
 import { RxCopy } from "react-icons/rx";
 
 //INTERNAL IMPORT
-import Style from "../styles/collection.module.css";
+import Style from "../styles/pages/collection.module.css";
 import Banner from "../components/Banner/Banner";
 import images from "../images";
 import NFTCards from "../components/NFTCards/NFTCards";

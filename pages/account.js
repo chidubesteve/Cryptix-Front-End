@@ -4,7 +4,7 @@ import Image from "next/image";
 import { BiImageAdd } from "react-icons/bi";
 
 // internal imports
-import style from "../styles/account.module.css";
+import style from "../styles/pages/account.module.css";
 import images from "../images";
 import Form from "../components/AccountPage/Form";
 import Title from "../components/Title/Title";

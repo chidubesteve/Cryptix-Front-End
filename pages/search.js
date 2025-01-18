@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme } from "next-themes";
 
 //internal imports
-import style from "../styles/search.module.css";
+import style from "../styles/pages/search.module.css";
 import {
   Banner,
   Brand,
