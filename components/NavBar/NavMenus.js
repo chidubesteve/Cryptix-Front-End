@@ -21,10 +21,10 @@
       name: "Account settings",
       link: "account",
     },
-    // {
-    //   name: "Connect Wallet",
-    //   link: "connect-wallet",
-    // },
+    {
+      name: "Upload Item",
+      link: "upload-item",
+    },
     {
       name: "Blog",
       link: "blog",
