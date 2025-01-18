@@ -29,7 +29,7 @@
 
 .navbar_container_left {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
 }
 
