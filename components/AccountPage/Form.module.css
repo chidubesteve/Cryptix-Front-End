@@ -52,10 +52,13 @@
 /* placeholder */
 .form_fieldset input:disabled,
 .form_fieldset input::placeholder,
-.form_fieldset textarea::placeholder {
+.form_fieldset textarea::placeholder  {
   color: var(--neutral-500);
   font-weight: 500;
   font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+.form_fieldset textarea {
   font-family: "Poppins", sans-serif;
 }
 /* first input */
