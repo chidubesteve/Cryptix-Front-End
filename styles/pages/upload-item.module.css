@@ -1,0 +1,82 @@
+.uploadItem {
+  width: 100%;
+  margin-inline: auto;
+  margin-top: 15rem;
+  margin-bottom: 6rem;
+  padding-inline: 1rem;
+}
+
+@media screen and (min-width: 640px) {
+  .uploadItem {
+    max-width: 640px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .uploadItem {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .uploadItem {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .uploadItem {
+    max-width: 1280px;
+    padding-inline: 40px;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .uploadItem {
+    max-width: 1536px;
+    padding-inline: 40px;
+  }
+}
+
+.uploadItem_box {
+  margin-inline: auto;
+  margin-block: 3rem;
+  max-width: 56rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .uploadItem_box {
+    margin-block: 6rem;
+  }
+}
+
+.uploadItem_box_title {
+  max-width: 43rem;
+}
+
+.uploadItem_box_demarcation {
+  width: 100%;
+  border: 1.5px solid var(--neutral-100);
+}
+.dark_uploadItem_box_demarcation {
+  border: 1.5px solid var(--neutral-700);
+}
+
+.uploadItem_box_form_upload_box h3 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+@media screen and (min-width: 640px) {
+  .uploadItem_box_form_upload_box h3 {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+  }
+}
+
+.uploadItem_box_form_upload_box span {
+  font-size: 1.075rem;
+  line-height: 1.25rem;
+  color: var(--minor-text-color);
+}
