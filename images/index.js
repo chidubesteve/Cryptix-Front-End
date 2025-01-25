@@ -65,6 +65,7 @@ import videocover2 from './videocover2.png';
 import videocover3 from './videocover3.png';
 import videocover4 from './videocover4.png';
 
+import defaultImage from './default-image.png'
 
 export default {
   collection,
@@ -129,5 +130,6 @@ export default {
   videocover2,
   videocover3,
   videocover4,
-  brand
+  brand,
+  defaultImage
 };
