@@ -40,7 +40,9 @@
   --bg-slate: rgb(15 23 42);
   --neutral-300: rgb(209 213 219);
   --neutral-200: rgb(229 231 235);
+  --neutral-400: rgb(156 163 175);
   --neutral-500: rgb(107, 114, 128);
+  --neutral-600: rgb(75, 85, 99);
   --neutral-800: rgb(31, 41, 55);
   --neutral-900: rgb(17, 24, 39);
 }
