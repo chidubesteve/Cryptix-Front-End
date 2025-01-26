@@ -21,6 +21,7 @@ import images from "../../../images";
 import { DropZone } from "../UploadItemPageIndex";
 import { Button } from "../../ComponentIndex";
 import { CategoryArray } from "../../Category/Category";
+import InputTag from "../../InputTag/InputTag";
 
 const UploadNftForm = () => {
   const [file, setFile] = useState(null); // manage uploaded file
@@ -32,7 +33,7 @@ const UploadNftForm = () => {
   const [description, setDescription] = useState("");
   const [royalties, setRoyalties] = useState("");
   const [quantity, setQuantity] = useState("");
-  const [nftProperties, setNftProperties] = useState("");
+  const [nftProperties, setNftProperties] = useState([]);
   const [isPutOnSale, setIsPutOnSale] = useState(true);
   const [isInstantSalePrice, setIsInstantSalePrice] = useState(false);
   const [isUnlockedOncePurchased, setIsUnlockedOncePurchased] = useState(true);
@@ -248,13 +249,9 @@ const UploadNftForm = () => {
             <div className={style.form_fieldset_form_grid_item}>
               <Field>
                 <Label>Properties</Label>
-                <Input
-                  name="quantity"
-                  type="text"
-                  placeholder="level, stats, rarity, etc."
-                  value={nftProperties}
-                  onChange={(e) => setNftProperties(e.target.value)}
-                  className={style.form_fieldset_form_grid_item_input}
+                <InputTag
+                  nftProperties={nftProperties}
+                  setNftProperties={setNftProperties}
                 />
               </Field>
             </div>
