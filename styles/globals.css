@@ -57,6 +57,16 @@ body {
   color: var(--icons-color);
   scroll-behavior: smooth;
 }
+/* for react tags */
+.ReactTags__error {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: .3rem;
+}
+.ReactTags__error svg {
+  width: auto;
+}
 
 a {
   color: inherit;
