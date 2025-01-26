@@ -8,6 +8,9 @@ import { LuImagePlus } from "react-icons/lu";
 import style from "./DropZone.module.css";
 import images from "../../../images";
 
+
+
+
 const DropZone = ({
   setFile,
   file,
@@ -22,6 +25,14 @@ const DropZone = ({
 }) => {
   const [filePreview, setFilePreview] = useState(null); //store preview
   const { resolvedTheme } = useTheme();
+
+  const handlePropertiesParse = (nftProperties) => {
+    if (nftProperties && nftProperties.length > 0) {
+      console.log(nftProperties);
+      return nftProperties.join(", ");
+    }
+    return "";
+  };
 
   const onDrop = useCallback(
     (acceptedFiles) => {
@@ -126,7 +137,7 @@ const DropZone = ({
               </span>
               <span>
                 <label>Properties: </label>
-                <p>{nftProperties || "N/A"}</p>
+                <p className={style.DropZone_box_aside_preview_three_properties}>{handlePropertiesParse(nftProperties) || "N/A"}</p>
               </span>
             </div>
           </div>
