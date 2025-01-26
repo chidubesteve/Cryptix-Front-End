@@ -95,3 +95,10 @@
 .DropZone_box_aside_preview_three p {
   margin-top: 7px;
 }
+
+.DropZone_box_aside_preview_three_properties {
+  display: flex;
+  white-space: wrap;
+  flex-wrap: wrap;
+  max-width: 15rem;
+}
