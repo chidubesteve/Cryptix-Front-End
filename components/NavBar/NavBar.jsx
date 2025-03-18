@@ -15,7 +15,7 @@ import styles from "./NavBar.module.css";
 import { Discover, HelpCenter, Notification, Profile, SideBar } from "./index";
 import { Button } from "../ComponentIndex";
 import images from "../../images";
-import useCloseOnOutsideClick from "../../utils/useCloseOnOutsideClick";
+import useCloseOnOutsideClick from "../../hooks/useCloseOnOutsideClick";
 import Link from "next/link";
 
 const NavBar = () => {
